@@ -1,0 +1,46 @@
+.view-school {
+    margin-top: 80px;
+}
+.view-directory.course-directory {
+    background-color: #09224a;
+}
+
+.school-title.navbar-brand {
+   
+}
+
+.navbar-fedora .navbar-header {
+    height: 80px;
+}
+
+.navbar-header {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.btn-sm {
+    border-radius: 0px !important;
+}
+
+/*courses page*/
+.view-directory .course-listing {
+    background-color: #0949b2;
+}
+.course-listing .course-box-image-container .course-box-image {
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom: 0px solid #EDEDED;
+}
+.course-listing {
+    border: 0;
+    border-radius: 0px;
+    box-shadow: 0px 0px #f9fefd;
+}
+.course-listing .course-listing-title {
+    color: #3CDBFF;
+}
+.course-listing .course-listing-subtitle {
+    color: #eeeeee;
+}
+.course-author-name {
+    color: #ffffff;
+}
