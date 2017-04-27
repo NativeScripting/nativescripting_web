@@ -36,6 +36,14 @@ h3 {
 .btn-sm {
     border-radius: 0px !important;
 }
+.btn-primary.btn-sm.pull-right.lecture-start {
+    background-color: transparent !important;
+    border: solid 2px #B517EC !important;
+}
+.btn-primary.btn-sm.pull-right.lecture-start:hover {
+    background-color: #B517EC !important;
+    border: solid 2px #B517EC !important;
+}
 .btn-default {
     color: #ffffff;
     background-color: #12ffcd;
@@ -80,6 +88,9 @@ h3 {
 .course-author-name {
     color: #ffffff;
 }
+.course-listing .course-listing-extra-info .course-price {
+    color: #FFC347;
+}
 input.form-control.search {
     border-bottom-left-radius: 0px !important;
     border-top-left-radius: 0px !important;
@@ -101,6 +112,16 @@ input.form-control.search {
 .course-block.odd-stripe, .block.odd-stripe {
     background-color: #09224a;
 }
+.block.bio.odd-stripe {
+    background-color: #073A8D;
+}
+.block.curriculum.even-stripe {
+    background-color: #09224a;
+}
+.block.checkout.odd-stripe {
+    background-color: #032e74;
+}
+
 .course-top-row .course-header-container .course-title {
     color: #12ffcd;
 }
@@ -110,4 +131,78 @@ input.form-control.search {
 .btn-hg, .btn-hg:active, .btn-hg:focus {
     border-radius: 0px !important;
     color: #09224a;
+}
+.course-section .section-title {
+    background: #09224a;
+    padding: 10px 16px;
+    margin: 0;
+    font-size: 16px;
+    font-weight: bold;
+    border-bottom: 0px solid #fff;
+}
+.course-section ul.section-list .section-item .item,
+.course-section ul.section-list .section-item .item:hover {
+    display: block;
+    padding: 20px 16px;
+    background: #052D6F;
+    list-style-type: none;
+    font-size: 15px;
+    letter-spacing: 0px;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 200;
+}
+.course-section ul.section-list .section-item {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    border-bottom: 5px solid #09224a;
+}
+.course-section ul.section-list .section-item .lecture-start {
+    opacity: 1;
+}
+
+.checkout-button-group {
+    color: #11f5ff;
+    background: #073A8D;
+    box-shadow: none;
+    border-radius: 0;
+    border-bottom: 3px solid #032e74;
+    font-size: 15px;
+    letter-spacing: 0px;
+}
+.checkout-button-group:hover {
+    color: #11f5ff;
+    background: #0949B2;
+}
+.checkout-button-group.active {
+    background: #0b58d6;
+}
+.checkout-button-group.active:hover {
+    background: #0b58d6;
+}
+
+.checkout-button-group .product-details {
+    border-left: 1px solid #032e74;
+    border-right: 1px solid #032e74;
+}
+.active div.custom-radio .selected, .checked div.custom-radio .selected {
+    background: #B517EC;
+    width: 8px;
+    height: 8px;
+    top: 2px;
+    left: 2px;
+}
+.active div.custom-radio, .checked div.custom-radio {
+    border: 2px solid #B517EC;
+}
+.checkout-button-group.active .product-enroll {
+    background-color: #B517EC !important;
+    border: 0px solid #B517EC !important;
+}
+.checkout-button-group.active .product-price {
+    color: #FFC347;
+}
+.checkout-button-group .product-price {
+    color: #557AB7;
 }
