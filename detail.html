@@ -1,356 +1,389 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>Title</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="img/favicon/manifest.json">
+    <link rel="mask-icon" href="img/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="img/favicon/favicon.ico">
+    <meta name="msapplication-config" content="img/favicon/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
     <link type="text/css" rel="stylesheet" href="style.css">
     <script src="jquery-3.2.0.slim.min.js"></script>
 </head>
+
 <body>
 
-<div class="container-fluid">
-    <div class="row">
-        <div class="header">
-            <div class="mobile-header">
-                <a href="#">About Us</a>
-                <a href="#">Log In</a>
-                <a href="#" class="sign">Sign Up</a>
-            </div>
-            <div class="container">
-                <div class="col-md-12">
-                    <div class="row">
-                        <img src="img/logo_full.svg" class="detail-logo">
-                        <div class="header-page">
-                            <a href="#">About Us</a>
-                            <a href="#">Log In</a>
-                            <a href="#" class="sign">Sign Up</a>
-                        </div>
-                        <div class="burger">
-                            <div class="line-2"></div>
-                            <div class="line-2"></div>
-                            <div class="line"></div>
-                            <div class="line"></div>
-                            <div class="line"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="pagination">
-             <div class="container">
-                 <p class="new hidden-xs">new</p>
-                <ul>
-                    <li><a href="index.html">Main courses page</a><img src="img/arrow.png"></li>
-                    <li><a href="index.html">Course details</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="detail-top-block">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-8 col-sm-12 col-xs-12" id="detailForHeight">
-                        <img class="logo" src="img/logo_2.svg">
-                        <h2 class="detail-header">The best Android course on the entire web that is really amazing</h2>
-                        <p class="detail-time"><span>1 hour 35 min </span>7 lessons<span></span><strong class="hidden-lg hidden-md hidden-sm">New</strong><img src="img/level_icon2.png"></p>
-                        <p class="detail-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
-                            printer took a galley of type and scrambled it to make a type specimen book. It has survived
-                            not only five centuries, but also the leap into electronic typesetting, remaining essentially
-                            unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
-                            Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-
-                        <div class="hidden-lg hidden-md col-xs-12 col-sm-12" id="mobile-detail-author">
-                            <div class="col-sm-7 col-xs-12" id="mobile-detail-author-2">
-                                <div class="detail-author">
-                                    <p class="author">author</p>
-                                    <h3>Abdul Kalim Manakhayir</h3>
-                                    <span>Web Developer And Teacher<img src="img/level_icon2.png"></span>
-                                    <p class="author-text">Lorem Ipsum is simply dummy text of the printing and typesetting
-                                        industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
-                                        when an unknown printer took a galley of type and scrambled it to make a type
-                                        specimen book.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="hidden-lg hidden-md hidden-sm col-xs-12">
-                            <img class="detail-header-img" src="img/logo.svg">
-                        </div>
-                        <div class="error"><span>Please select the type of course first</span></div>
-                        <div class="medium-block">
-                            <div class="active-border-left"></div>
-                            <div class="active-border-right"></div>
-                            <div class="active-border-top"></div>
-                            <div class="active-border-bottom"></div>
-                            <div class="left learn-user">
-                                <div class="glow-border"></div>
-                                <div class="border-medium"></div>
-                                <p class="user">Single User</p>
-                                <p class="price">Launch price<span>$15<span>$20</span></span></p>
-                            </div>
-                            <div class="right">
-                                <img src="img/arrow.png">
-                                <p class="team">Team</p>
-                                <ul>
-                                    <li>2-5 users<span>$15<span>$20</span></span></li>
-                                    <li>6-10 users<span>$15<span>$20</span></span></li>
-                                    <li>11-20 users<span>$15<span>$20</span></span></li>
-                                    <li>21-40 users<span>$15<span>$20</span></span></li>
-                                    <li>40 users +<span>email us</span></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="bottom">
-                            <a href="#"><span>Buy Course</span></a>
-                        </div>
-                        <img class="detail-header-img hidden-xs" src="img/logo.svg">
-                    </div>
-                    <div class="col-md-4 col-xs-12 hidden-sm hidden-xs" >
-                        <div class="col-md-12 col-sm-6 col-xs-12" id="detailSetHeight">
-                            <div class="detail-author">
-                                <p class="author">author</p>
-                                <h3>Abdul Kalim Manakhayir</h3>
-                                <span>Web Developer And Teacher<img src="img/level_icon2.png"></span>
-                                <p class="author-text">Lorem Ipsum is simply dummy text of the printing and typesetting
-                                    industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
-                                    when an unknown printer took a galley of type and scrambled it to make a type
-                                    specimen book.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="lessons-block">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="col-md-12">
-                            <div class="top-line"></div>
-                        </div>
-                    </div>
-                    <div class="col-md-8 col-sm-12 col-xs-12">
-                        <h2 class="lessons-header">Lessons</h2>
-                        <p class="get-started">Getting started</p>
-                        <div class="lessons-info-block">
-                            <div class="lessons-number"><span>1</span></div>
-                            <div class="lessons-name"><span>Welcome</span></div>
-                            <div class="lessons-down"><a href="#">video</a></div>
-                            <div class="data-info"><span>Data Info</span></div>
-                            <div class="time"><span>11:12</span></div>
-                            <div class="view"><a href="#">Watch now</a></div>
-                        </div>
-                        <div class="lessons-info-block">
-                            <div class="lessons-number"><span>2</span></div>
-                            <div class="lessons-name"><span>Source files</span></div>
-                            <div class="lessons-down"><a href="#">download</a></div>
-                            <div class="data-info"><span>Data Info</span></div>
-                            <div class="time"><span></span></div>
-                            <div class="view"><a href="#">Watch now</a></div>
-                        </div>
-                        <div class="lessons-info-block">
-                            <div class="lessons-number"><span>3</span></div>
-                            <div class="lessons-name"><span>Overview</span></div>
-                            <div class="lessons-down"><a href="#">video</a></div>
-                            <div class="data-info"><span>Data Info</span></div>
-                            <div class="time"><span>6:45</span></div>
-                            <div class="view-pre"><a href="#">FREE PREVIEW</a></div>
-                        </div>
-
-                        <h2 class="tools">Toolset</h2>
-
-                        <div class="lessons-info-block">
-                            <div class="lessons-number"><span>4</span></div>
-                            <div class="lessons-name"><span>xCode setup</span></div>
-                            <div class="lessons-down"><a href="#">video</a></div>
-                            <div class="data-info"><span>Data Info</span></div>
-                            <div class="time"><span>3:45</span></div>
-                            <div class="view"><a href="#">Watch now</a></div>
-                        </div>
-                        <div class="lessons-info-block">
-                            <div class="lessons-number"><span>5</span></div>
-                            <div class="lessons-name"><span>View controller example</span></div>
-                            <div class="lessons-down"><a href="#">download</a></div>
-                            <div class="data-info"><span>Data Info</span></div>
-                            <div class="time"><span>4:50</span></div>
-                            <div class="view"><a href="#">Watch now</a></div>
-                        </div>
-                        <div class="lessons-info-block">
-                            <div class="lessons-number"><span>6</span></div>
-                            <div class="lessons-name"><span>UIButton</span></div>
-                            <div class="lessons-down"><a href="#">video</a></div>
-                            <div class="data-info"><span>Data Info</span></div>
-                            <div class="time"><span>1:34</span></div>
-                            <div class="view"><a href="#">Watch now</a></div>
-                        </div>
-                        <div class="lessons-info-block">
-                            <div class="lessons-number"><span>7</span></div>
-                            <div class="lessons-name"><span>UILabel example</span></div>
-                            <div class="lessons-down"><a href="#">video</a></div>
-                            <div class="data-info"><span>Data Info</span></div>
-                            <div class="time"><span>2:23</span></div>
-                            <div class="view-pre"><a href="#">FREE PREVIEW</a></div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-12 col-xs-12 detail-bundle">
-                        <h2 class="get-better">Get the better offer now!</h2>
-                        <div class="bundle-card">
-                            <div class="top-block active-header">
-                                <div class="included">2 courses included <img src="img/arrow.png"></div>
-                                <h2>Kickstart Bundle<img src="img/blue_arrow.png"></h2>
-                                <div class="lessons-list">
-                                    <div class="card-lessons">
-                                        <h2>Bob Smith</h2>
-                                        <p>iOS Fundamentals</p>
-                                        <img src="img/level_icon1.svg">
-                                        <div class="line"></div>
-                                    </div>
-                                    <div class="card-lessons">
-                                        <h2>Bob Smith, Sammitia Mahonogey</h2>
-                                        <p>The best Android course on the entire web that is really amazing</p>
-                                        <img src="img/level_icon2.svg">
-                                    </div>
-                                </div>
-                                <span class="error">Please select the type of course first</span>
-                            </div>
-                            <div class="medium-block active-medium">
-                                <div class="medium-border-left"></div>
-                                <div class="medium-border-right"></div>
-                                <div class="medium-border-top"></div>
-                                <div class="glow-border"></div>
-                                <div class="single-user">
-                                    <div class="border-medium"></div>
-                                    <p class="user">single user</p>
-                                    <p class="team">Bundle special<span>$25<span>$100</span></span></p>
-                                </div>
-                                <div class="teams">
-                                    <p class="team">team <img src="img/arrow.png"></p>
-                                    <ul>
-                                        <li>2-5 users<span>$40<span>$100</span></span></li>
-                                        <li>6-10 users<span>$15<span>$20</span></span></li>
-                                        <li>11-20 users<span>$15<span>$20</span></span></li>
-                                        <li>21-40 users<span>$15<span>$20</span></span></li>
-                                        <li>40 users +<span>email us</span></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="bottom">
-                                <a href="#"><span>grab bundle</span></a>
-                            </div>
-                        </div>
-                        <div class="bundle-card supreme-bundle">
-                            <div class="border-top"></div>
-                            <div class="border-left"></div>
-                            <div class="border-right"></div>
-                            <div class="top-block">
-                                <div class="included">3 courses included <img src="img/arrow.png"></div>
-                                <h2>Supreme Bundle<img src="img/blue_arrow.png"></h2>
-                                <span class="error">Please select the type of course first</span>
-                                <div class="lessons-list">
-                                    <div class="card-lessons">
-                                        <h2>Bob Smith</h2>
-                                        <p>iOS Fundamentals</p>
-                                        <img src="img/level_icon1.svg">
-                                        <div class="line"></div>
-                                    </div>
-                                    <div class="card-lessons">
-                                        <h2>Bob Smith, Sammitia Mahonogey</h2>
-                                        <p>The best Android course on the entire web that is really amazing</p>
-                                        <img src="img/level_icon2.svg">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="medium-block">
-                                <div class="medium-border-left"></div>
-                                <div class="medium-border-right"></div>
-                                <div class="medium-border-top"></div>
-                                <div class="glow-border"></div>
-                                <div class="single-user">
-                                    <div class="border-medium"></div>
-                                    <p class="user">single user</p>
-                                    <p class="team">Bundle special<span>$25<span>$100</span></span></p>
-                                </div>
-                                <div class="teams">
-                                    <p class="team">team <img src="img/arrow.png"></p>
-                                    <ul>
-                                        <li>2-5 users<span>$40<span>$100</span></span></li>
-                                        <li>6-10 users<span>$15<span>$20</span></span></li>
-                                        <li>11-20 users<span>$15<span>$20</span></span></li>
-                                        <li>21-40 users<span>$15<span>$20</span></span></li>
-                                        <li>40 users +<span>email us</span></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="bottom">
-                                <a href="#"><span>grab bundle</span></a>
-                            </div>
-                        </div>
-                        <div class="bundle-card ultimate-bundle">
-                            <div class="border-top"></div>
-                            <div class="border-left"></div>
-                            <div class="border-right"></div>
-                            <div class="top-block">
-                                <div class="included">3 courses included <img src="img/arrow.png"></div>
-                                <h2>Ultimate Bundle<img src="img/yellow_arrow.png"></h2>
-                                <span class="error">Please select the type of course first</span>
-                                <div class="lessons-list">
-                                    <div class="card-lessons">
-                                        <h2>Bob Smith</h2>
-                                        <p>iOS Fundamentals</p>
-                                        <img src="img/level_icon1.svg">
-                                        <div class="line"></div>
-                                    </div>
-                                    <div class="card-lessons">
-                                        <h2>Bob Smith, Sammitia Mahonogey</h2>
-                                        <p>The best Android course on the entire web that is really amazing</p>
-                                        <img src="img/level_icon2.svg">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="medium-block">
-                                <div class="medium-border-left"></div>
-                                <div class="medium-border-right"></div>
-                                <div class="medium-border-top"></div>
-                                <div class="glow-border"></div>
-                                <div class="single-user">
-                                    <div class="border-medium"></div>
-                                    <p class="user">single user</p>
-                                    <p class="team">Bundle special<span>$25<span>$100</span></span></p>
-                                </div>
-                                <div class="teams">
-                                    <p class="team">team <img src="img/arrow.png"></p>
-                                    <ul>
-                                        <li>2-5 users<span>$40<span>$100</span></span></li>
-                                        <li>6-10 users<span>$15<span>$20</span></span></li>
-                                        <li>11-20 users<span>$15<span>$20</span></span></li>
-                                        <li>21-40 users<span>$15<span>$20</span></span></li>
-                                        <li>40 users +<span>email us</span></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="bottom">
-                                <a href="#"><span>preorder bundle</span></a>
-                            </div>
-                        </div>
-                    </div>
-            </div>
-        </div>
-    </div>
-        <div class="footer">
-            <div class="container">
-                <div class="footer-left">
-                    <p>@2017 NativeScripting</p>
-                </div>
-                <div class="footer-right">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="header">
+                <div class="mobile-header">
                     <a href="#">About Us</a>
                     <a href="#">Log In</a>
                     <a href="#" class="sign">Sign Up</a>
                 </div>
+                <div class="container">
+                    <div class="col-md-12">
+                        <div class="row">
+                            <img src="img/logo_full.svg" class="detail-logo">
+                            <div class="header-page">
+                                <a href="#">About Us</a>
+                                <a href="#">Log In</a>
+                                <a href="#" class="sign">Sign Up</a>
+                            </div>
+                            <div class="burger">
+                                <div class="line-2"></div>
+                                <div class="line-2"></div>
+                                <div class="line"></div>
+                                <div class="line"></div>
+                                <div class="line"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pagination">
+                <div class="container">
+                    <p class="new hidden-xs">new</p>
+                    <ul>
+                        <li><a href="index.html">Main courses page</a><img src="img/arrow.png"></li>
+                        <li><a href="index.html">Course details</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="detail-top-block">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-8 col-sm-12 col-xs-12" id="detailForHeight">
+                            <img class="logo" src="img/logo_2.svg">
+                            <h2 class="detail-header">The best Android course on the entire web that is really amazing</h2>
+                            <p class="detail-time"><span>1 hour 35 min </span>7 lessons<span></span><strong class="hidden-lg hidden-md hidden-sm">New</strong>
+                                <img
+                                    src="img/level_icon2.png"></p>
+                            <p class="detail-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                                the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
+                                of type and scrambled it to make a type specimen book. It has survived not only five centuries,
+                                but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised
+                                in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more
+                                recently with desktop publishing software like Aldus PageMaker including versions of Lorem
+                                Ipsum.</p>
+
+                            <div class="hidden-lg hidden-md col-xs-12 col-sm-12" id="mobile-detail-author">
+                                <div class="col-sm-7 col-xs-12" id="mobile-detail-author-2">
+                                    <div class="detail-author">
+                                        <p class="author">author</p>
+                                        <h3>Abdul Kalim Manakhayir</h3>
+                                        <span>Web Developer And Teacher<img src="img/level_icon2.png"></span>
+                                        <p class="author-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                                            Ipsum has been the industry's standard dummy text ever since the 1500s when an
+                                            unknown printer took a galley of type and scrambled it to make a type specimen
+                                            book.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="hidden-lg hidden-md hidden-sm col-xs-12">
+                                <img class="detail-header-img" src="img/logo.svg">
+                            </div>
+                            <div class="error"><span>Please select the type of course first</span></div>
+                            <div class="medium-block">
+                                <div class="active-border-left"></div>
+                                <div class="active-border-right"></div>
+                                <div class="active-border-top"></div>
+                                <div class="active-border-bottom"></div>
+                                <div class="left learn-user">
+                                    <div class="glow-border"></div>
+                                    <div class="border-medium"></div>
+                                    <p class="user">Single User</p>
+                                    <p class="price">Launch price<span>$15<span>$20</span></span>
+                                    </p>
+                                </div>
+                                <div class="right">
+                                    <img src="img/arrow.png">
+                                    <p class="team">Team</p>
+                                    <ul>
+                                        <li>2-5 users<span>$15<span>$20</span></span>
+                                        </li>
+                                        <li>6-10 users<span>$15<span>$20</span></span>
+                                        </li>
+                                        <li>11-20 users<span>$15<span>$20</span></span>
+                                        </li>
+                                        <li>21-40 users<span>$15<span>$20</span></span>
+                                        </li>
+                                        <li>40 users +<span>email us</span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="bottom">
+                                <a href="#"><span>Buy Course</span></a>
+                            </div>
+                            <img class="detail-header-img hidden-xs" src="img/logo.svg">
+                        </div>
+                        <div class="col-md-4 col-xs-12 hidden-sm hidden-xs">
+                            <div class="col-md-12 col-sm-6 col-xs-12" id="detailSetHeight">
+                                <div class="detail-author">
+                                    <p class="author">author</p>
+                                    <h3>Abdul Kalim Manakhayir</h3>
+                                    <span>Web Developer And Teacher<img src="img/level_icon2.png"></span>
+                                    <p class="author-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+                                        has been the industry's standard dummy text ever since the 1500s when an unknown
+                                        printer took a galley of type and scrambled it to make a type specimen book.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="lessons-block">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="col-md-12">
+                                <div class="top-line"></div>
+                            </div>
+                        </div>
+                        <div class="col-md-8 col-sm-12 col-xs-12">
+                            <h2 class="lessons-header">Lessons</h2>
+                            <p class="get-started">Getting started</p>
+                            <div class="lessons-info-block">
+                                <div class="lessons-number"><span>1</span></div>
+                                <div class="lessons-name"><span>Welcome</span></div>
+                                <div class="lessons-down"><a href="#">video</a></div>
+                                <div class="data-info"><span>Data Info</span></div>
+                                <div class="time"><span>11:12</span></div>
+                                <div class="view"><a href="#">Watch now</a></div>
+                            </div>
+                            <div class="lessons-info-block">
+                                <div class="lessons-number"><span>2</span></div>
+                                <div class="lessons-name"><span>Source files</span></div>
+                                <div class="lessons-down"><a href="#">download</a></div>
+                                <div class="data-info"><span>Data Info</span></div>
+                                <div class="time"><span></span></div>
+                                <div class="view"><a href="#">Watch now</a></div>
+                            </div>
+                            <div class="lessons-info-block">
+                                <div class="lessons-number"><span>3</span></div>
+                                <div class="lessons-name"><span>Overview</span></div>
+                                <div class="lessons-down"><a href="#">video</a></div>
+                                <div class="data-info"><span>Data Info</span></div>
+                                <div class="time"><span>6:45</span></div>
+                                <div class="view-pre"><a href="#">FREE PREVIEW</a></div>
+                            </div>
+
+                            <h2 class="tools">Toolset</h2>
+
+                            <div class="lessons-info-block">
+                                <div class="lessons-number"><span>4</span></div>
+                                <div class="lessons-name"><span>xCode setup</span></div>
+                                <div class="lessons-down"><a href="#">video</a></div>
+                                <div class="data-info"><span>Data Info</span></div>
+                                <div class="time"><span>3:45</span></div>
+                                <div class="view"><a href="#">Watch now</a></div>
+                            </div>
+                            <div class="lessons-info-block">
+                                <div class="lessons-number"><span>5</span></div>
+                                <div class="lessons-name"><span>View controller example</span></div>
+                                <div class="lessons-down"><a href="#">download</a></div>
+                                <div class="data-info"><span>Data Info</span></div>
+                                <div class="time"><span>4:50</span></div>
+                                <div class="view"><a href="#">Watch now</a></div>
+                            </div>
+                            <div class="lessons-info-block">
+                                <div class="lessons-number"><span>6</span></div>
+                                <div class="lessons-name"><span>UIButton</span></div>
+                                <div class="lessons-down"><a href="#">video</a></div>
+                                <div class="data-info"><span>Data Info</span></div>
+                                <div class="time"><span>1:34</span></div>
+                                <div class="view"><a href="#">Watch now</a></div>
+                            </div>
+                            <div class="lessons-info-block">
+                                <div class="lessons-number"><span>7</span></div>
+                                <div class="lessons-name"><span>UILabel example</span></div>
+                                <div class="lessons-down"><a href="#">video</a></div>
+                                <div class="data-info"><span>Data Info</span></div>
+                                <div class="time"><span>2:23</span></div>
+                                <div class="view-pre"><a href="#">FREE PREVIEW</a></div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-12 col-xs-12 detail-bundle">
+                            <h2 class="get-better">Get the better offer now!</h2>
+                            <div class="bundle-card">
+                                <div class="top-block active-header">
+                                    <div class="included">2 courses included <img src="img/arrow.png"></div>
+                                    <h2>Kickstart Bundle<img src="img/blue_arrow.png"></h2>
+                                    <div class="lessons-list">
+                                        <div class="card-lessons">
+                                            <h2>Bob Smith</h2>
+                                            <p>iOS Fundamentals</p>
+                                            <img src="img/level_icon1.svg">
+                                            <div class="line"></div>
+                                        </div>
+                                        <div class="card-lessons">
+                                            <h2>Bob Smith, Sammitia Mahonogey</h2>
+                                            <p>The best Android course on the entire web that is really amazing</p>
+                                            <img src="img/level_icon2.svg">
+                                        </div>
+                                    </div>
+                                    <span class="error">Please select the type of course first</span>
+                                </div>
+                                <div class="medium-block active-medium">
+                                    <div class="medium-border-left"></div>
+                                    <div class="medium-border-right"></div>
+                                    <div class="medium-border-top"></div>
+                                    <div class="glow-border"></div>
+                                    <div class="single-user">
+                                        <div class="border-medium"></div>
+                                        <p class="user">single user</p>
+                                        <p class="team">Bundle special<span>$25<span>$100</span></span>
+                                        </p>
+                                    </div>
+                                    <div class="teams">
+                                        <p class="team">team <img src="img/arrow.png"></p>
+                                        <ul>
+                                            <li>2-5 users<span>$40<span>$100</span></span>
+                                            </li>
+                                            <li>6-10 users<span>$15<span>$20</span></span>
+                                            </li>
+                                            <li>11-20 users<span>$15<span>$20</span></span>
+                                            </li>
+                                            <li>21-40 users<span>$15<span>$20</span></span>
+                                            </li>
+                                            <li>40 users +<span>email us</span></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="bottom">
+                                    <a href="#"><span>grab bundle</span></a>
+                                </div>
+                            </div>
+                            <div class="bundle-card supreme-bundle">
+                                <div class="border-top"></div>
+                                <div class="border-left"></div>
+                                <div class="border-right"></div>
+                                <div class="top-block">
+                                    <div class="included">3 courses included <img src="img/arrow.png"></div>
+                                    <h2>Supreme Bundle<img src="img/blue_arrow.png"></h2>
+                                    <span class="error">Please select the type of course first</span>
+                                    <div class="lessons-list">
+                                        <div class="card-lessons">
+                                            <h2>Bob Smith</h2>
+                                            <p>iOS Fundamentals</p>
+                                            <img src="img/level_icon1.svg">
+                                            <div class="line"></div>
+                                        </div>
+                                        <div class="card-lessons">
+                                            <h2>Bob Smith, Sammitia Mahonogey</h2>
+                                            <p>The best Android course on the entire web that is really amazing</p>
+                                            <img src="img/level_icon2.svg">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="medium-block">
+                                    <div class="medium-border-left"></div>
+                                    <div class="medium-border-right"></div>
+                                    <div class="medium-border-top"></div>
+                                    <div class="glow-border"></div>
+                                    <div class="single-user">
+                                        <div class="border-medium"></div>
+                                        <p class="user">single user</p>
+                                        <p class="team">Bundle special<span>$25<span>$100</span></span>
+                                        </p>
+                                    </div>
+                                    <div class="teams">
+                                        <p class="team">team <img src="img/arrow.png"></p>
+                                        <ul>
+                                            <li>2-5 users<span>$40<span>$100</span></span>
+                                            </li>
+                                            <li>6-10 users<span>$15<span>$20</span></span>
+                                            </li>
+                                            <li>11-20 users<span>$15<span>$20</span></span>
+                                            </li>
+                                            <li>21-40 users<span>$15<span>$20</span></span>
+                                            </li>
+                                            <li>40 users +<span>email us</span></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="bottom">
+                                    <a href="#"><span>grab bundle</span></a>
+                                </div>
+                            </div>
+                            <div class="bundle-card ultimate-bundle">
+                                <div class="border-top"></div>
+                                <div class="border-left"></div>
+                                <div class="border-right"></div>
+                                <div class="top-block">
+                                    <div class="included">3 courses included <img src="img/arrow.png"></div>
+                                    <h2>Ultimate Bundle<img src="img/yellow_arrow.png"></h2>
+                                    <span class="error">Please select the type of course first</span>
+                                    <div class="lessons-list">
+                                        <div class="card-lessons">
+                                            <h2>Bob Smith</h2>
+                                            <p>iOS Fundamentals</p>
+                                            <img src="img/level_icon1.svg">
+                                            <div class="line"></div>
+                                        </div>
+                                        <div class="card-lessons">
+                                            <h2>Bob Smith, Sammitia Mahonogey</h2>
+                                            <p>The best Android course on the entire web that is really amazing</p>
+                                            <img src="img/level_icon2.svg">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="medium-block">
+                                    <div class="medium-border-left"></div>
+                                    <div class="medium-border-right"></div>
+                                    <div class="medium-border-top"></div>
+                                    <div class="glow-border"></div>
+                                    <div class="single-user">
+                                        <div class="border-medium"></div>
+                                        <p class="user">single user</p>
+                                        <p class="team">Bundle special<span>$25<span>$100</span></span>
+                                        </p>
+                                    </div>
+                                    <div class="teams">
+                                        <p class="team">team <img src="img/arrow.png"></p>
+                                        <ul>
+                                            <li>2-5 users<span>$40<span>$100</span></span>
+                                            </li>
+                                            <li>6-10 users<span>$15<span>$20</span></span>
+                                            </li>
+                                            <li>11-20 users<span>$15<span>$20</span></span>
+                                            </li>
+                                            <li>21-40 users<span>$15<span>$20</span></span>
+                                            </li>
+                                            <li>40 users +<span>email us</span></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="bottom">
+                                    <a href="#"><span>preorder bundle</span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer">
+                <div class="container">
+                    <div class="footer-left">
+                        <p>@2017 NativeScripting</p>
+                    </div>
+                    <div class="footer-right">
+                        <a href="#">About Us</a>
+                        <a href="#">Log In</a>
+                        <a href="#" class="sign">Sign Up</a>
+                    </div>
+                </div>
             </div>
         </div>
-</div>
-<script src="script.js"></script>
+        <script src="script.js"></script>
 </body>
+
 </html>
