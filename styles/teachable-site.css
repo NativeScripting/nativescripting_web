@@ -1,3 +1,15 @@
+body {
+    color: #ffffff;
+}
+h2 {
+    color: #12ffcd;
+}
+h3 {
+    color: #11f5ff;
+}
+.course-block, .block {
+    background-color: #09224a;
+}
 .view-school {
     margin-top: 80px;
 }
@@ -17,24 +29,48 @@
     padding-top: 10px;
     padding-bottom: 10px;
 }
+.navbar-fedora .navbar-collapse.in, .navbar-fedora .navbar-collapse.collapsing {
+    top: 80px;
+}
+
 .btn-sm {
     border-radius: 0px !important;
 }
+.btn-default {
+    color: #ffffff;
+    background-color: #12ffcd;
+    border-color: #12ffcd;
+}
+.btn-default:hover {
+    color: #ffffff;
+    background-color: #05e1b3;
+    border-color: #12ffcd;
+}
 
 /*courses page*/
+
 .view-directory .course-listing {
     background-color: #0949b2;
+}
+.course-filter {
+    background: none;
+}
+.filter-label {
+    color: #3CDBFF;
 }
 .course-listing .course-box-image-container .course-box-image {
     border-top-left-radius: 0px;
     border-top-right-radius: 0px;
     border-bottom: 0px solid #EDEDED;
 }
+
 .course-listing {
-    border: 0;
+    box-shadow: 0px 1px transparent;
+    border: 1px solid transparent;
+    padding: 0px;
     border-radius: 0px;
-    box-shadow: 0px 0px #f9fefd;
 }
+
 .course-listing .course-listing-title {
     color: #3CDBFF;
 }
@@ -43,4 +79,35 @@
 }
 .course-author-name {
     color: #ffffff;
+}
+input.form-control.search {
+    border-bottom-left-radius: 0px !important;
+    border-top-left-radius: 0px !important;
+    background-color: #09224a;
+    border-color: #12ffcd;
+    color: #3CDBFF;
+}
+
+/*single course page */
+.navbar-course-hero {
+    background: #032e74;
+}
+.course-top-row {
+    background-color: #09224a;
+}
+.course-block.even-stripe, .block.even-stripe {
+    background-color: #032e74;
+}
+.course-block.odd-stripe, .block.odd-stripe {
+    background-color: #09224a;
+}
+.course-top-row .course-header-container .course-title {
+    color: #12ffcd;
+}
+.course-top-row .course-header-container .course-subtitle {
+    color: #3CDBFF;
+}
+.btn-hg, .btn-hg:active, .btn-hg:focus {
+    border-radius: 0px !important;
+    color: #09224a;
 }
