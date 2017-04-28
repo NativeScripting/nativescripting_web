@@ -1,5 +1,6 @@
 body {
     color: #ffffff;
+    background: #09224a;
 }
 h2 {
     color: #12ffcd;
@@ -205,4 +206,45 @@ input.form-control.search {
 }
 .checkout-button-group .product-price {
     color: #557AB7;
+}
+
+/* course video page */
+.course-sidebar {
+    background-color: #09224a;
+    border-right: 1px solid #000000;
+}
+.course-mainbar {
+    background: #09224a;
+}
+.well {
+    min-height: 20px;
+    padding: 19px;
+    margin-bottom: 20px;
+    background-color: #09224a;
+    border: 1px solid #e3e3e3;
+    border-radius: 0px;
+    box-shadow: inset 0 0px 0px rgba(0,0,0,.05);
+}
+.btn-md, .btn-md:active, .btn-md:focus {
+    border-radius: 0 !important;
+    color: #09224a;
+}
+.course-sidebar .course-progress.lecture-page.sticky {
+    background: #073d95 !important;
+    border-bottom: 1px solid #073d95;
+}
+.course-section ul.section-list .section-item.next-lecture .item {
+    color: #d5f9f1;
+    background: #073d95;
+}
+.course-section ul.section-list .section-item.next-lecture .item:hover {
+    color: #d5f9f1;
+    background: #0949b2;
+}
+.course-section ul.section-list .section-item.next-lecture .status-icon {
+    background: url(//d2oz8i5n9se8ej.cloudfront.net/icons/course-incomplete.png) 1px 0px #12ffcd;
+    box-shadow: inset 0px 0px 0px 2px #12ffcd;
+}
+header.half-height .lecture-nav a.nav-btn.complete, header.half-height .lecture-nav a.nav-btn:hover {
+    color: #09224a;
 }
