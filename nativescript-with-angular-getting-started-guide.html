@@ -13,8 +13,8 @@
     <link rel="shortcut icon" href="img/favicon/favicon.ico">
     <meta name="msapplication-config" content="img/favicon/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
-    <link type="text/css" rel="stylesheet" href="style.css">
-    <script src="jquery-3.2.0.slim.min.js"></script>
+    <link type="text/css" rel="stylesheet" href="styles/style.css">
+
 </head>
 
 <body>
@@ -47,10 +47,10 @@
             </div>
             <div class="pagination">
                 <div class="container">
-                    <p class="new hidden-xs">new</p>
+                    <p class="new hidden-xs" data-bind="text: course.tag"></p>
                     <ul>
-                        <li><a href="index.html">Main courses page</a><img src="img/arrow.png"></li>
-                        <li><a href="index.html">Course details</a></li>
+                        <li><a href="index.html">All Courses</a><img src="img/arrow.png"></li>
+                        <li><a>Course details</a></li>
                     </ul>
                 </div>
             </div>
@@ -59,79 +59,100 @@
                     <div class="row">
                         <div class="col-md-8 col-sm-12 col-xs-12" id="detailForHeight">
                             <img class="logo" src="img/logo_2.svg">
-                            <h2 class="detail-header">The best Android course on the entire web that is really amazing</h2>
-                            <p class="detail-time"><span>1 hour 35 min </span>7 lessons<span></span><strong class="hidden-lg hidden-md hidden-sm">New</strong>
-                                <img src="img/level_icon2.png"></p>
-                            <p class="detail-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
-                                the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
-                                of type and scrambled it to make a type specimen book. It has survived not only five centuries,
-                                but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised
-                                in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more
-                                recently with desktop publishing software like Aldus PageMaker including versions of Lorem
-                                Ipsum.
+                            <h2 class="detail-header" data-bind="text: course.title"></h2>
+                            <p class="detail-time"><span> </span>
+                                <lessons data-bind="text: course.numLessons"></lessons> lessons<span></span><strong class="hidden-lg hidden-md hidden-sm" data-bind="text: course.tag"></strong>
+                                <!-- ko with: course -->
+                                <img data-bind="attr: { src: getLevelIcon({
+                                            l1: 'img/level_icon1.svg',
+                                            l2: 'img/level_icon2.svg',
+                                            l3: 'img/level_icon3.svg'
+                                        }) }" />
+                                <!-- /ko -->
+                            </p>
+                            <p class="detail-text" data-bind="text: course.description">
                             </p>
 
                             <div class="hidden-lg hidden-md col-xs-12 col-sm-12" id="mobile-detail-author">
                                 <div class="col-sm-7 col-xs-12" id="mobile-detail-author-2">
                                     <div class="detail-author">
-                                        <p class="author">author</p>
-                                        <h3>Abdul Kalim Manakhayir</h3>
-                                        <span>Web Developer And Teacher<img src="img/level_icon2.png"></span>
-                                        <p class="author-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                                            Ipsum has been the industry's standard dummy text ever since the 1500s when an
-                                            unknown printer took a galley of type and scrambled it to make a type specimen
-                                            book.
+                                        <p class="author">Author</p>
+                                        <!-- ko foreach: course.authors -->
+                                        <h3 data-bind="text: name"></h3>
+
+                                        <span><authtitle data-bind="text:title"></authtitle><img class="detail-author-pic" data-bind="attr: { src: picture }" /></span>
+                                        <p class="author-text" data-bind="text: bio">
                                         </p>
+                                        <!-- /ko -->
                                     </div>
                                 </div>
                             </div>
+
                             <div class="hidden-lg hidden-md hidden-sm col-xs-12">
-                                <img class="detail-header-img" src="img/logo.svg">
+                                <img class="detail-header-img" data-bind="attr: { src: course.courseIcon }" />
                             </div>
-                            <div class="error"><span>Please select the type of course first</span></div>
+
+                            <div class="error"><span>Please select the number of users</span></div>
                             <div class="medium-block">
                                 <div class="active-border-left"></div>
                                 <div class="active-border-right"></div>
                                 <div class="active-border-top"></div>
                                 <div class="active-border-bottom"></div>
                                 <div class="left learn-user">
+                                    <!-- ko with: course.productSingle -->
                                     <div class="glow-border"></div>
                                     <div class="border-medium"></div>
                                     <p class="user">Single User</p>
-                                    <p class="price">Launch price<span>$15<span>$20</span></span>
+                                    <!-- ko if: pricereg === 0 -->
+                                    <p class="price">
+                                        <users data-bind="text: usersDisp"></users><span><price data-bind="text: priceSaleDisp"></price></span></p>
+                                    <!-- /ko -->
+                                    <!-- ko if: pricereg > 0 -->
+                                    <p class="price">
+                                        <users data-bind="text: usersDisp"></users><span><price data-bind="text: priceSaleDisp"></price><span data-bind="text: priceRegDisp"></span></span>
                                     </p>
+                                    <!-- /ko -->
+                                    <!-- /ko -->
                                 </div>
                                 <div class="right">
                                     <img src="img/arrow.png">
                                     <p class="team">Team</p>
                                     <ul>
-                                        <li>2-5 users<span>$15<span>$20</span></span>
+                                        <!-- ko with: course -->
+                                        <!-- ko foreach: productsTeam -->
+                                        <li data-bind="click: function() { $parent.selectProduct($data); }">
+                                            <!-- ko if: pricereg === 0 -->
+                                            <users data-bind="text: usersDisp"></users><span><price data-bind="text: priceSaleDisp"></price></span>
+                                            <!-- /ko -->
+                                            <!-- ko if: pricereg > 0 -->
+                                            <users data-bind="text: usersDisp"></users><span><price data-bind="text: priceSaleDisp"></price><span data-bind="text: priceRegDisp"></span></span>
+                                            <!-- /ko -->
                                         </li>
-                                        <li>6-10 users<span>$15<span>$20</span></span>
-                                        </li>
-                                        <li>11-20 users<span>$15<span>$20</span></span>
-                                        </li>
-                                        <li>21-40 users<span>$15<span>$20</span></span>
-                                        </li>
-                                        <li>40 users +<span>email us</span></li>
+                                        <!-- /ko -->
+
+
+
+                                        <li>11+ users<span><a href="mailto:info@nuvious.com?Subject=NativeScripting%20team" target="_top">email us</a></span></li>
+                                        <!-- /ko -->
                                     </ul>
                                 </div>
                             </div>
                             <div class="bottom">
-                                <a href="#"><span>Buy Course</span></a>
+                                <a href="#"><span>Get Course</span></a>
                             </div>
-                            <img class="detail-header-img hidden-xs" src="img/logo.svg">
+
+                            <img class="detail-header-img hidden-xs" data-bind="attr: { src: course.courseIcon }" />
                         </div>
                         <div class="col-md-4 col-xs-12 hidden-sm hidden-xs">
                             <div class="col-md-12 col-sm-6 col-xs-12" id="detailSetHeight">
                                 <div class="detail-author">
-                                    <p class="author">author</p>
-                                    <h3>Abdul Kalim Manakhayir</h3>
-                                    <span>Web Developer And Teacher<img src="img/level_icon2.png"></span>
-                                    <p class="author-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
-                                        has been the industry's standard dummy text ever since the 1500s when an unknown
-                                        printer took a galley of type and scrambled it to make a type specimen book.
-                                    </p>
+                                    <p class="author">Author</p>
+                                    <!-- ko foreach: course.authors -->
+                                    <h3 data-bind="text: name"></h3>
+
+                                    <span><authtitle data-bind="text:title"></authtitle><img class="detail-author-pic" data-bind="attr: { src: picture }" /></span>
+                                    <p class="author-text" data-bind="text: bio"></p>
+                                    <!-- /ko -->
                                 </div>
                             </div>
                         </div>
@@ -380,7 +401,11 @@
                 </div>
             </div>
         </div>
-        <script src="script.js"></script>
+
+        <script src="node_modules/jquery/dist/jquery.min.js"></script>
+        <script src="node_modules/knockout/build/output/knockout-latest.js"></script>
+        <script src="scripts/detail-vm.js"></script>
+        <script src="scripts/script.js"></script>
 </body>
 
 </html>
