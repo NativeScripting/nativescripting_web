@@ -248,3 +248,20 @@ input.form-control.search {
 header.half-height .lecture-nav a.nav-btn.complete, header.half-height .lecture-nav a.nav-btn:hover {
     color: #09224a;
 }
+
+/*checkout page */
+
+.checkout-page {
+    background: #032e74;
+}
+.checkout-page h1 {
+    color: #12FFCD;
+}
+
+.content-box {
+    background: #fff;
+    border-radius: 0px;
+    box-shadow: 0 0px 0px #e7eeef;
+    border: 0.5px solid #d8d8d8;
+}
+
