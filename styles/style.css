@@ -1612,6 +1612,7 @@ a:hover, a:focus, a:active {
               color: #557AB7;
               margin-left: 6px;
               text-decoration: line-through; }
+
         .card-block .learn-card .medium-block .right ul {
           overflow: hidden;
           transition: 0.8s;
@@ -1650,6 +1651,8 @@ a:hover, a:focus, a:active {
                 color: #557AB7;
                 margin-left: 5px;
                 text-decoration: line-through; }
+
+
         .card-block .learn-card .medium-block .right .active-li:before {
           content: '';
           position: absolute;
@@ -3603,3 +3606,9 @@ a:hover, a:focus, a:active {
     margin: 0px auto 10px auto; } }
 
 /*# sourceMappingURL=style.css.map */
+
+
+.detail-author-pic {
+  height: 50px;
+  border-radius: 25px;
+}
