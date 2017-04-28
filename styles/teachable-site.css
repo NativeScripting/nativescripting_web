@@ -250,6 +250,9 @@ header.half-height .lecture-nav a.nav-btn.complete, header.half-height .lecture-
 }
 
 /*checkout page */
+#checkout-total {
+    color: #FFC347;
+}
 
 .checkout-page {
     background: #032e74;
@@ -259,9 +262,92 @@ header.half-height .lecture-nav a.nav-btn.complete, header.half-height .lecture-
 }
 
 .content-box {
-    background: #fff;
+    background: #032e74;
     border-radius: 0px;
     box-shadow: 0 0px 0px #e7eeef;
-    border: 0.5px solid #d8d8d8;
+    border: 0.5px solid #488dfb;
+}
+.content-box label {
+    color: #11f5ff;
+}
+.content-box .form-control, .content-box select.form-control {
+    background-color: #032e74;
+    border: 1px solid #12ffcd;
+    box-shadow: 0px 0px 0px 0px #E6E9EC;
+}
+.content-box .form-control:focus, .content-box select.form-control:focus {
+    background-color: #0442a6;
+    color: #12ffcd;
+    box-shadow: 0px 0px 0px 0px #f9c4ad !important;
+    border: 1px solid #12ffcd !important;
+}
+.checkout-page .review-order-box .box-footer {
+    background: #0442a6;
+}
+.checkout-page .review-order-box .itemized-row .item-name {
+    color: #11f5ff;
+}
+.checkout-page .price-adjustment .price-adjustment-form input.form-control {
+    border-radius: 0px;
+}
+.content-box .box-footer {
+    background: #0442a6;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
 }
 
+.btn-secondary {
+    background: #12FFCD !important;
+    border: 1px solid #12FFCD !important;
+    font-weight: 600 !important;
+    outline: none !important;
+    color: #19396D;
+    border-radius: 0px;
+    padding: 10px 18px !important;
+}
+.btn-secondary:hover, .btn-secondary:active, .btn-secondary:focus {
+    background: #05E1B3 !important;
+    border: 1px solid #05E1B3 !important;
+    color: #19396D;
+}
+.payment-errors {
+    background: #ffe9e9;
+    color: #d57676;
+    background-image: url(https://d2oz8i5n9se8ej.cloudfront.net/icons/icon-card-error.svg);
+    background-repeat: no-repeat;
+    background-position: 19px 12px;
+    border: 0.5px solid rgba(211, 111, 111, 0.44);
+    border-radius: 0px;
+}
+
+
+/*login page */
+.devise-layout .content {
+    background-color: #073A8D;
+}
+.devise-layout .content input.form-control {
+    border-radius: 0px;
+}
+.form-control {
+    color: #12FFCD;
+    background-color: #073A8D;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 0px;
+    box-shadow: inset 0 0px 0px rgba(0,0,0,.075);
+}
+.devise-layout .content label.control-label {
+    color: #11f5ff;
+}
+.nav.navbar-nav > li .btn-primary,
+.nav.navbar-nav > li .btn-primary:active,
+.nav.navbar-nav > li .btn-primary:focus
+{
+    background: #12ffcd !important;
+    border: 1px solid #12ffcd !important;
+    font-weight: 600 !important;
+    outline: none !important;
+    color: #19396D;
+    border-radius: 0px;
+    padding: 3px 18px !important;
+}
