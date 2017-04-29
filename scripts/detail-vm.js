@@ -109,6 +109,28 @@ function Course(c) {
             return false;
         }
     };
+
+    self.getCourseUrl = ko.pureComputed(function () {
+        if (self.selectedProduct()) {
+            var url = 'https://sso.teachable.com/secure/89912/checkout/confirmation?product_id=' +
+                self.selectedProduct().id +
+                '&course_id=' + self.id;
+            return url;
+        } else {
+            return '#';
+        }
+
+    });
+
+    self.getCourse = function () {
+        var url = self.getCourseUrl();
+        if (url !== '#') {
+            window.location = url;
+        }
+        else {
+            return false;
+        }
+    }
 }
 
 

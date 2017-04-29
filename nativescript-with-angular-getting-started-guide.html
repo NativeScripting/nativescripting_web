@@ -98,8 +98,9 @@
                                 <div class="active-border-right"></div>
                                 <div class="active-border-top"></div>
                                 <div class="active-border-bottom"></div>
-                                <div class="left learn-user">
-                                    <!-- ko with: course.productSingle -->
+                                <!-- ko with: course -->
+                                <div class="left learn-user" data-bind="click: function() { selectProduct('single'); }">
+                                    <!-- ko with: productSingle -->
                                     <div class="glow-border"></div>
                                     <div class="border-medium"></div>
                                     <p class="user">Single User</p>
@@ -114,6 +115,7 @@
                                     <!-- /ko -->
                                     <!-- /ko -->
                                 </div>
+                                <!-- /ko -->
                                 <div class="right">
                                     <img src="img/arrow.png">
                                     <p class="team">Team</p>
@@ -138,7 +140,7 @@
                                 </div>
                             </div>
                             <div class="bottom">
-                                <a href="#"><span>Get Course</span></a>
+                                <a data-bind="click: course.getCourse "><span>Get Course</span></a>
                             </div>
 
                             <img class="detail-header-img hidden-xs" data-bind="attr: { src: course.courseIcon }" />
@@ -179,7 +181,7 @@
                                 <!--div class="lessons-down"><a href="#">video</a></div-->
                                 <!--div class="data-info"><span>Data Info</span></div-->
                                 <!--div class="time"><span>11:12</span></div-->
-                                <div class="view"><a href="#">Watch now</a></div>
+                                <div class="view"><a href="#">Start</a></div>
                             </div>
                             <!-- /ko -->
                             <!-- /ko -->
