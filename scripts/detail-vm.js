@@ -116,13 +116,29 @@ function DetailViewModel(courseRaw) {
 
 $.getJSON("courses.json", function (coursesData) {
     var url = window.location.href;
-    var filename = url.substring(url.lastIndexOf("/") + 1, url.lastIndexOf("."));
+    var filename = getBaseName(url);
 
     var course = coursesData.courses.find(function (course) {
         return course.url === filename;
     });
     ko.applyBindings(new DetailViewModel(course));
 });
+
+function getBaseName(url) {
+    if (!url || (url && url.length === 0)) {
+        return "";
+    }
+    var index = url.lastIndexOf("/") + 1;
+    var filenameWithExtension = url.substr(index);
+    var basename = filenameWithExtension.split(/[.?&#]+/)[0];
+
+    // Handle '/mypage/' type paths
+    if (basename.length === 0) {
+        url = url.substr(0, index - 1);
+        basename = getBaseName(url);
+    }
+    return basename ? basename : "";
+}
 
 
 

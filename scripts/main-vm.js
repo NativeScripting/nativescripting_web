@@ -89,7 +89,11 @@ function Course(c) {
 
     self.goToCoursePage = function () {
         if (self.selectedProduct()) {
-            window.location = self.url + '.html';
+            if (window.location.href.indexOf('127') > 0) {
+                window.location = self.url + '.html';
+            } else {
+                window.location = self.url;
+            }
         } else {
             return false;
         }
