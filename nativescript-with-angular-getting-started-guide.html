@@ -169,66 +169,20 @@
                         </div>
                         <div class="col-md-8 col-sm-12 col-xs-12">
                             <h2 class="lessons-header">Lessons</h2>
-                            <p class="get-started">Getting started</p>
-                            <div class="lessons-info-block">
-                                <div class="lessons-number"><span>1</span></div>
-                                <div class="lessons-name"><span>Welcome</span></div>
-                                <div class="lessons-down"><a href="#">video</a></div>
-                                <div class="data-info"><span>Data Info</span></div>
-                                <div class="time"><span>11:12</span></div>
-                                <div class="view"><a href="#">Watch now</a></div>
-                            </div>
-                            <div class="lessons-info-block">
-                                <div class="lessons-number"><span>2</span></div>
-                                <div class="lessons-name"><span>Source files</span></div>
-                                <div class="lessons-down"><a href="#">download</a></div>
-                                <div class="data-info"><span>Data Info</span></div>
-                                <div class="time"><span></span></div>
-                                <div class="view"><a href="#">Watch now</a></div>
-                            </div>
-                            <div class="lessons-info-block">
-                                <div class="lessons-number"><span>3</span></div>
-                                <div class="lessons-name"><span>Overview</span></div>
-                                <div class="lessons-down"><a href="#">video</a></div>
-                                <div class="data-info"><span>Data Info</span></div>
-                                <div class="time"><span>6:45</span></div>
-                                <div class="view-pre"><a href="#">FREE PREVIEW</a></div>
-                            </div>
+                            <!-- ko foreach: course.chapters -->
+                            <p class="get-started" data-bind="text: name"></p>
 
-                            <h2 class="tools">Toolset</h2>
-
+                            <!-- ko foreach: lessons -->
                             <div class="lessons-info-block">
-                                <div class="lessons-number"><span>4</span></div>
-                                <div class="lessons-name"><span>xCode setup</span></div>
-                                <div class="lessons-down"><a href="#">video</a></div>
-                                <div class="data-info"><span>Data Info</span></div>
-                                <div class="time"><span>3:45</span></div>
+                                <div class="lessons-number"><span data-bind="text: lessonNumber"></span></div>
+                                <div class="lessons-name"><span data-bind="text: name"></span></div>
+                                <!--div class="lessons-down"><a href="#">video</a></div-->
+                                <!--div class="data-info"><span>Data Info</span></div-->
+                                <!--div class="time"><span>11:12</span></div-->
                                 <div class="view"><a href="#">Watch now</a></div>
                             </div>
-                            <div class="lessons-info-block">
-                                <div class="lessons-number"><span>5</span></div>
-                                <div class="lessons-name"><span>View controller example</span></div>
-                                <div class="lessons-down"><a href="#">download</a></div>
-                                <div class="data-info"><span>Data Info</span></div>
-                                <div class="time"><span>4:50</span></div>
-                                <div class="view"><a href="#">Watch now</a></div>
-                            </div>
-                            <div class="lessons-info-block">
-                                <div class="lessons-number"><span>6</span></div>
-                                <div class="lessons-name"><span>UIButton</span></div>
-                                <div class="lessons-down"><a href="#">video</a></div>
-                                <div class="data-info"><span>Data Info</span></div>
-                                <div class="time"><span>1:34</span></div>
-                                <div class="view"><a href="#">Watch now</a></div>
-                            </div>
-                            <div class="lessons-info-block">
-                                <div class="lessons-number"><span>7</span></div>
-                                <div class="lessons-name"><span>UILabel example</span></div>
-                                <div class="lessons-down"><a href="#">video</a></div>
-                                <div class="data-info"><span>Data Info</span></div>
-                                <div class="time"><span>2:23</span></div>
-                                <div class="view-pre"><a href="#">FREE PREVIEW</a></div>
-                            </div>
+                            <!-- /ko -->
+                            <!-- /ko -->
                         </div>
                         <div class="col-md-4 col-sm-12 col-xs-12 detail-bundle">
                             <h2 class="get-better">Get the better offer now!</h2>

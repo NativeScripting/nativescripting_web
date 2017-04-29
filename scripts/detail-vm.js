@@ -48,6 +48,7 @@ function Course(c) {
     self.productSingle = ko.observable(null);
     self.productsTeam = ko.observableArray([]);
     self.chapters = c.chapters;
+    self.numLessons = ko.observable(0);
 
     var tAuthors = [];
     var tProductsTeam = [];
@@ -66,6 +67,16 @@ function Course(c) {
     self.authors(tAuthors);
     self.productsTeam(tProductsTeam);
 
+    var lessonCount = 0;
+    for (var i = 0; i < self.chapters.length; i++) {
+        //lessonCount += self.chapters[i].lessons.length;
+        for (var j = 0; j < self.chapters[i].lessons.length; j++) {
+            lessonCount++;
+            self.chapters[i].lessons[j].lessonNumber = lessonCount;
+        }
+    }
+    self.numLessons(lessonCount);
+
     self.courseIcon = ko.pureComputed(function () {
         if (self.type === 'ng') {
             return 'img/nativescript_angular.svg';
@@ -74,14 +85,6 @@ function Course(c) {
         } else {
             return 'img/logo.svg';
         }
-    });
-
-    self.numLessons = ko.pureComputed(function () {
-        var lessonCount = 0;
-        for (var i = 0; i < self.chapters.length; i++) {
-            lessonCount += self.chapters[i].lessons.length;
-        }
-        return lessonCount;
     });
 
     self.getLevelIcon = function (levelObj) {

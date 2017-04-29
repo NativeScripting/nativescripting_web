@@ -2982,7 +2982,7 @@ a:hover, a:focus, a:active {
     line-height: 80px;
     display: flex;
     padding: 0px 10px;
-    justify-content: space-between;
+    /*justify-content: space-between;*/
     margin-bottom: 5px; }
     .lessons-block .lessons-info-block .lessons-number {
       order: 1;
@@ -3005,7 +3005,10 @@ a:hover, a:focus, a:active {
       font-weight: bold;
       color: #FFFFFF;
       margin-right: 20px;
-      flex-basis: 32%; }
+      flex-basis: auto; 
+      align-self: left;
+      
+      }
       .lessons-block .lessons-info-block .lessons-name span {
         display: inline-block;
         line-height: 25px; }
@@ -3038,7 +3041,9 @@ a:hover, a:focus, a:active {
         font-weight: bold;
         color: #FFFFFF; }
     .lessons-block .lessons-info-block .view {
-      order: 6; }
+      order: 6; 
+      margin-left: auto;
+      }
       .lessons-block .lessons-info-block .view a {
         transition: 0.5s;
         text-transform: uppercase;
@@ -3130,7 +3135,7 @@ a:hover, a:focus, a:active {
       line-height: 25px; } }
   @media all and (min-width: 1024px) and (max-width: 1200px) {
     .lessons-block .lessons-info-block .lessons-name {
-      flex-basis: 25%; }
+      flex-basis: auto; }
     .lessons-block .lessons-info-block .data-info span {
       text-align: center;
       display: inline-block;
