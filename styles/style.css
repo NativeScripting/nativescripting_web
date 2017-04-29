@@ -1280,7 +1280,9 @@ a:hover, a:focus, a:active {
       line-height: 44px;
       display: block;
       padding: 0px 10px;
-      border: 1px solid #00E9B8; }
+      border: 1px solid #00E9B8; 
+      cursor: pointer;
+      }
     .bottom-header .select-cat a:nth-child(2) {
       color: #4A81DA;
       font-family: "MonoRegular";
@@ -1293,7 +1295,9 @@ a:hover, a:focus, a:active {
       padding: 0px 10px;
       background-color: #09224a;
       z-index: 2;
-      position: relative; }
+      position: relative; 
+      cursor: pointer;
+      }
     .bottom-header .select-cat ul {
       transition: 0.4s;
       position: absolute;
@@ -1315,7 +1319,7 @@ a:hover, a:focus, a:active {
     position: absolute;
     height: 8.31px;
     width: 16.47px;
-    background-image: url("img/green_arrow.png");
+    background-image: url("../img/green_arrow.png");
     background-repeat: no-repeat;
     top: 17px;
     right: 9px; }
@@ -1327,7 +1331,7 @@ a:hover, a:focus, a:active {
     position: absolute;
     height: 8.31px;
     width: 16.47px;
-    background-image: url("img/green_arrow.png");
+    background-image: url("../img/green_arrow.png");
     background-repeat: no-repeat;
     top: 17px;
     right: 9px;

@@ -1,5 +1,12 @@
 var tBaseUrl = 'http://nativescripting.teachable.com';
 
+function CategoryVm(c) {
+    var self = this;
+    self.type = c.type;
+    self.name = c.name;
+}
+
+
 function AuthorVm(a) {
     var self = this;
     self.name = a.name;
@@ -167,8 +174,20 @@ function CourseVm(c) {
 
 function CoursesPageVm(coursesRaw) {
     var self = this;
-    self.selectedType = ko.observable();
+
     self.courses = ko.observableArray([]);
+
+    self.categories = ko.observableArray([]);
+    self.selectedCategory = ko.observable();
+
+    self.selectedType = ko.pureComputed(function () {
+        var theCat = self.selectedCategory();
+        if (theCat) {
+            return theCat.type;
+        } else {
+            return '';
+        }
+    });
 
     self.allCourses = [];
 
@@ -176,37 +195,70 @@ function CoursesPageVm(coursesRaw) {
         self.allCourses.push(new CourseVm(coursesRaw[i]));
     }
 
+    self.selectCategory = function (type) {
 
+        if (self.selectedCategory().type !== type) {
+            var newCat = self.categories().find(function (cat) {
+                return cat.type === type;
+            });
+            self.selectedCategory(newCat);
+            localStorage.setItem('cat-value', type);
+            self.filterCoursesByType();
+
+            var tCats = self.categories();
+            var tCat1 = tCats[1];
+            tCats[1] = tCats[0];
+            tCats[0] = tCat1;
+            self.categories(tCats);
+        }
+    }
 
     self.showNativeScriptCore = function () {
-        if (self.selectedType() === 'ng') {
-            self.selectedType('core');
+        if (self.selectedCategory().type === 'ng') {
+            var newCat = self.categories().find(function (cat) {
+                return cat.type === 'core';
+            });
+            self.selectedCategory(newCat);
             localStorage.setItem('cat-value', 'core');
-            self.filterCoursesByType(self.selectedType());
+            self.filterCoursesByType();
         }
     };
     self.showNativeScriptAngular = function () {
-        if (self.selectedType() === 'core') {
-            self.selectedType('ng');
+        if (self.selectedCategory().type === 'core') {
+            var newCat = self.categories().find(function (cat) {
+                return cat.type === 'ng';
+            });
+            self.selectedCategory(newCat);
             localStorage.setItem('cat-value', 'ng');
-            self.filterCoursesByType(self.selectedType());
+            self.filterCoursesByType();
         }
     };
 
-    self.filterCoursesByType = function (type) {
+    self.filterCoursesByType = function () {
+        var selectedCat = self.selectedCategory();
         var filteredCourses = self.allCourses.filter(function (course) {
-            return course.type === type;
+            return course.type === selectedCat.type;
         });
 
         self.courses(filteredCourses);
     };
 
-    if (localStorage.getItem('cat-value') == undefined) {
-        localStorage.setItem('cat-value', 'core');
-    }
-    self.selectedType(localStorage.getItem('cat-value'));
+    var tCats = [
+        new CategoryVm({ type: 'core', name: 'NativeScript Core' }),
+        new CategoryVm({ type: 'ng', name: 'NativeScript with Angular' }),
+    ];
 
-    self.filterCoursesByType(self.selectedType());
+    if (localStorage.getItem('cat-value') === undefined) {
+        localStorage.setItem('cat-value', 'core');
+    } else if (localStorage.getItem('cat-value') === 'ng') {
+        var tCat1 = tCats[1];
+        tCats[1] = tCats[0];
+        tCats[0] = tCat1;
+    }
+
+    self.categories(tCats);
+    self.selectedCategory(tCats[0]);
+    self.filterCoursesByType();
 }
 
 function DetailPageVm(courseRaw) {

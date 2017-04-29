@@ -6,7 +6,7 @@ window.onload = function () {
     var main = document.getElementsByClassName('bottom-header');
     setTimeout(function () {
         $('.card-block .learn-card .top-block .card-header').each(function () {
-            console.log($(this).height());
+            //console.log($(this).height());
             if ($(this).height() > 97) {
                 $(this).find('img').css('top', '22px');
                 $(this).css('top', '126px');
@@ -20,76 +20,95 @@ window.onload = function () {
             $(this).toggleClass('right-active');
         });
 
+        /*
+                if (localStorage.getItem('filter-value') == undefined) {
+                    localStorage.setItem('filter-value', 'left');
+                }*/
+        /*
+                if (localStorage.getItem('filter-value') === 'left') {
+                    //ocument.querySelector('#loadCard-2').style.display = 'none';
+                    document.querySelector('.text-left').style.color = '#12ffcd';
+                    document.querySelector('.text-right').style.color = '#4a81da';
+                    //document.querySelector('.bottom-header .left').style.backgroundColor = '#12ffcd';
+                    //document.querySelector('.bottom-header .right').style.backgroundColor = '#4a81da';
+                } else {
+                    document.querySelector('#loadCard').style.display = 'none';
+                    document.querySelector('.text-right').style.color = '#12ffcd';
+                    //document.querySelector('.bottom-header .right').style.backgroundColor = '#12ffcd';
+                    //document.querySelector('.bottom-header .left').style.backgroundColor = '#4a81da';
+                    document.querySelector('.text-left').style.color = '#4a81da';
+                }
+                */
 
-        if (localStorage.getItem('filter-value') == undefined) {
-            localStorage.setItem('filter-value', 'left');
-        }
+        /*
+                var leftFilter = document.querySelector('#left-filter').addEventListener('click', function () {
+                    document.querySelector('.text-left').style.color = '#12ffcd';
+                    document.querySelector('.text-right').style.color = '#4a81da';
+                    //document.querySelector('.bottom-header .left').style.backgroundColor = '#12ffcd';
+                    //document.querySelector('.bottom-header .right').style.backgroundColor = '#4a81da';
+                    localStorage.setItem('filter-value', 'left');
+                    //document.querySelector('#loadCard-2').style.display = 'none';
+                    document.querySelector('#loadCard').style.display = 'block';
+                });
+                */
 
-        if (localStorage.getItem('filter-value') === 'left') {
-            document.querySelector('#loadCard-2').style.display = 'none';
-            document.querySelector('.text-left').style.color = '#12ffcd';
-            document.querySelector('.text-right').style.color = '#4a81da';
-            //document.querySelector('.bottom-header .left').style.backgroundColor = '#12ffcd';
-            //document.querySelector('.bottom-header .right').style.backgroundColor = '#4a81da';
-        } else {
-            document.querySelector('#loadCard').style.display = 'none';
-            document.querySelector('.text-right').style.color = '#12ffcd';
-            //document.querySelector('.bottom-header .right').style.backgroundColor = '#12ffcd';
-            //document.querySelector('.bottom-header .left').style.backgroundColor = '#4a81da';
-            document.querySelector('.text-left').style.color = '#4a81da';
-        }
+        /*
+                var rightFilter = document.querySelector('#right-filter').addEventListener('click', function () {
+                    document.querySelector('.text-right').style.color = '#12ffcd';
+                    document.querySelector('.text-left').style.color = '#4a81da';
+                    //document.querySelector('.bottom-header .left').style.backgroundColor = '#4a81da';
+                    //document.querySelector('.bottom-header .right').style.backgroundColor = '#12ffcd';
+                    localStorage.setItem('filter-value', 'right');
+                    //document.querySelector('#loadCard-2').style.display = 'block';
+                    document.querySelector('#loadCard').style.display = 'none';
+                });
+                */
 
-        var leftFilter = document.querySelector('#left-filter').addEventListener('click', function () {
-            document.querySelector('.text-left').style.color = '#12ffcd';
-            document.querySelector('.text-right').style.color = '#4a81da';
-            //document.querySelector('.bottom-header .left').style.backgroundColor = '#12ffcd';
-            //document.querySelector('.bottom-header .right').style.backgroundColor = '#4a81da';
-            localStorage.setItem('filter-value', 'left');
-            document.querySelector('#loadCard-2').style.display = 'none';
-            document.querySelector('#loadCard').style.display = 'block';
-        });
-
-        var rightFilter = document.querySelector('#right-filter').addEventListener('click', function () {
-            document.querySelector('.text-right').style.color = '#12ffcd';
-            document.querySelector('.text-left').style.color = '#4a81da';
-            //document.querySelector('.bottom-header .left').style.backgroundColor = '#4a81da';
-            //document.querySelector('.bottom-header .right').style.backgroundColor = '#12ffcd';
-            localStorage.setItem('filter-value', 'right');
-            document.querySelector('#loadCard-2').style.display = 'block';
-            document.querySelector('#loadCard').style.display = 'none';
-        });
 
         $('.bottom-header .select-cat').on('click', function () {
-
-            //$(this).toggleClass('select-cat-active');
-
+            $(this).toggleClass('select-cat-active');
         });
 
+        if (localStorage.getItem('cat-value2') == undefined) {
+            localStorage.setItem('cat-value2', 'core');
+        }
+
+        var linkCore = $('.select-cat a#option-left');
+        var linkNg = $('.select-cat a#option-right');
+        if (localStorage.getItem('cat-value') === 'core') {
+            //$('.select-cat').empty().append(linkCore).append(linkNg);
+
+        } else {
+            //$('.select-cat').empty().append(linkNg).append(linkCore);
+        }
+
+
         $('.select-cat a').on('click', function () {
-            console.log($(this).attr('data-value'));
+            //console.log($(this).attr('data-value'));
             var value = $(this).attr('data-value');
 
-            $('.select-cat').prepend($(this));
+            //$('.select-cat').prepend($(this));
             if (value == 'left') {
-                document.querySelector('.text-left').style.color = '#12ffcd';
-                document.querySelector('.text-right').style.color = '#4a81da';
+                //document.querySelector('.text-left').style.color = '#12ffcd';
+                //document.querySelector('.text-right').style.color = '#4a81da';
                 //document.querySelector('.bottom-header .left').style.backgroundColor = '#12ffcd';
                 //document.querySelector('.bottom-header .right').style.backgroundColor = '#4a81da';
-                localStorage.setItem('filter-value', 'left');
-                document.querySelector('#loadCard-2').style.display = 'none';
-                document.querySelector('#loadCard').style.display = 'block';
+                localStorage.setItem('cat-value2', 'core');
+                //document.querySelector('#loadCard-2').style.display = 'none';
+                //document.querySelector('#loadCard').style.display = 'block';
 
             } else {
-                document.querySelector('.text-right').style.color = '#12ffcd';
-                document.querySelector('.text-left').style.color = '#4a81da';
+                //document.querySelector('.text-right').style.color = '#12ffcd';
+                //document.querySelector('.text-left').style.color = '#4a81da';
                 //document.querySelector('.bottom-header .left').style.backgroundColor = '#4a81da';
                 //document.querySelector('.bottom-header .right').style.backgroundColor = '#12ffcd';
-                localStorage.setItem('filter-value', 'right');
-                document.querySelector('#loadCard-2').style.display = 'block';
-                document.querySelector('#loadCard').style.display = 'none';
+                localStorage.setItem('cat-value2', 'ng');
+                //document.querySelector('#loadCard-2').style.display = 'block';
+                //document.querySelector('#loadCard').style.display = 'none';
 
             }
         });
+
 
 
     }
@@ -127,7 +146,7 @@ window.onload = function () {
 
     $('.bundle-card .bottom a').on('click', function (e) {
         e.preventDefault();
-        console.log($(this).prev().find('.active-single,.teams-active').length);
+        //console.log($(this).prev().find('.active-single,.teams-active').length);
         if ($(this).parent().prev().find('.active-single,.team-list-active').length > 0) {
             $(this).parent().prev().prev().find('.error').removeClass('error-active');
             $(this).parent().parent().addClass('select-bundle');
@@ -253,7 +272,7 @@ window.onload = function () {
 
         $('.detail-top-block .bottom a').on('click', function (e) {
             e.preventDefault();
-            console.log($(this).parent().prev().find('.active,.active-users').length);
+            //console.log($(this).parent().prev().find('.active,.active-users').length);
             if ($(this).parent().prev().find('.active,.active-users').length > 0) {
                 $(this).parent().prev().prev().removeClass('error-active');
             } else {

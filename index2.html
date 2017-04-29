@@ -51,18 +51,20 @@
                     <div class="row">
                         <div class="col-md-12">
                             <div class="select-cat">
-                                <a data-value="left" id="option-left" data-bind="click: showNativeScriptCore"><span>NativeScript Core</span></a>
-                                <a data-value="right" id="option-right" data-bind="click: showNativeScriptAngular"><span>NativeScript with Angular</span></a>
+                                <!-- ko foreach: categories -->
+                                <a data-bind="click: function() { $parent.selectCategory($data.type) }"><span data-bind="text: name"></span></a>
+                                <!-- /ko -->
                             </div>
                         </div>
+
                         <div class="col-md-6 col-sm-6" id="left-filter">
                             <div class="row">
-                                <a class="text-left" data-bind="click: showNativeScriptCore"><span data-bind="css: { selected: selectedType() === 'core' }">NativeScript Core</span></a>
+                                <a class="text-left" data-bind="click: function() { selectCategory('core') }"><span data-bind="css: { selected: selectedType() === 'core' }">NativeScript Core</span></a>
                             </div>
                         </div>
                         <div class="col-md-6 col-sm-6" id="right-filter">
                             <div class="row">
-                                <a class="text-right" data-bind="click: showNativeScriptAngular"><span data-bind="css: { selected: selectedType() === 'ng' }">NativeScript with Angular</span></a>
+                                <a class="text-right" data-bind="click: function() { selectCategory('ng') }"><span data-bind="css: { selected: selectedType() === 'ng' }">NativeScript with Angular</span></a>
                             </div>
                         </div>
                     </div>
