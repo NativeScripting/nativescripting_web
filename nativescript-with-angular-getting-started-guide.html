@@ -140,7 +140,7 @@
                                 </div>
                             </div>
                             <div class="bottom">
-                                <a data-bind="click: course.getCourse "><span>Get Course</span></a>
+                                <a data-bind="click: course.getCourse"><span>Get Course</span></a>
                             </div>
 
                             <img class="detail-header-img hidden-xs" data-bind="attr: { src: course.courseIcon }" />
@@ -181,7 +181,7 @@
                                 <!--div class="lessons-down"><a href="#">video</a></div-->
                                 <!--div class="data-info"><span>Data Info</span></div-->
                                 <!--div class="time"><span>11:12</span></div-->
-                                <div class="view"><a href="#">Start</a></div>
+                                <div class="view"><a data-bind="click: startLesson">Start</a></div>
                             </div>
                             <!-- /ko -->
                             <!-- /ko -->
@@ -360,8 +360,12 @@
 
         <script src="node_modules/jquery/dist/jquery.min.js"></script>
         <script src="node_modules/knockout/build/output/knockout-latest.js"></script>
-        <script src="scripts/detail-vm.js"></script>
+        <script src="scripts/main-vm.js"></script>
         <script src="scripts/script.js"></script>
+
+        <script>
+            bootstrapDetailsPage();
+        </script>
 </body>
 
 </html>

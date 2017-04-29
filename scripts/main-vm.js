@@ -1,9 +1,14 @@
-function Author(a) {
+var tBaseUrl = 'http://nativescripting.teachable.com';
+
+function AuthorVm(a) {
     var self = this;
     self.name = a.name;
+    self.bio = a.bio;
+    self.title = a.title;
+    self.picture = 'img/authors/' + a.picture;
 }
 
-function Product(p, tag) {
+function ProductVm(p, tag) {
     var self = this;
     self.id = p.id;
     self.type = p.type;
@@ -30,7 +35,34 @@ function Product(p, tag) {
     });
 }
 
-function Course(c) {
+function LessonVm(chap, less) {
+    var self = this;
+    self.chapterId = chap.id;
+    self.id = less.id;
+    self.name = less.name;
+    self.lessonNumber = less.lessonNumber;
+    self.chapter = chap;
+
+    self.startLesson = function () {
+        window.location = tBaseUrl + '/courses/' + self.chapter.course.url + '/lectures/2543888';
+    };
+}
+
+function ChapterVm(course, chap) {
+    var self = this;
+    self.id = chap.id;
+    self.name = chap.name;
+    self.lessons = ko.observableArray([]);
+    self.course = course;
+
+    var tLessons = [];
+    for (var i = 0; i < chap.lessons.length; i++) {
+        tLessons.push(new LessonVm(self, chap.lessons[i]));
+    }
+    self.lessons(tLessons);
+}
+
+function CourseVm(c) {
     var self = this;
     self.id = c.id;
     self.title = c.title;
@@ -44,23 +76,37 @@ function Course(c) {
     self.authors = ko.observableArray([]);
     self.productSingle = ko.observable(null);
     self.productsTeam = ko.observableArray([]);
+    self.chapters = ko.observableArray([]);
+    self.numLessons = ko.observable(0);
 
     var tAuthors = [];
     var tProductsTeam = [];
+    var tChapters = [];
 
     for (var i = 0; i < c.authors.length; i++) {
-        tAuthors.push(new Author(c.authors[i]));
+        tAuthors.push(new AuthorVm(c.authors[i]));
     }
     for (var i = 0; i < c.products.length; i++) {
-        var newProd = new Product(c.products[i], c.tag);
+        var newProd = new ProductVm(c.products[i], c.tag);
         if (newProd.licensesMin === 1) {
             self.productSingle(newProd);
         } else {
             tProductsTeam.push(newProd);
         }
     }
+
+    var lessonCount = 0;
+    for (var i = 0; i < c.chapters.length; i++) {
+        for (var j = 0; j < c.chapters[i].lessons.length; j++) {
+            lessonCount++;
+            c.chapters[i].lessons[j].lessonNumber = lessonCount;
+        }
+        tChapters.push(new ChapterVm(self, c.chapters[i]));
+    }
     self.authors(tAuthors);
     self.productsTeam(tProductsTeam);
+    self.chapters(tChapters);
+    self.numLessons(lessonCount);
 
     self.courseIcon = ko.pureComputed(function () {
         if (self.type === 'ng') {
@@ -89,34 +135,79 @@ function Course(c) {
 
     self.goToCoursePage = function () {
         if (self.selectedProduct()) {
-            if (window.location.href.indexOf('127') > 0) {
-                window.location = self.url + '.html';
-            } else {
-                window.location = self.url;
-            }
+            window.location = self.url + '.html';
         } else {
             return false;
         }
     };
+
+    self.getCourseUrl = ko.pureComputed(function () {
+        if (self.selectedProduct()) {
+            var url = 'https://sso.teachable.com/secure/89912/checkout/confirmation?product_id=' +
+                self.selectedProduct().id +
+                '&course_id=' + self.id;
+            return url;
+        } else {
+            return '#';
+        }
+    });
+
+    self.getCourse = function () {
+        console.log('gc');
+        var url = self.getCourseUrl();
+        if (url !== '#') {
+            window.location = url;
+        }
+        else {
+            return false;
+        }
+    }
 }
 
 
-function AppViewModel(coursesRaw) {
+function CoursesPageVm(coursesRaw) {
     this.courses = ko.observableArray([]);
-
     var tempCourses = [];
     for (var i = 0; i < coursesRaw.length; i++) {
-        tempCourses.push(new Course(coursesRaw[i]));
+        tempCourses.push(new CourseVm(coursesRaw[i]));
     }
-
     this.courses(tempCourses);
-
 }
 
-$.getJSON("courses.json", function (coursesData) {
-    ko.applyBindings(new AppViewModel(coursesData.courses));
-});
+function DetailPageVm(courseRaw) {
+    this.course = new CourseVm(courseRaw);
+}
 
+function bootstrapCoursesPage() {
+    $.getJSON("courses.json", function (coursesData) {
+        ko.applyBindings(new CoursesPageVm(coursesData.courses));
+    });
+}
 
+function bootstrapDetailsPage() {
+    $.getJSON("courses.json", function (coursesData) {
+        var url = window.location.href;
+        var filename = getBaseName(url);
 
+        var course = coursesData.courses.find(function (course) {
+            return course.url === filename;
+        });
+        ko.applyBindings(new DetailPageVm(course));
+    });
+}
+
+function getBaseName(url) {
+    if (!url || (url && url.length === 0)) {
+        return "";
+    }
+    var index = url.lastIndexOf("/") + 1;
+    var filenameWithExtension = url.substr(index);
+    var basename = filenameWithExtension.split(/[.?&#]+/)[0];
+
+    if (basename.length === 0) {
+        url = url.substr(0, index - 1);
+        basename = getBaseName(url);
+    }
+    return basename ? basename : "";
+}
 
