@@ -1359,7 +1359,7 @@ a:hover, a:focus, a:active {
       display: inline-block; }
   .bottom-header .text-left {
     text-align: center;
-    color: #12FFCD;
+    color: #4A81DA;
     font-size: 24px;
     font-family: "MonoBold";
     display: block;
@@ -1375,12 +1375,14 @@ a:hover, a:focus, a:active {
     float: left;
     width: 50%;
     height: 4px;
-    background-color: #00E9B8; }
+    background-color: #4A81DA; 
+    }
   .bottom-header .right {
     float: left;
     width: 50%;
     height: 4px;
-    background-color: #4A81DA; }
+    background-color: #4A81DA; 
+    }
   @media all and (max-width: 768px) {
     .bottom-header select {
       display: block; }
@@ -3616,4 +3618,18 @@ a:hover, a:focus, a:active {
 .detail-author-pic {
   height: 50px;
   border-radius: 25px;
+}
+
+.bottom-header .selected {
+  color: #12FFCD !important;
+}
+.bottom-header {
+  color: #4A81DA !important;
+}
+
+.bottom-header .cat-underline {
+  background-color: #4A81DA !important; 
+}
+.bottom-header .cat-underline.selected {
+  background-color: #12FFCD !important;
 }

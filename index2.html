@@ -51,24 +51,24 @@
                     <div class="row">
                         <div class="col-md-12">
                             <div class="select-cat">
-                                <a data-value="left" id="option-left">NativeScript Core</a>
-                                <a data-value="right" id="option-right">NativeScript with Angular</a>
+                                <a data-value="left" id="option-left" data-bind="click: showNativeScriptCore"><span>NativeScript Core</span></a>
+                                <a data-value="right" id="option-right" data-bind="click: showNativeScriptAngular"><span>NativeScript with Angular</span></a>
                             </div>
                         </div>
                         <div class="col-md-6 col-sm-6" id="left-filter">
                             <div class="row">
-                                <a href="#" class="text-left">NativeScript Core</a>
+                                <a class="text-left" data-bind="click: showNativeScriptCore"><span data-bind="css: { selected: selectedType() === 'core' }">NativeScript Core</span></a>
                             </div>
                         </div>
                         <div class="col-md-6 col-sm-6" id="right-filter">
                             <div class="row">
-                                <a href="#" class="text-right">NativeScript with Angular</a>
+                                <a class="text-right" data-bind="click: showNativeScriptAngular"><span data-bind="css: { selected: selectedType() === 'ng' }">NativeScript with Angular</span></a>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="left"></div>
-                <div class="right"></div>
+                <div class="left cat-underline" data-bind="css: { selected: selectedType() === 'core' }"></div>
+                <div class="right cat-underline" data-bind="css: { selected: selectedType() === 'ng' }"></div>
             </div>
 
             <div class="top-text-block">
@@ -162,175 +162,6 @@
 
                 </div>
             </div>
-
-
-
-            <div class="card-block">
-                <div class="container">
-                    <div class="col-md-12" id="loadCard">
-                        <div class="col-md-4 col-sm-6 col-xs-12">
-                            <div class="row">
-                                <!-- ko foreach: courses -->
-
-                                <!-- /ko -->
-
-                                <div class="learn-card main-card">
-                                    <div class="top-block">
-                                        <img class="top-left-image" src="img/level_icon1.svg">
-                                        <p class="new">new</p>
-                                        <div class="card-header">
-                                            <div style="position: relative">
-                                                <img src="img/logo.svg">
-                                            </div>
-                                            <h3>Abdul Kalim Manakhayir</h3>
-                                            <p>The best Android course on the entire web that is really amazing</p>
-                                        </div>
-                                        <p class="error">Please select the type of course first</p>
-                                    </div>
-                                    <div class="medium-block">
-                                        <div class="border-left"></div>
-                                        <div class="border-top"></div>
-                                        <div class="border-right"></div>
-                                        <div class="left learn-user">
-                                            <div class="border-medium"></div>
-                                            <p class="user">Single User</p>
-                                            <p class="price">Launch price<span>$15<span>$20</span></span>
-                                            </p>
-                                        </div>
-                                        <div class="right">
-                                            <img src="img/arrow.png">
-                                            <p class="team">Team</p>
-                                            <ul>
-                                                <li>2-5 users<span>$15<span>$20</span></span>
-                                                </li>
-                                                <li>6-10 users<span>$15<span>$20</span></span>
-                                                </li>
-                                                <li>11-20 users<span>$15<span>$20</span></span>
-                                                </li>
-                                                <li>21-40 users<span>$15<span>$20</span></span>
-                                                </li>
-                                                <li>40 users +<span>email us</span></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="bottom">
-                                        <a href="#"><span>learn more</span></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 col-sm-6 col-xs-12">
-                            <div class="row">
-                                <div class="learn-card pre-card">
-                                    <div class="top-block">
-                                        <img class="top-left-image" src="img/level_icon2.svg">
-                                        <p class="new">preorder</p>
-                                        <div class="card-header">
-                                            <div style="position: relative">
-                                                <img src="img/logo.svg">
-                                            </div>
-                                            <h3>Abdul Kalim Manakhayir</h3>
-                                            <p class="pre-text">iOS Fundamentals</p>
-                                        </div>
-                                        <p class="error">Please select the type of course first</p>
-                                    </div>
-                                    <div class="medium-block">
-                                        <div class="border-left"></div>
-                                        <div class="border-top"></div>
-                                        <div class="border-right"></div>
-                                        <div class="left learn-user">
-                                            <div class="border-medium"></div>
-                                            <p class="user">Single User</p>
-                                            <p class="price">Launch price<span>$15<span>$20</span></span>
-                                            </p>
-                                        </div>
-                                        <div class="right">
-                                            <img src="img/arrow.png">
-                                            <p class="team">Team</p>
-                                            <ul>
-                                                <li>2-5 users<span>$15<span>$20</span></span>
-                                                </li>
-                                                <li>6-10 users<span>$15<span>$20</span></span>
-                                                </li>
-                                                <li>11-20 users<span>$15<span>$20</span></span>
-                                                </li>
-                                                <li>21-40 users<span>$15<span>$20</span></span>
-                                                </li>
-                                                <li>40 users +<span>email us</span></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="pre-bottom">
-                                        <a href="#"><span>learn more</span></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 col-sm-6 col-xs-12">
-                            <div class="row">
-                                <div class="learn-card sub-learn-card">
-                                    <div class="top-block">
-                                        <img src="img/logo_bg.svg">
-                                        <div class="card-header">
-                                            <p>New Course will appear soon </p>
-                                        </div>
-                                    </div>
-                                    <div class="sub-medium-block medium-block"></div>
-                                    <div class="sub-bottom">
-                                        <a href="#"><span>SUBSCRIBE </span></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-12" id="loadCard-2">
-                        <div class="col-md-4 col-sm-6 col-xs-12">
-                            <div class="row">
-                                <div class="learn-card main-card">
-                                    <div class="top-block">
-                                        <img class="top-left-image" src="img/level_icon1.svg">
-                                        <p class="new">new</p>
-                                        <div class="card-header">
-                                            <div style="position: relative">
-                                                <img src="img/logo.svg">
-                                            </div>
-                                            <h3>Abdul Kalim Manakhayir</h3>
-                                            <p>iOS Fundamentals</p>
-                                        </div>
-                                    </div>
-                                    <div class="medium-block">
-                                        <div class="left learn-user">
-                                            <div class="border-medium"></div>
-                                            <p class="user">Single User</p>
-                                            <p class="price">Launch price<span>$15<span>$20</span></span>
-                                            </p>
-                                        </div>
-                                        <div class="right">
-                                            <img src="img/arrow.png">
-                                            <p class="team">Team</p>
-                                            <ul>
-                                                <li>2-5 users<span>$15<span>$20</span></span>
-                                                </li>
-                                                <li>6-10 users<span>$15<span>$20</span></span>
-                                                </li>
-                                                <li>11-20 users<span>$15<span>$20</span></span>
-                                                </li>
-                                                <li>21-40 users<span>$15<span>$20</span></span>
-                                                </li>
-                                                <li>40 users +<span>email us</span></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="bottom">
-                                        <a href="#"><span>learn more</span></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
 
 
             <div class="special">

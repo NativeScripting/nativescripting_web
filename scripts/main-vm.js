@@ -166,16 +166,52 @@ function CourseVm(c) {
 
 
 function CoursesPageVm(coursesRaw) {
-    this.courses = ko.observableArray([]);
-    var tempCourses = [];
+    var self = this;
+    self.selectedType = ko.observable();
+    self.courses = ko.observableArray([]);
+
+    self.allCourses = [];
+
     for (var i = 0; i < coursesRaw.length; i++) {
-        tempCourses.push(new CourseVm(coursesRaw[i]));
+        self.allCourses.push(new CourseVm(coursesRaw[i]));
     }
-    this.courses(tempCourses);
+
+
+
+    self.showNativeScriptCore = function () {
+        if (self.selectedType() === 'ng') {
+            self.selectedType('core');
+            localStorage.setItem('cat-value', 'core');
+            self.filterCoursesByType(self.selectedType());
+        }
+    };
+    self.showNativeScriptAngular = function () {
+        if (self.selectedType() === 'core') {
+            self.selectedType('ng');
+            localStorage.setItem('cat-value', 'ng');
+            self.filterCoursesByType(self.selectedType());
+        }
+    };
+
+    self.filterCoursesByType = function (type) {
+        var filteredCourses = self.allCourses.filter(function (course) {
+            return course.type === type;
+        });
+
+        self.courses(filteredCourses);
+    };
+
+    if (localStorage.getItem('cat-value') == undefined) {
+        localStorage.setItem('cat-value', 'core');
+    }
+    self.selectedType(localStorage.getItem('cat-value'));
+
+    self.filterCoursesByType(self.selectedType());
 }
 
 function DetailPageVm(courseRaw) {
-    this.course = new CourseVm(courseRaw);
+    var self = this;
+    self.course = new CourseVm(courseRaw);
 }
 
 function bootstrapCoursesPage() {
