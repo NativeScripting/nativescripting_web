@@ -3668,3 +3668,11 @@ a:hover, a:focus, a:active {
 .bottom-header .cat-underline.selected {
   background-color: #12FFCD !important;
 }
+
+.course-tag {
+  padding: 5px;
+  color: #09224a !important;
+  font-weight: bold;
+  font-size: smaller;
+  background-color: #F0AE26;
+}

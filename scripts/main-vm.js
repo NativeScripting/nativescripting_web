@@ -287,29 +287,6 @@ function CoursesPageVm(coursesData) {
         }
     }
 
-    /*
-        self.showNativeScriptCore = function () {
-            if (self.selectedCategory().type === 'ng') {
-                var newCat = self.categories().find(function (cat) {
-                    return cat.type === 'core';
-                });
-                self.selectedCategory(newCat);
-                localStorage.setItem('cat-value', 'core');
-                self.filterCoursesByType();
-            }
-        };
-        self.showNativeScriptAngular = function () {
-            if (self.selectedCategory().type === 'core') {
-                var newCat = self.categories().find(function (cat) {
-                    return cat.type === 'ng';
-                });
-                self.selectedCategory(newCat);
-                localStorage.setItem('cat-value', 'ng');
-                self.filterCoursesByType();
-            }
-        };
-        */
-
     self.filterCoursesByType = function () {
         var selectedCat = self.selectedCategory();
         var filteredCourses = self.allCourses.filter(function (course) {
@@ -337,9 +314,21 @@ function CoursesPageVm(coursesData) {
     self.filterCoursesByType();
 }
 
-function DetailPageVm(courseRaw) {
+function DetailPageVm(coursesData, filename) {
     var self = this;
+
+    var courseRaw = coursesData.courses.find(function (course) {
+        return course.url === filename;
+    });
+
     self.course = new CourseVm(courseRaw);
+    self.bundles = ko.observableArray([]);
+
+    var tBundles = [];
+    for (var i = 0; i < coursesData.bundles.length; i++) {
+        self.bundles.push(new BundleVm(coursesData.bundles[i], coursesData.courses));
+    }
+
 }
 
 function bootstrapCoursesPage() {
@@ -352,11 +341,7 @@ function bootstrapDetailsPage() {
     $.getJSON("courses.json", function (coursesData) {
         var url = window.location.href;
         var filename = getBaseName(url);
-
-        var course = coursesData.courses.find(function (course) {
-            return course.url === filename;
-        });
-        ko.applyBindings(new DetailPageVm(course));
+        ko.applyBindings(new DetailPageVm(coursesData, filename));
     });
 }
 
