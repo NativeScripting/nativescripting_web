@@ -2,7 +2,7 @@ var tBaseUrl = 'http://nativescripting.teachable.com';
 
 function CategoryVm(c) {
     var self = this;
-    self.type = c.type;
+    self.catId = c.catId;
     self.name = c.name;
 }
 
@@ -143,7 +143,7 @@ function CourseVm(c) {
     self.title = c.title;
     self.subtitle = c.subtitle;
     self.description = c.description;
-    self.type = c.type;
+    self.categories = c.categories;
     self.tag = c.tag;
     self.level = c.level;
     self.launchdate = c.launchdate;
@@ -184,12 +184,10 @@ function CourseVm(c) {
     self.numLessons(lessonCount);
 
     self.courseIcon = ko.pureComputed(function () {
-        if (self.type === 'ng') {
+        if (self.categories.indexOf('ng') > -1) {
             return 'img/nativescript_angular.svg';
-        } else if (self.type === 'core') {
-            return 'img/nativescript_white.svg';
         } else {
-            return 'img/logo.svg';
+            return 'img/nativescript_white.svg';
         }
     });
 
@@ -252,7 +250,7 @@ function CoursesPageVm(coursesData) {
     self.selectedType = ko.pureComputed(function () {
         var theCat = self.selectedCategory();
         if (theCat) {
-            return theCat.type;
+            return theCat.catId;
         } else {
             return '';
         }
@@ -269,15 +267,14 @@ function CoursesPageVm(coursesData) {
         self.bundles.push(new BundleVm(coursesData.bundles[i], coursesData.courses));
     }
 
-    self.selectCategory = function (type) {
-
-        if (self.selectedCategory().type !== type) {
+    self.selectCategory = function (catId) {
+        if (self.selectedCategory().catId !== catId) {
             var newCat = self.categories().find(function (cat) {
-                return cat.type === type;
+                return cat.catId === catId;
             });
             self.selectedCategory(newCat);
-            localStorage.setItem('cat-value', type);
-            self.filterCoursesByType();
+            localStorage.setItem('cat-value', catId);
+            self.filterCoursesByCategory();
 
             var tCats = self.categories();
             var tCat1 = tCats[1];
@@ -287,18 +284,18 @@ function CoursesPageVm(coursesData) {
         }
     }
 
-    self.filterCoursesByType = function () {
+    self.filterCoursesByCategory = function () {
         var selectedCat = self.selectedCategory();
         var filteredCourses = self.allCourses.filter(function (course) {
-            return course.type === selectedCat.type;
+            return course.categories.indexOf(selectedCat.catId) > -1;
         });
 
         self.courses(filteredCourses);
     };
 
     var tCats = [
-        new CategoryVm({ type: 'core', name: 'NativeScript Core' }),
-        new CategoryVm({ type: 'ng', name: 'NativeScript with Angular' }),
+        new CategoryVm({ catId: 'core', name: 'NativeScript Core' }),
+        new CategoryVm({ catId: 'ng', name: 'NativeScript with Angular' }),
     ];
 
     if (localStorage.getItem('cat-value') === undefined) {
@@ -311,7 +308,7 @@ function CoursesPageVm(coursesData) {
 
     self.categories(tCats);
     self.selectedCategory(tCats[0]);
-    self.filterCoursesByType();
+    self.filterCoursesByCategory();
 }
 
 function DetailPageVm(coursesData, filename) {
