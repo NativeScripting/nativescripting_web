@@ -125,10 +125,10 @@
                                             <div class="border-medium"></div>
                                             <p class="user">Single User</p>
                                             <p class="price">
-                                                <!-- ko if: pricereg === 0 -->
+                                                <!-- ko if: pricereg === pricesale -->
                                                 <users data-bind="text: usersDisp"></users><span><price data-bind="text: priceSaleDisp"></price></span>
                                                 <!-- /ko -->
-                                                <!-- ko if: pricereg > 0 -->
+                                                <!-- ko if: pricereg !== pricesale -->
                                                 <users data-bind="text: usersDisp"></users><span><price data-bind="text: priceSaleDisp"></price><span data-bind="text: priceRegDisp"></span></span>
                                                 <!-- /ko -->
                                             </p>
@@ -166,6 +166,7 @@
             </div>
 
 
+
             <div class="special">
                 <div class="container">
                     <div class="row">
@@ -175,174 +176,91 @@
 
                         <div class="for-flex">
 
-                            <div class="bundle-card">
+                            <!-- ko foreach: bundles -->
+                            <div class="bundle-card" data-bind="css: { 'supreme-bundle': bundleLevel === 2, 'ultimate-bundle': bundleLevel === 3 }">
+                                <!-- ko if: promoremaining > 0 -->
+                                <div class="top-price">
+                                    <promoremaining data-bind="text: promoremaining"></promoremaining>/
+                                    <promototal data-bind="text: promototal"></promototal> left at this price</div>
+                                <!-- /ko -->
                                 <div class="border-top"></div>
                                 <div class="border-left"></div>
                                 <div class="border-right"></div>
                                 <div class="top-block">
-                                    <div class="included">2 courses included <img src="img/arrow.png"></div>
-                                    <h2>Kickstart Bundle</h2>
-                                    <p>Hit the ground running with these two courses</p>
+                                    <div class="included">
+                                        <numcourses data-bind="text: courseIds.length"></numcourses> courses included <img src="img/arrow.png"></div>
+                                    <h2 data-bind="text: title"></h2>
+                                    <p data-bind="text: subtitle"></p>
                                     <div class="lessons-list">
+                                        <!-- ko foreach: courseSummaries -->
                                         <div class="card-lessons">
-                                            <h2>Bob Smith</h2>
-                                            <p>iOS Fundamentals</p>
-                                            <img src="img/level_icon1.svg">
+                                            <h2 data-bind="text: authorNames"></h2>
+                                            <p data-bind="text: title"></p>
+                                            <img data-bind="attr: { src: getLevelIcon({
+                                                                l1: 'img/level_icon1.svg',
+                                                                l2: 'img/level_icon2.svg',
+                                                                l3: 'img/level_icon3.svg'
+                                                            }) }" />
+
                                             <div class="line"></div>
                                         </div>
-                                        <div class="card-lessons">
-                                            <h2>Bob Smith, Sammitia Mahonogey</h2>
-                                            <p>The best Android course on the entire web that is really amazing</p>
-                                            <img src="img/level_icon2.svg">
-                                        </div>
+                                        <!-- /ko -->
                                     </div>
-                                    <span class="error">Please select the type of course first</span>
+                                    <span class="error">Please select the number of users</span>
                                 </div>
                                 <div class="medium-block">
                                     <div class="medium-border-left"></div>
                                     <div class="medium-border-right"></div>
                                     <div class="medium-border-top"></div>
                                     <div class="glow-border"></div>
-                                    <div class="single-user">
+
+
+                                    <div class="single-user" data-bind="click: function() { selectProduct('single'); }">
+                                        <!-- ko with: productSingle -->
                                         <div class="border-medium"></div>
                                         <p class="user">single user</p>
-                                        <p class="team">Bundle special<span>$25<span>$100</span></span>
+                                        <!-- ko if: pricereg === pricesale -->
+                                        <p class="team">Bundle special<span><price data-bind="text: priceSaleDisp"></price></span>
                                         </p>
+                                        <!-- /ko -->
+                                        <!-- ko if: pricereg !== pricesale -->
+                                        <p class="team">Bundle special<span><price data-bind="text: priceSaleDisp"></price><span data-bind="text: priceRegDisp"></span></span>
+                                        </p>
+                                        <!-- /ko -->
+                                        <!-- /ko -->
                                     </div>
+
+
+
                                     <div class="teams">
                                         <p class="team">team <img src="img/arrow.png"></p>
                                         <ul>
-                                            <li>6-10 users<span>$40<span>$100</span></span>
+                                            <!-- ko foreach: productsTeam -->
+                                            <li data-bind="click: function() { $parent.selectProduct($data); }">
+                                                <!-- ko if: pricereg === 0 -->
+                                                <users data-bind="text: usersDisp"></users><span><price data-bind="text: priceSaleDisp"></price></span>
+                                                <!-- /ko -->
+                                                <!-- ko if: pricereg > 0 -->
+                                                <users data-bind="text: usersDisp"></users><span><price data-bind="text: priceSaleDisp"></price><span data-bind="text: priceRegDisp"></span></span>
+                                                <!-- /ko -->
                                             </li>
-                                            <li>6-10 users<span>$15<span>$20</span></span>
-                                            </li>
-                                            <li>11-20 users<span>$15<span>$20</span></span>
-                                            </li>
-                                            <li>21-40 users<span>$15<span>$20</span></span>
-                                            </li>
-                                            <li>40 users +<span>email us</span></li>
+                                            <!-- /ko -->
+
+                                            <li>11+ users<span><a href="mailto:info@nuvious.com?Subject=NativeScripting%20team" target="_top">email us</a></span></li>
                                         </ul>
                                     </div>
                                 </div>
                                 <div class="bottom">
-                                    <a href="#"><span>grab bundle</span></a>
+                                    <a href="#"><span>Buy Bundle</span></a>
                                 </div>
                             </div>
-
-                            <div class="bundle-card supreme-bundle">
-                                <div class="border-top"></div>
-                                <div class="border-left"></div>
-                                <div class="border-right"></div>
-                                <div class="top-block">
-                                    <div class="included">2 courses included <img src="img/arrow.png"></div>
-                                    <h2>Supreme Bundle</h2>
-                                    <p>Get to the and potatoes</p>
-
-                                    <div class="lessons-list">
-                                        <div class="card-lessons">
-                                            <h2>Bob Smith</h2>
-                                            <p>iOS Fundamentals</p>
-                                            <img src="img/level_icon1.svg">
-                                            <div class="line"></div>
-                                        </div>
-                                        <div class="card-lessons">
-                                            <h2>Bob Smith, Sammitia Mahonogey</h2>
-                                            <p>The best Android course on the entire web that is really amazing</p>
-                                            <img src="img/level_icon2.svg">
-                                        </div>
-                                    </div>
-                                    <span class="error">Please select the type of course first</span>
-                                </div>
-                                <div class="medium-block">
-                                    <div class="medium-border-left"></div>
-                                    <div class="medium-border-right"></div>
-                                    <div class="medium-border-top"></div>
-                                    <div class="glow-border"></div>
-                                    <div class="single-user">
-                                        <div class="border-medium"></div>
-                                        <p class="user">single user</p>
-                                        <p class="team">Bundle special<span>$25<span>$100</span></span>
-                                        </p>
-                                    </div>
-                                    <div class="teams">
-                                        <p class="team">team <img src="img/arrow.png"></p>
-                                        <ul>
-                                            <li>6-10 users<span>$40<span>$100</span></span>
-                                            </li>
-                                            <li>6-10 users<span>$15<span>$20</span></span>
-                                            </li>
-                                            <li>11-20 users<span>$15<span>$20</span></span>
-                                            </li>
-                                            <li>21-40 users<span>$15<span>$20</span></span>
-                                            </li>
-                                            <li>40 users +<span>email us</span></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="bottom">
-                                    <a href="#"><span>grab bundle</span></a>
-                                </div>
-                            </div>
-
-                            <div class="bundle-card ultimate-bundle">
-                                <div class="top-price">61/100 left at this price</div>
-                                <div class="border-top"></div>
-                                <div class="border-left"></div>
-                                <div class="border-right"></div>
-                                <div class="top-block">
-                                    <div class="included">2 courses included <img src="img/arrow.png"></div>
-                                    <h2>Ultimate Bundle</h2>
-                                    <p>Get to the and potatoes</p>
-
-                                    <div class="lessons-list">
-                                        <div class="card-lessons">
-                                            <h2>Bob Smith</h2>
-                                            <p>iOS Fundamentals</p>
-                                            <img src="img/level_icon1.svg">
-                                            <div class="line"></div>
-                                        </div>
-                                        <div class="card-lessons">
-                                            <h2>Bob Smith, Sammitia Mahonogey</h2>
-                                            <p>The best Android course on the entire web that is really amazing</p>
-                                            <img src="img/level_icon2.svg">
-                                        </div>
-                                    </div>
-                                    <span class="error">Please select the type of course first</span>
-                                </div>
-                                <div class="medium-block">
-                                    <div class="medium-border-left"></div>
-                                    <div class="medium-border-right"></div>
-                                    <div class="medium-border-top"></div>
-                                    <div class="glow-border"></div>
-                                    <div class="single-user">
-                                        <div class="border-medium"></div>
-                                        <p class="user">single user</p>
-                                        <p class="team">Bundle special<span>$25<span>$100</span></span>
-                                        </p>
-                                    </div>
-                                    <div class="teams">
-                                        <p class="team">team <img src="img/arrow.png"></p>
-                                        <ul>
-                                            <li>6-10 users<span>$40<span>$100</span></span>
-                                            </li>
-                                            <li>6-10 users<span>$15<span>$20</span></span>
-                                            </li>
-                                            <li>11-20 users<span>$15<span>$20</span></span>
-                                            </li>
-                                            <li>21-40 users<span>$15<span>$20</span></span>
-                                            </li>
-                                            <li>40 users +<span>email us</span></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="bottom">
-                                    <a href="#"><span>preorder bundle</span></a>
-                                </div>
-                            </div>
+                            <!-- /ko -->
                         </div>
                     </div>
                 </div>
             </div>
+
+
             <div class="footer">
                 <div class="container">
                     <div class="footer-left">

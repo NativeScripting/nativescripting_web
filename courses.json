@@ -581,5 +581,95 @@
                 }
             ]
         }
+    ],
+    "bundles": [
+        {
+            "id": 1,
+            "title": "Kickstart Bundle 1",
+            "subtitle": "Get started quickly with these basic courses",
+            "url": "",
+            "promototal": 100,
+            "promoremaining": 100,
+            "bundleLevel": 1,
+            "products": [
+                {
+                    "id": 1,
+                    "type": "Free",
+                    "licensesMin": 1,
+                    "licensesMax": 1,
+                    "pricereg": 500,
+                    "pricesale": 250
+                },
+                {
+                    "id": 2,
+                    "type": "Free",
+                    "licensesMin": 2,
+                    "licensesMax": 10,
+                    "pricereg": 900,
+                    "pricesale": 500
+                }
+            ],
+            "courseIds": [
+                1,
+                2,
+                3
+            ]
+        },
+        {
+            "id": 2,
+            "title": "Supreme Bundle 1",
+            "subtitle": "Get started quickly with these basic courses",
+            "url": "",
+            "promototal": 100,
+            "promoremaining": 100,
+            "bundleLevel": 2,
+            "products": [
+                {
+                    "id": 1,
+                    "type": "Free",
+                    "licensesMin": 1,
+                    "licensesMax": 1,
+                    "pricereg": 0,
+                    "pricesale": 0
+                },
+                {
+                    "id": 2,
+                    "type": "Free",
+                    "licensesMin": 2,
+                    "licensesMax": 10,
+                    "pricereg": 0,
+                    "pricesale": 0
+                }
+            ],
+            "courseIds": []
+        },
+        {
+            "id": 3,
+            "title": "Ultimate Bundle 1",
+            "subtitle": "Get started quickly with these basic courses",
+            "url": "",
+            "promototal": 100,
+            "promoremaining": 100,
+            "bundleLevel": 3,
+            "products": [
+                {
+                    "id": 1,
+                    "type": "Free",
+                    "licensesMin": 1,
+                    "licensesMax": 1,
+                    "pricereg": 0,
+                    "pricesale": 0
+                },
+                {
+                    "id": 2,
+                    "type": "Free",
+                    "licensesMin": 2,
+                    "licensesMax": 10,
+                    "pricereg": 0,
+                    "pricesale": 0
+                }
+            ],
+            "courseIds": []
+        }
     ]
 }

@@ -6,6 +6,55 @@ function CategoryVm(c) {
     self.name = c.name;
 }
 
+function BundleVm(b, allCourses) {
+    var self = this;
+    self.id = b.id;
+    self.title = b.title;
+    self.subtitle = b.subtitle;
+    self.url = b.url;
+    self.promototal = b.promototal;
+    self.promoremaining = b.promoremaining;
+    self.bundleLevel = b.bundleLevel;
+    self.courseIds = b.courseIds;
+    self.productSingle = ko.observable(null);
+    self.productsTeam = ko.observableArray([]);
+
+    self.courseSummaries = ko.observableArray([]);
+
+    var tProductsTeam = [];
+
+
+    for (var i = 0; i < b.products.length; i++) {
+        var newProd = new ProductVm(b.products[i], b.tag);
+        if (newProd.licensesMin === 1) {
+            self.productSingle(newProd);
+        } else {
+            tProductsTeam.push(newProd);
+        }
+    }
+    self.productsTeam(tProductsTeam);
+
+    var tCourseSummaries = [];
+    var matchingCourses = allCourses.filter(function (course) {
+        return self.courseIds.indexOf(course.id) > -1;
+    });
+    for (var i = 0; i < matchingCourses.length; i++) {
+        tCourseSummaries.push(new CourseSummaryVm(matchingCourses[i]));
+    }
+
+    self.courseSummaries(tCourseSummaries);
+
+    //Changed values
+    self.selectedProduct = ko.observable(null);
+
+    self.selectProduct = function (prod) {
+        if (typeof prod === 'string' && prod === 'single') {
+            self.selectedProduct(self.productSingle());
+        } else {
+            self.selectedProduct(prod);
+        }
+    };
+}
 
 function AuthorVm(a) {
     var self = this;
@@ -67,6 +116,25 @@ function ChapterVm(course, chap) {
         tLessons.push(new LessonVm(self, chap.lessons[i]));
     }
     self.lessons(tLessons);
+}
+
+function CourseSummaryVm(c) {
+    var self = this;
+    self.id = c.id;
+    self.title = c.title;
+    self.level = c.level;
+    self.authors = c.authors;
+
+    self.authorNames = ko.pureComputed(function () {
+        var allNames = self.authors.map(function (author) {
+            return author.name;
+        });
+        return allNames.join(', ');
+    });
+
+    self.getLevelIcon = function (levelObj) {
+        return levelObj['l' + self.level];
+    };
 }
 
 function CourseVm(c) {
@@ -172,10 +240,11 @@ function CourseVm(c) {
 }
 
 
-function CoursesPageVm(coursesRaw) {
+function CoursesPageVm(coursesData) {
     var self = this;
 
     self.courses = ko.observableArray([]);
+    self.bundles = ko.observableArray([]);
 
     self.categories = ko.observableArray([]);
     self.selectedCategory = ko.observable();
@@ -191,8 +260,13 @@ function CoursesPageVm(coursesRaw) {
 
     self.allCourses = [];
 
-    for (var i = 0; i < coursesRaw.length; i++) {
-        self.allCourses.push(new CourseVm(coursesRaw[i]));
+    for (var i = 0; i < coursesData.courses.length; i++) {
+        self.allCourses.push(new CourseVm(coursesData.courses[i]));
+    }
+
+    var tBundles = [];
+    for (var i = 0; i < coursesData.bundles.length; i++) {
+        self.bundles.push(new BundleVm(coursesData.bundles[i], coursesData.courses));
     }
 
     self.selectCategory = function (type) {
@@ -213,26 +287,28 @@ function CoursesPageVm(coursesRaw) {
         }
     }
 
-    self.showNativeScriptCore = function () {
-        if (self.selectedCategory().type === 'ng') {
-            var newCat = self.categories().find(function (cat) {
-                return cat.type === 'core';
-            });
-            self.selectedCategory(newCat);
-            localStorage.setItem('cat-value', 'core');
-            self.filterCoursesByType();
-        }
-    };
-    self.showNativeScriptAngular = function () {
-        if (self.selectedCategory().type === 'core') {
-            var newCat = self.categories().find(function (cat) {
-                return cat.type === 'ng';
-            });
-            self.selectedCategory(newCat);
-            localStorage.setItem('cat-value', 'ng');
-            self.filterCoursesByType();
-        }
-    };
+    /*
+        self.showNativeScriptCore = function () {
+            if (self.selectedCategory().type === 'ng') {
+                var newCat = self.categories().find(function (cat) {
+                    return cat.type === 'core';
+                });
+                self.selectedCategory(newCat);
+                localStorage.setItem('cat-value', 'core');
+                self.filterCoursesByType();
+            }
+        };
+        self.showNativeScriptAngular = function () {
+            if (self.selectedCategory().type === 'core') {
+                var newCat = self.categories().find(function (cat) {
+                    return cat.type === 'ng';
+                });
+                self.selectedCategory(newCat);
+                localStorage.setItem('cat-value', 'ng');
+                self.filterCoursesByType();
+            }
+        };
+        */
 
     self.filterCoursesByType = function () {
         var selectedCat = self.selectedCategory();
@@ -268,7 +344,7 @@ function DetailPageVm(courseRaw) {
 
 function bootstrapCoursesPage() {
     $.getJSON("courses.json", function (coursesData) {
-        ko.applyBindings(new CoursesPageVm(coursesData.courses));
+        ko.applyBindings(new CoursesPageVm(coursesData));
     });
 }
 

@@ -2393,7 +2393,7 @@ a:hover, a:focus, a:active {
   .special .ultimate-bundle {
     order: 3;
     position: relative; }
-    .special .ultimate-bundle .top-price {
+.special .ultimate-bundle .top-price {
       position: absolute;
       top: -46px;
       left: 50%;
@@ -2406,7 +2406,38 @@ a:hover, a:focus, a:active {
       font-size: 14px;
       font-weight: bold;
       text-align: center;
-      color: #FFFFFF; }
+      color: #FFFFFF; 
+}
+.special .supreme-bundle .top-price {
+      position: absolute;
+      top: -46px;
+      left: 50%;
+      margin-left: -120px;
+      background-color: #11f5ff;
+      width: 240px;
+      height: 46px;
+      line-height: 46px;
+      font-family: "OpenSansRegular";
+      font-size: 14px;
+      font-weight: bold;
+      text-align: center;
+      color: #09224a; 
+}
+.special .top-price {
+      position: absolute;
+      top: -46px;
+      left: 50%;
+      margin-left: -120px;
+      background-color: #12ffcd;
+      width: 240px;
+      height: 46px;
+      line-height: 46px;
+      font-family: "OpenSansRegular";
+      font-size: 14px;
+      font-weight: bold;
+      text-align: center;
+      color: #09224a; 
+}
     .special .ultimate-bundle .border-top {
       position: absolute;
       width: 100%;
