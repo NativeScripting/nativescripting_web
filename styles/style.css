@@ -1513,9 +1513,9 @@ a:hover, a:focus, a:active {
           color: #12FFCD;
           padding: 0px 60px 0px 15px; }
         .card-block .learn-card .top-block .card-header img {
-          position: absolute;
+          /*position: absolute;
           top: 0px;
-          right: 16px;
+          right: 16px;*/
           width: 42px;
           height: 42px; }
         .card-block .learn-card .top-block .card-header .pre-text {

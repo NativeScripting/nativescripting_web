@@ -183,12 +183,21 @@ function CourseVm(c) {
     self.chapters(tChapters);
     self.numLessons(lessonCount);
 
-    self.courseIcon = ko.pureComputed(function () {
-        if (self.categories.indexOf('ng') > -1) {
-            return 'img/nativescript_angular.svg';
-        } else {
-            return 'img/nativescript_white.svg';
+
+    self.courseIcons = ko.pureComputed(function () {
+        var ret = [];
+        if (self.categories.indexOf('core') > -1) {
+            ret.push('img/nativescript_white.svg');
         }
+        if (self.categories.indexOf('ng') > -1) {
+            ret.push('img/nativescript_angular.svg');
+        }
+        return ret;
+    });
+
+    self.courseIcon = ko.pureComputed(function () {
+        var icons = self.courseIcons();
+        return icons[0];
     });
 
     self.getLevelIcon = function (levelObj) {
