@@ -5,6 +5,7 @@ var courseTitle = $('.course-title')[0].innerText;
 var courseSubTitle = $('.course-subtitle')[0].innerText;
 var courseDescription = $('.course-description')[0].innerText;
 var courseId = $('#fedora-data').attr('data-course-id');
+var courseUrl = courseTitle.toLocaleLowerCase().split(' ').join('-');
 var chapters = [];
 var chapCounter = 0;
 $('.course-section').each((i, section) => {
@@ -30,5 +31,5 @@ $('.checkout-button-group').each((i, group) => {
 
     products.push({ id: prodId, name: prodName, description: prodDesc, pricesale: price });
 });
-var courseObj = { id: courseId, title: courseTitle, subtitle: courseSubTitle, description: courseDescription, products: products, chapters: chapters };
+var courseObj = { id: courseId, title: courseTitle, subtitle: courseSubTitle, description: courseDescription, url: courseUrl, products: products, chapters: chapters };
 console.log(JSON.stringify(courseObj, null, 2));
