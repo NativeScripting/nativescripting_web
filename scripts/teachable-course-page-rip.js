@@ -28,8 +28,16 @@ $('.checkout-button-group').each((i, group) => {
     if (price == 'FREE') price = 0;
     var prodName = $(group).find('.product-name')[0].innerText;
     var prodDesc = $(group).find('.description')[0].innerText;
-
-    products.push({ id: prodId, name: prodName, description: prodDesc, pricesale: price });
+    var liccount = prodName.toLowerCase().indexOf('single') > -1 ? 1 : 2;
+    var licensesMin = liccount === 1 ? 1 : 2;
+    var licensesMax = liccount === 1 ? 1 : 10;
+    products.push({ id: prodId, name: prodName, description: prodDesc, pricesale: price, pricereg: price, licensesMin: licensesMin, licensesMax: licensesMax });
 });
-var courseObj = { id: courseId, title: courseTitle, subtitle: courseSubTitle, description: courseDescription, url: courseUrl, products: products, chapters: chapters };
+var authors = [{
+    "name": "Alex Ziskind",
+    "picture": "alex_ziskind.png",
+    "bio": "This is Alex's short bio",
+    "title": "Trainer and Owner"
+}];
+var courseObj = { id: courseId, title: courseTitle, subtitle: courseSubTitle, description: courseDescription, url: courseUrl, categories: ['core', 'ng'], level: 1, tag: 'PRESALE', launchdate: '05/01/2017', authors: authors, products: products, chapters: chapters };
 console.log(JSON.stringify(courseObj, null, 2));
