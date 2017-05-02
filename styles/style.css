@@ -2515,8 +2515,13 @@ a:hover, a:focus, a:active {
     .special .ultimate-bundle .bottom a, .special .ultimate-bundle .card-block .learn-card .pre-bottom a, .card-block .learn-card .special .ultimate-bundle .pre-bottom a, .special .ultimate-bundle .card-block .learn-card .sub-bottom a, .card-block .learn-card .special .ultimate-bundle .sub-bottom a {
       background-color: #F0AE26; }
     @media all and (max-width: 768px) {
+      .special .supreme-bundle {
+        margin-top: 70px; 
+        }
       .special .ultimate-bundle {
-        margin-top: 70px; } }
+        margin-top: 70px; 
+        } 
+        }
     @media all and (min-width: 768px) and (max-width: 1199px) {
       .special .ultimate-bundle {
         margin-top: 100px !important; } }
@@ -3286,8 +3291,9 @@ a:hover, a:focus, a:active {
   .detail-bundle .bundle-card .medium-block {
     transition: 0.8s;
     overflow: hidden;
-    max-height: 0px;
-    position: relative; }
+    /*max-height: 0px;*/
+    position: relative; 
+    }
     .detail-bundle .bundle-card .medium-block .team-list-active:before {
       content: '';
       position: absolute;
@@ -3545,7 +3551,7 @@ a:hover, a:focus, a:active {
 .detail-bundle .supreme-bundle .medium-block {
   transition: 2s;
   overflow: hidden;
-  max-height: 0px;
+  /*max-height: 0px;*/
   position: relative; }
   .detail-bundle .supreme-bundle .medium-block .glow-border {
     border-top: solid 2px #11f5ff;
@@ -3602,7 +3608,7 @@ a:hover, a:focus, a:active {
   .detail-bundle .ultimate-bundle .medium-block {
     transition: 2s;
     overflow: hidden;
-    max-height: 0px;
+    /*max-height: 0px;*/
     position: relative; }
     .detail-bundle .ultimate-bundle .medium-block .glow-border {
       border-top: solid 2px #F0AE26;

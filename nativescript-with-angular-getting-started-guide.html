@@ -252,10 +252,10 @@
                                         <ul>
                                             <!-- ko foreach: productsTeam -->
                                             <li data-bind="click: function() { $parent.selectProduct($data); }">
-                                                <!-- ko if: pricereg === 0 -->
+                                                <!-- ko if: pricereg === pricesale -->
                                                 <users data-bind="text: usersDisp"></users><span><price data-bind="text: priceSaleDisp"></price></span>
                                                 <!-- /ko -->
-                                                <!-- ko if: pricereg > 0 -->
+                                                <!-- ko if: pricereg !== pricesale -->
                                                 <users data-bind="text: usersDisp"></users><span><price data-bind="text: priceSaleDisp"></price><span data-bind="text: priceRegDisp"></span></span>
                                                 <!-- /ko -->
                                             </li>
@@ -266,7 +266,7 @@
                                     </div>
                                 </div>
                                 <div class="bottom">
-                                    <a href="#"><span>Buy Bundle</span></a>
+                                    <a data-bind="click: buyBundle"><span>Buy Bundle</span></a>
                                 </div>
                             </div>
                             <!-- /ko -->

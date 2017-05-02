@@ -54,6 +54,28 @@ function BundleVm(b, allCourses) {
             self.selectedProduct(prod);
         }
     };
+
+    self.getBundleUrl = ko.pureComputed(function () {
+        if (self.selectedProduct()) {
+            var url = 'https://sso.teachable.com/secure/89912/checkout/confirmation?product_id=' +
+                self.selectedProduct().id +
+                '&course_id=' + self.id;
+            return url;
+        } else {
+            return '#';
+        }
+    });
+
+    self.buyBundle = function () {
+        console.log('bb click');
+        var url = self.getBundleUrl();
+        if (url !== '#') {
+            window.location = url;
+        }
+        else {
+            return false;
+        }
+    };
 }
 
 function AuthorVm(a) {
@@ -75,15 +97,15 @@ function ProductVm(p, tag) {
     self.tag = tag;
 
     self.priceRegDisp = ko.pureComputed(function () {
-        return self.pricereg === 0 ? 'FREE' : '$' + self.pricereg;
+        return self.pricereg === 0 ? 'FREE' : self.pricereg;
     });
 
     self.priceSaleDisp = ko.pureComputed(function () {
-        return self.pricesale === 0 ? 'FREE' : '$' + self.pricesale;
+        return self.pricesale === 0 ? 'FREE' : self.pricesale;
     });
 
     self.usersDisp = ko.pureComputed(function () {
-        if (self.licensesMin === 1 && self.tag === 'NEW') {
+        if (self.licensesMin === 1 && (self.tag === 'NEW' || self.tag === 'PRESALE')) {
             return 'Launch';
         } else {
             return self.licensesMin + '-' + self.licensesMax + ' users';
