@@ -1178,7 +1178,7 @@ a:hover, a:focus, a:active {
     transform: rotate(-45deg); }
   .header .mobile-header {
     position: absolute;
-    transition: 0.7s;
+    transition: 0.5s;
     background-color: #032E74;
     width: 100%;
     top: 80px;
@@ -1622,7 +1622,7 @@ a:hover, a:focus, a:active {
 
         .card-block .learn-card .medium-block .right ul {
           overflow: hidden;
-          transition: 0.8s;
+          transition: 0.5s;
           position: absolute;
           z-index: 4;
           list-style: none;
@@ -1972,13 +1972,13 @@ a:hover, a:focus, a:active {
       z-index: 1; }
     .special .bundle-card .top-block {
       min-height: 144px;
-      transition: 1s;
+      transition: 0.5s;
       position: relative;
       background-color: #073D95;
       padding: 37px 0px 0px 0px;
       overflow: hidden; }
       .special .bundle-card .top-block .lessons-list {
-        transition: 0.8s;
+        transition: 0.5s;
         max-height: 0px;
         overflow: hidden; }
       .special .bundle-card .top-block .card-lessons {
@@ -2129,7 +2129,7 @@ a:hover, a:focus, a:active {
       .special .bundle-card .medium-block .active-single .border-medium {
         opacity: 1; }
       .special .bundle-card .medium-block .teams {
-        transition: 1s;
+        transition: 0.5s;
         background-color: #043078;
         max-height: 56px;
         overflow: hidden;
@@ -2184,7 +2184,7 @@ a:hover, a:focus, a:active {
               text-decoration: line-through; }
         .special .bundle-card .medium-block .teams ul {
           overflow: hidden;
-          transition: 0.8s;
+          transition: 0.5s;
           z-index: 4;
           list-style: none;
           background-color: #043078;
@@ -2732,7 +2732,7 @@ a:hover, a:focus, a:active {
         border: solid 2px #12FFCD; }
       .detail-top-block .medium-block .right ul {
         overflow: hidden;
-        transition: 0.8s;
+        transition: 0.5s;
         position: absolute;
         z-index: 4;
         list-style: none;
@@ -3199,7 +3199,7 @@ a:hover, a:focus, a:active {
     .detail-bundle .bundle-card .top-block .error-active {
       display: block; }
     .detail-bundle .bundle-card .top-block .lessons-list {
-      transition: 1s;
+      transition: 0.5s;
       max-height: 0px;
       overflow: hidden; }
     .detail-bundle .bundle-card .top-block .card-lessons {
@@ -3284,13 +3284,14 @@ a:hover, a:focus, a:active {
       display: block;
       text-align: left; }
   .detail-bundle .bundle-card .included-active .lessons-list {
-    max-height: 210px; }
+    max-height: 300px; 
+    }
   .detail-bundle .bundle-card .included-active .included img {
     transform: rotate(180deg); }
   .detail-bundle .bundle-card .active-header h2 img {
     transform: rotate(180deg) !important; }
   .detail-bundle .bundle-card .medium-block {
-    transition: 0.8s;
+    transition: 0.5s;
     overflow: hidden;
     /*max-height: 0px;*/
     position: relative; 
@@ -3367,7 +3368,7 @@ a:hover, a:focus, a:active {
     .detail-bundle .bundle-card .medium-block .teams {
       overflow: hidden;
       max-height: 56px;
-      transition: 1s;
+      transition: 0.5s;
       position: relative;
       cursor: pointer; }
       .detail-bundle .bundle-card .medium-block .teams .team {
@@ -3421,7 +3422,7 @@ a:hover, a:focus, a:active {
         border: solid 2px #12FFCD; }
       .detail-bundle .bundle-card .medium-block .teams ul {
         overflow: hidden;
-        transition: 0.8s;
+        transition: 0.5s;
         z-index: 4;
         list-style: none;
         background-color: #003b9b;
@@ -3550,7 +3551,7 @@ a:hover, a:focus, a:active {
 .detail-bundle .supreme-bundle .top-block .card-lessons p {
   color: #11f5ff; }
 .detail-bundle .supreme-bundle .medium-block {
-  transition: 2s;
+  transition: 0.5s;
   overflow: hidden;
   /*max-height: 0px;*/
   position: relative; }
@@ -3607,7 +3608,7 @@ a:hover, a:focus, a:active {
   .detail-bundle .ultimate-bundle .top-block .card-lessons p {
     color: #F0AE26; }
   .detail-bundle .ultimate-bundle .medium-block {
-    transition: 2s;
+    transition: 0.5s;
     overflow: hidden;
     /*max-height: 0px;*/
     position: relative; }
