@@ -94,14 +94,14 @@
                                 <img class="detail-header-img" data-bind="attr: { src: course.courseIcon }" />
                             </div>
 
-                            <div class="error"><span>Please select the number of users</span></div>
+                            <div class="error" data-bind="css:{ 'error-active': course.showMessage }"><span>Please select the number of users</span></div>
                             <div class="medium-block">
                                 <div class="active-border-left"></div>
                                 <div class="active-border-right"></div>
                                 <div class="active-border-top"></div>
                                 <div class="active-border-bottom"></div>
                                 <!-- ko with: course -->
-                                <div class="left learn-user" data-bind="click: function() { selectProduct('single'); }">
+                                <div class="left learn-user" data-bind="click: function() { selectProduct('single'); }, css: { active: singleSelected }">
                                     <!-- ko with: productSingle -->
                                     <div class="glow-border"></div>
                                     <div class="border-medium"></div>
@@ -117,12 +117,12 @@
                                     <!-- /ko -->
                                     <!-- /ko -->
                                 </div>
-                                <!-- /ko -->
-                                <div class="right">
+
+                                <div class="right" data-bind="click: toggleTeamSelecting, css: { 'active-users': teamSelected, 'right-active': teamSelecting }">
                                     <img src="img/arrow.png">
                                     <p class="team">Team</p>
                                     <ul>
-                                        <!-- ko with: course -->
+
                                         <!-- ko foreach: productsTeam -->
                                         <li data-bind="click: function() { $parent.selectProduct($data); }">
                                             <!-- ko if: pricereg === pricesale -->
@@ -137,9 +137,10 @@
 
 
                                         <li>11+ users<span><a href="mailto:info@nuvious.com?Subject=NativeScripting%20team" target="_top">email us</a></span></li>
-                                        <!-- /ko -->
+
                                     </ul>
                                 </div>
+                                <!-- /ko -->
                             </div>
                             <div class="bottom">
                                 <a data-bind="click: course.getCourse"><span>Get Course</span></a>

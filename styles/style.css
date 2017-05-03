@@ -1494,8 +1494,9 @@ a:hover, a:focus, a:active {
         color: #fff; }
       .card-block .learn-card .top-block .card-header {
         position: absolute;
-        top: 148px;
-        width: 100%; }
+        top: 120px;
+        width: 100%; 
+        }
         .card-block .learn-card .top-block .card-header h3 {
           text-align: left;
           font-family: "OpenSansLight";

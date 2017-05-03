@@ -108,7 +108,7 @@
                                         <p class="new"><span class="course-tag" data-bind="text: tag"></span></p>
                                         <div class="card-header">
                                             <div style="position: relative;">
-                                                <ul style="position: absolute; margin: 0; top: 0px; right: 16px;list-style: none;">
+                                                <ul style="position: absolute; margin: 0; top: 15px; right: 16px;list-style: none;">
                                                     <!-- ko foreach: courseIcons -->
                                                     <li style="margin-left: -30px; margin-bottom: 5px;">
                                                         <img style="display:block;" data-bind="attr: { src: $data }" />
@@ -123,45 +123,9 @@
                                         </div>
                                         <p class="error">Please select the number of users</p>
                                     </div>
-                                    <div class="medium-block">
-                                        <div class="border-left"></div>
-                                        <div class="border-top"></div>
-                                        <div class="border-right"></div>
-                                        <div class="left learn-user" data-bind="click: function() { selectProduct('single'); }">
-                                            <!-- ko with: productSingle -->
-                                            <div class="border-medium"></div>
-                                            <p class="user">Single User</p>
-                                            <p class="price">
-                                                <!-- ko if: pricereg === pricesale -->
-                                                <users data-bind="text: usersDisp"></users><span><price data-bind="text: priceSaleDisp"></price></span>
-                                                <!-- /ko -->
-                                                <!-- ko if: pricereg !== pricesale -->
-                                                <users data-bind="text: usersDisp"></users><span><price data-bind="text: priceSaleDisp"></price><span data-bind="text: priceRegDisp"></span></span>
-                                                <!-- /ko -->
-                                            </p>
-                                            <!-- /ko -->
-                                        </div>
-                                        <div class="right">
-                                            <img src="img/arrow.png">
-                                            <p class="team">Team</p>
-                                            <ul class="team-price-list">
-                                                <!-- ko foreach: productsTeam -->
-                                                <li data-bind="click: function() { $parent.selectProduct($data); }">
-                                                    <!-- ko if: pricereg === pricesale -->
-                                                    <users data-bind="text: usersDisp"></users><span><price data-bind="text: priceSaleDisp"></price></span>
-                                                    <!-- /ko -->
-                                                    <!-- ko if: pricereg !== pricesale -->
-                                                    <users data-bind="text: usersDisp"></users><span><price data-bind="text: priceSaleDisp"></price><span data-bind="text: priceRegDisp"></span></span>
-                                                    <!-- /ko -->
-                                                </li>
-                                                <!-- /ko -->
 
-                                                <li>11+ users<span><a href="mailto:info@nuvious.com?Subject=NativeScripting%20team" target="_top">email us</a></span></li>
-                                            </ul>
-                                        </div>
-                                    </div>
                                     <div class="bottom">
-                                        <a data-bind="click: goToCoursePage"><span>learn more</span></a>
+                                        <a data-bind="click: goToCourseDetailPage"><span>learn more</span></a>
                                     </div>
                                 </div>
                             </div>

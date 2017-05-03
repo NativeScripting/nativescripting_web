@@ -226,43 +226,63 @@ function CourseVm(c) {
         return levelObj['l' + self.level];
     };
 
+    self.singleSelected = ko.pureComputed(function () {
+        var selProd = self.selectedProduct();
+        if (selProd) {
+            return selProd.licensesMin === 1;
+        } else {
+            return false;
+        }
+    });
+
+    self.toggleTeamSelecting = function () {
+        self.teamSelecting(!self.teamSelecting());
+    };
+
+    self.teamSelected = ko.pureComputed(function () {
+        var selProd = self.selectedProduct();
+        if (selProd) {
+            return selProd.licensesMin > 1;
+        } else {
+            return false;
+        }
+    });
+
+    self.teamSelecting = ko.observable(false);
+
     //Changed values
     self.selectedProduct = ko.observable(null);
 
     self.selectProduct = function (prod) {
+        console.log('selectProduct');
         if (typeof prod === 'string' && prod === 'single') {
             self.selectedProduct(self.productSingle());
         } else {
             self.selectedProduct(prod);
         }
+        self.showMessage(false);
     };
 
-    self.goToCoursePage = function () {
-        if (self.selectedProduct()) {
-            window.location = self.url + '.html';
-        } else {
-            return false;
-        }
+    self.goToCourseDetailPage = function () {
+        window.location = self.url + '.html';
     };
 
-    self.getCourseUrl = ko.pureComputed(function () {
-        if (self.selectedProduct()) {
-            var url = 'https://sso.teachable.com/secure/89912/checkout/confirmation?product_id=' +
-                self.selectedProduct().id +
-                '&course_id=' + self.id;
-            return url;
-        } else {
-            return '#';
-        }
+    self.courseUrl = ko.pureComputed(function () {
+        var url = 'https://sso.teachable.com/secure/89912/checkout/confirmation?product_id=' +
+            self.selectedProduct().id +
+            '&course_id=' + self.id;
+        return url;
     });
 
+    self.showMessage = ko.observable(false);
+
     self.getCourse = function () {
-        console.log('gc');
-        var url = self.getCourseUrl();
-        if (url !== '#') {
+        if (self.selectedProduct()) {
+            var url = self.courseUrl();
             window.location = url;
         }
         else {
+            self.showMessage(true);
             return false;
         }
     }
