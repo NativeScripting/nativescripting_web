@@ -181,7 +181,7 @@ $(function () {
             //$(this).parent().parent().parent().parent().addClass('select-bundle');
             //$(this).parent().parent().parent().find('.active-single').removeClass('active-single');
             //$(this).parent().parent().addClass('team-list-active');
-            $($(this).parent()).prepend($(this));
+            //$($(this).parent()).prepend($(this));
             //var count = 0;
 
             /*
@@ -217,7 +217,7 @@ $(function () {
             //$(this).parent().parent().parent().parent().find('.medium-block').removeClass('medium-active');
             $(this).parent().parent().parent().find('.active-users').removeClass('active-users');
             $(this).parent().find('.active-li').removeClass('active-li');
-            $($(this).parent()).prepend($(this));
+            //$($(this).parent()).prepend($(this));
             $(this).parent().parent().addClass('active-users');
         }
     });

@@ -2064,7 +2064,8 @@ a:hover, a:focus, a:active {
       .special .bundle-card .top-block .error-active {
         display: block !important; }
     .special .bundle-card .included-active .lessons-list {
-      max-height: 250px; }
+      max-height: 300px; 
+      }
     .special .bundle-card .included-active .included img {
       transform: rotate(180deg); }
     .special .bundle-card .medium-block {

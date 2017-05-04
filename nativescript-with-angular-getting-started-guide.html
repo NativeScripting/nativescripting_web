@@ -94,11 +94,6 @@
                                 <img class="detail-header-img" data-bind="attr: { src: course.courseIcon }" />
                             </div>
 
-                            <!-- ko with: course -->
-                            <pre style="color:white;" data-bind="text: ko.toJSON(selectedProduct, null, 2)"></pre>
-                            <!-- /ko -->
-
-
                             <div class="error" data-bind="css:{ 'error-active': course.showMessage }"><span>Please select the number of users</span></div>
                             <div class="medium-block" data-bind="css:{ 'medium-active': course.showMessage }">
                                 <div class="active-border-left"></div>
@@ -261,8 +256,6 @@
                                         <!-- /ko -->
                                         <!-- /ko -->
                                     </div>
-
-
 
                                     <div class="teams" data-bind="click: toggleTeamSelecting, css: { 'team-list-active': teamSelected, 'teams-active': teamSelecting }">
                                         <p class="team">team <img src="img/arrow.png"></p>

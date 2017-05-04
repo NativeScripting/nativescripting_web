@@ -66,7 +66,7 @@ function BundleVm(b, allCourses, deselectAllBundlesCallback) {
     self.teamSelected = ko.pureComputed(function () {
         var selProd = self.selectedProduct();
         if (selProd) {
-            return selProd.licensesMin > 1;
+            return selProd.licensesMin > 1 || selProd.type === 'contact';
         } else {
             return false;
         }
