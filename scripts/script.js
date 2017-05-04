@@ -115,67 +115,29 @@ $(function () {
 
     }
 
-    $('.bundle-card .medium-block .teams').on('click', function () {
-        $(this).toggleClass('teams-active')
-    });
-
-    $('.bundle-card .single-user').on('click', function () {
-
-        $(this).parent().find('.team-select').removeClass('team-select');
-        $(this).parent().find('.team-list-active').removeClass('team-list-active');
-        $(this).parent().removeClass('medium-block-active');
-        $(this).toggleClass('active-single');
-        if ($(this).hasClass('active-single')) {
-            $(this).parent().parent().addClass('select-bundle');
-        } else {
-            $(this).parent().parent().removeClass('select-bundle');
-        }
-        var count = 0;
-
-        $('.bundle-card').each(function () {
-
-            if ($(this).hasClass('select-bundle') === false) {
-                count++
-                $(this).css('opacity', '0.6');
-            } else {
-                $(this).css('opacity', '1');
-            }
-            if (count === 3) {
-                $('.bundle-card').css('opacity', '1');
-            }
+    /*
+        $('.bundle-card .medium-block .teams').on('click', function () {
+            $(this).toggleClass('teams-active');
         });
-    });
+    */
 
-    $('.bundle-card .bottom a').on('click', function (e) {
-        e.preventDefault();
-        //console.log($(this).prev().find('.active-single,.teams-active').length);
-        if ($(this).parent().prev().find('.active-single,.team-list-active').length > 0) {
-            $(this).parent().prev().prev().find('.error').removeClass('error-active');
-            $(this).parent().parent().addClass('select-bundle');
-            $(this).parent().prev().removeClass('medium-block-active');
-        } else {
-            $(this).parent().parent().addClass('select-bundle');
-            $(this).parent().prev().addClass('medium-block-active');
-            $(this).parent().prev().prev().find('.error').addClass('error-active');
-        }
-    });
-
-    $('.bundle-card .top-block .included').on('click', function () {
-        $(this).parent().toggleClass('included-active')
-    });
-
-    $('.bundle-card .medium-block .teams ul li').on('click', function () {
-        if ($(this).parent().parent().hasClass('teams-active')) {
-            $(this).parent().parent().parent().find('.team-select').removeClass('team-select');
-            $(this).parent().parent().parent().removeClass('medium-block-active');
-            $(this).parent().parent().parent().parent().addClass('select-bundle');
-            $(this).parent().parent().parent().find('.active-single').removeClass('active-single');
-            $(this).parent().parent().addClass('team-list-active');
-            $($(this).parent()).prepend($(this));
+    /*
+        $('.bundle-card .single-user').on('click', function () {
+    
+            $(this).parent().find('.team-select').removeClass('team-select');
+            //$(this).parent().find('.team-list-active').removeClass('team-list-active');
+            //$(this).parent().removeClass('medium-block-active');
+            //$(this).toggleClass('active-single');
+            //if ($(this).hasClass('active-single')) {
+            //    $(this).parent().parent().addClass('select-bundle');
+            //} else {
+            //    $(this).parent().parent().removeClass('select-bundle');
+            //}
             var count = 0;
-
+    
+    
             $('.bundle-card').each(function () {
-
+    
                 if ($(this).hasClass('select-bundle') === false) {
                     count++
                     $(this).css('opacity', '0.6');
@@ -186,8 +148,59 @@ $(function () {
                     $('.bundle-card').css('opacity', '1');
                 }
             });
+    
+        });
+        */
+
+
+    $('.bundle-card .bottom a').on('click', function (e) {
+        e.preventDefault();
+        //console.log($(this).prev().find('.active-single,.teams-active').length);
+        if ($(this).parent().prev().find('.active-single,.team-list-active').length > 0) {
+            //$(this).parent().prev().prev().find('.error').removeClass('error-active');
+            $(this).parent().parent().addClass('select-bundle');
+            //$(this).parent().prev().removeClass('medium-block-active');
+        } else {
+            $(this).parent().parent().addClass('select-bundle');
+            //$(this).parent().prev().addClass('medium-block-active');
+            //$(this).parent().prev().prev().find('.error').addClass('error-active');
         }
     });
+
+    /*
+        $('.bundle-card .top-block .included').on('click', function () {
+            $(this).parent().toggleClass('included-active')
+        });
+        */
+
+
+    $('.bundle-card .medium-block .teams ul li').on('click', function () {
+        if ($(this).parent().parent().hasClass('teams-active')) {
+            //$(this).parent().parent().parent().find('.team-select').removeClass('team-select');
+            //$(this).parent().parent().parent().removeClass('medium-block-active');
+            //$(this).parent().parent().parent().parent().addClass('select-bundle');
+            //$(this).parent().parent().parent().find('.active-single').removeClass('active-single');
+            //$(this).parent().parent().addClass('team-list-active');
+            $($(this).parent()).prepend($(this));
+            //var count = 0;
+
+            /*
+                        $('.bundle-card').each(function () {
+            
+                            if ($(this).hasClass('select-bundle') === false) {
+                                count++
+                                $(this).css('opacity', '0.6');
+                            } else {
+                                $(this).css('opacity', '1');
+                            }
+                            if (count === 3) {
+                                $('.bundle-card').css('opacity', '1');
+                            }
+                        });
+                        */
+        }
+    });
+
 
     // $('.bundle-card .medium-block .teams .users').on('click',function () {
     //     $(this).parent().parent().find('.active-single').removeClass('active-single');
@@ -201,7 +214,7 @@ $(function () {
     $('.learn-card .medium-block .right ul li').on('click', function () {
         if ($(this).parent().parent().hasClass('right-active')) {
             $(this).parent().parent().parent().find('.learn-user').removeClass('active active-pre');
-            $(this).parent().parent().parent().parent().find('.medium-block').removeClass('medium-active');
+            //$(this).parent().parent().parent().parent().find('.medium-block').removeClass('medium-active');
             $(this).parent().parent().parent().find('.active-users').removeClass('active-users');
             $(this).parent().find('.active-li').removeClass('active-li');
             $($(this).parent()).prepend($(this));
@@ -214,7 +227,7 @@ $(function () {
             //$(this).prev().prev().find('.error').removeClass('error-active');
         } else {
             //$(this).prev().prev().find('.error').addClass('error-active');
-            $(this).prev().addClass('medium-active');
+            //$(this).prev().addClass('medium-active');
         }
     });
 
@@ -230,7 +243,7 @@ $(function () {
 
         $(this).parent().find('.active-li').removeClass('active-li');
         $(this).parent().find('.active-users').removeClass('active-users');
-        $(this).parent().parent().find('.medium-block').removeClass('medium-active');
+        //$(this).parent().parent().find('.medium-block').removeClass('medium-active');
         //$(this).toggleClass('active')
     });
 
@@ -238,8 +251,8 @@ $(function () {
     $('.pre-card .learn-user').on('click', function () {
         $(this).parent().find('.active-li').removeClass('active-li');
         $(this).parent().find('.active-users').removeClass('active-users');
-        $(this).parent().parent().find('.medium-block').removeClass('medium-active');
-        $(this).toggleClass('active-pre')
+        //$(this).parent().parent().find('.medium-block').removeClass('medium-active');
+        $(this).toggleClass('active-pre');
     });
 
 
@@ -253,23 +266,26 @@ $(function () {
     if (detail.length > 0) {
 
 
-        $('.medium-block .right').on('click', function () {
-            //$(this).toggleClass('right-active');
-        });
+        /*
+                $('.medium-block .right').on('click', function () {
+                    $(this).toggleClass('right-active');
+                });
+                */
+
 
         $('.detail-top-block .medium-block .right ul li').on('click', function () {
             if ($(this).parent().parent().hasClass('right-active')) {
                 //$(this).parent().parent().parent().find('.learn-user').removeClass('active');
                 //$(this).parent().parent().addClass('active-users');
-                $(this).parent().parent().parent().removeClass('medium-active');
-                $($(this).parent()).prepend($(this));
+                //$(this).parent().parent().parent().removeClass('medium-active');
+                //$($(this).parent()).prepend($(this));
             }
         });
 
         $('.detail-top-block .learn-user').on('click', function () {
             $(this).parent().find('.li-active').removeClass('li-active');
             //$(this).parent().find('.active-users').removeClass('active-users');
-            $(this).parent().removeClass('medium-active');
+            //$(this).parent().removeClass('medium-active');
             //$(this).toggleClass('active');
         });
 
@@ -279,26 +295,27 @@ $(function () {
             if ($(this).parent().prev().find('.active,.active-users').length > 0) {
                 //$(this).parent().prev().prev().removeClass('error-active');
             } else {
-                $(this).parent().prev().addClass('medium-active');
+                //$(this).parent().prev().addClass('medium-active');
                 //$('.detail-top-block .error').addClass('error-active');
             }
         });
 
-
-        document.querySelectorAll('.detail-bundle .bundle-card .top-block h2')[0].addEventListener('click', function () {
-            this.parentNode.nextElementSibling.classList.toggle('active-medium');
-            this.parentNode.classList.toggle('active-header');
-        });
-
-        document.querySelectorAll('.detail-bundle .supreme-bundle .top-block h2')[0].addEventListener('click', function () {
-            this.parentNode.nextElementSibling.classList.toggle('active-medium');
-            this.parentNode.classList.toggle('active-header');
-        });
-
-        document.querySelectorAll('.detail-bundle .ultimate-bundle .top-block h2')[0].addEventListener('click', function () {
-            this.parentNode.nextElementSibling.classList.toggle('active-medium');
-            this.parentNode.classList.toggle('active-header');
-        });
+        /*
+                document.querySelectorAll('.detail-bundle .bundle-card .top-block h2')[0].addEventListener('click', function () {
+                    this.parentNode.nextElementSibling.classList.toggle('active-medium');
+                    this.parentNode.classList.toggle('active-header');
+                });
+        
+                document.querySelectorAll('.detail-bundle .supreme-bundle .top-block h2')[0].addEventListener('click', function () {
+                    this.parentNode.nextElementSibling.classList.toggle('active-medium');
+                    this.parentNode.classList.toggle('active-header');
+                });
+        
+                document.querySelectorAll('.detail-bundle .ultimate-bundle .top-block h2')[0].addEventListener('click', function () {
+                    this.parentNode.nextElementSibling.classList.toggle('active-medium');
+                    this.parentNode.classList.toggle('active-header');
+                });
+                */
 
 
         if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {

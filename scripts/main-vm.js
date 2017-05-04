@@ -6,7 +6,7 @@ function CategoryVm(c) {
     self.name = c.name;
 }
 
-function BundleVm(b, allCourses) {
+function BundleVm(b, allCourses, deselectAllBundlesCallback) {
     var self = this;
     self.id = b.id;
     self.title = b.title;
@@ -18,6 +18,7 @@ function BundleVm(b, allCourses) {
     self.courseIds = b.courseIds;
     self.productSingle = ko.observable(null);
     self.productsTeam = ko.observableArray([]);
+    self.deselectAllBundlesCallback = deselectAllBundlesCallback;
 
     self.courseSummaries = ko.observableArray([]);
 
@@ -32,6 +33,7 @@ function BundleVm(b, allCourses) {
             tProductsTeam.push(newProd);
         }
     }
+    tProductsTeam.push(new ProductVm({ type: 'contact' }, b.tag));
     self.productsTeam(tProductsTeam);
 
     var tCourseSummaries = [];
@@ -44,35 +46,107 @@ function BundleVm(b, allCourses) {
 
     self.courseSummaries(tCourseSummaries);
 
+
+    self.showMessage = ko.observable(false);
+
+    self.singleSelected = ko.pureComputed(function () {
+        var selProd = self.selectedProduct();
+        if (selProd) {
+            return selProd.licensesMin === 1;
+        } else {
+            return false;
+        }
+    });
+
+    self.toggleTeamSelecting = function () {
+        console.log('bundle toggleTeamSelecting');
+        self.teamSelecting(!self.teamSelecting());
+    };
+
+    self.teamSelected = ko.pureComputed(function () {
+        var selProd = self.selectedProduct();
+        if (selProd) {
+            return selProd.licensesMin > 1;
+        } else {
+            return false;
+        }
+    });
+
+    self.toggleCoursesShowing = function () {
+        console.log('bundle toggleCoursesShowing');
+        self.coursesShowing(!self.coursesShowing());
+    };
+
+    self.teamSelecting = ko.observable(false);
+    self.coursesShowing = ko.observable(false);
+    self.bundleSelected = ko.observable(false);
+
     //Changed values
     self.selectedProduct = ko.observable(null);
 
     self.selectProduct = function (prod) {
+        self.deselectAllBundlesCallback();
         if (typeof prod === 'string' && prod === 'single') {
             self.selectedProduct(self.productSingle());
+        } else if (prod.type === 'contact') {
+            self.selectedProduct(prod);
         } else {
             self.selectedProduct(prod);
         }
+        self.bundleSelected(true);
+        self.showMessage(false);
     };
 
-    self.getBundleUrl = ko.pureComputed(function () {
-        if (self.selectedProduct()) {
-            var url = 'https://sso.teachable.com/secure/89912/checkout/confirmation?product_id=' +
-                self.selectedProduct().id +
-                '&course_id=' + self.id;
-            return url;
+    self.teamTop = ko.pureComputed(function () {
+        if (self.teamSelected()) {
+            return self.selectedProduct();
         } else {
-            return '#';
+            return self.productsTeam()[0];
         }
     });
 
+    self.teamTopIsContact = ko.pureComputed(function () {
+        return self.teamTop().type === 'contact';
+    });
+
+    self.teamUsersTop = ko.pureComputed(function () {
+        return self.teamTop().usersDisp();
+    });
+
+    self.teamPriceSaleTop = ko.pureComputed(function () {
+        var psDisp = self.teamTop().priceSaleDisp();
+        return psDisp;
+    });
+
+    self.teamPriceRegTop = ko.pureComputed(function () {
+        return self.teamTop().priceRegDisp();
+    });
+
+    self.goToCourseDetailPage = function () {
+        window.location = self.url + '.html';
+    };
+
+    self.deselectBundle = function () {
+        console.log('deselecting bundle: ' + self.title);
+        self.bundleSelected(false);
+        self.selectedProduct(null);
+        self.showMessage(false);
+    };
+
+    self.getBundleUrl = ko.pureComputed(function () {
+        var url = 'https://sso.teachable.com/secure/89912/checkout/confirmation?product_id=' +
+            self.selectedProduct().id +
+            '&course_id=' + self.id;
+        return url;
+    });
+
     self.buyBundle = function () {
-        console.log('bb click');
-        var url = self.getBundleUrl();
-        if (url !== '#') {
+        if (self.selectedProduct()) {
+            var url = self.getBundleUrl();
             window.location = url;
-        }
-        else {
+        } else {
+            self.deselectAllBundlesCallback();
+            self.showMessage(true);
             return false;
         }
     };
@@ -191,6 +265,7 @@ function CourseVm(c) {
             tProductsTeam.push(newProd);
         }
     }
+    tProductsTeam.push(new ProductVm({ type: 'contact' }, c.tag));
 
     var lessonCount = 0;
     for (var i = 0; i < c.chapters.length; i++) {
@@ -242,7 +317,7 @@ function CourseVm(c) {
     self.teamSelected = ko.pureComputed(function () {
         var selProd = self.selectedProduct();
         if (selProd) {
-            return selProd.licensesMin > 1;
+            return selProd.licensesMin > 1 || selProd.type === 'contact';
         } else {
             return false;
         }
@@ -252,16 +327,44 @@ function CourseVm(c) {
 
     //Changed values
     self.selectedProduct = ko.observable(null);
+    self.contactSelected = ko.observable(null);
 
     self.selectProduct = function (prod) {
         console.log('selectProduct');
         if (typeof prod === 'string' && prod === 'single') {
             self.selectedProduct(self.productSingle());
+        } else if (prod.type === 'contact') {
+            self.selectedProduct(prod);
         } else {
             self.selectedProduct(prod);
         }
         self.showMessage(false);
     };
+
+    self.teamTop = ko.pureComputed(function () {
+        if (self.teamSelected()) {
+            return self.selectedProduct();
+        } else {
+            return self.productsTeam()[0];
+        }
+    });
+
+    self.teamTopIsContact = ko.pureComputed(function () {
+        return self.teamTop().type === 'contact';
+    });
+
+    self.teamUsersTop = ko.pureComputed(function () {
+        return self.teamTop().usersDisp();
+    });
+
+    self.teamPriceSaleTop = ko.pureComputed(function () {
+        var psDisp = self.teamTop().priceSaleDisp();
+        return psDisp;
+    });
+
+    self.teamPriceRegTop = ko.pureComputed(function () {
+        return self.teamTop().priceRegDisp();
+    });
 
     self.goToCourseDetailPage = function () {
         window.location = self.url + '.html';
@@ -277,9 +380,15 @@ function CourseVm(c) {
     self.showMessage = ko.observable(false);
 
     self.getCourse = function () {
-        if (self.selectedProduct()) {
-            var url = self.courseUrl();
-            window.location = url;
+        var selProd = self.selectedProduct();
+        if (selProd) {
+            if (selProd.type === 'contact') {
+                self.showMessage(true);
+                return false;
+            } else {
+                var url = self.courseUrl();
+                window.location = url;
+            }
         }
         else {
             self.showMessage(true);
@@ -307,6 +416,13 @@ function CoursesPageVm(coursesData) {
         }
     });
 
+    self.deselectAllBundles = function () {
+        var bundles = self.bundles();
+        for (var i = 0; i < bundles.length; i++) {
+            bundles[i].deselectBundle();
+        }
+    }
+
     self.allCourses = [];
 
     for (var i = 0; i < coursesData.courses.length; i++) {
@@ -315,8 +431,10 @@ function CoursesPageVm(coursesData) {
 
     var tBundles = [];
     for (var i = 0; i < coursesData.bundles.length; i++) {
-        self.bundles.push(new BundleVm(coursesData.bundles[i], coursesData.courses));
+        self.bundles.push(new BundleVm(coursesData.bundles[i], coursesData.courses, self.deselectAllBundles));
     }
+
+
 
     self.selectCategory = function (catId) {
         if (self.selectedCategory().catId !== catId) {
@@ -372,9 +490,17 @@ function DetailPageVm(coursesData, filename) {
     self.course = new CourseVm(courseRaw);
     self.bundles = ko.observableArray([]);
 
+    self.deselectAllBundles = function () {
+        console.log('details deseleccting all bundles');
+        var bundles = self.bundles();
+        for (var i = 0; i < bundles.length; i++) {
+            bundles[i].deselectBundle();
+        }
+    }
+
     var tBundles = [];
     for (var i = 0; i < coursesData.bundles.length; i++) {
-        self.bundles.push(new BundleVm(coursesData.bundles[i], coursesData.courses));
+        self.bundles.push(new BundleVm(coursesData.bundles[i], coursesData.courses, self.deselectAllBundles));
     }
 
 }
