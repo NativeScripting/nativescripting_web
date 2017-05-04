@@ -367,7 +367,12 @@ function CourseVm(c) {
     });
 
     self.goToCourseDetailPage = function () {
-        window.location = self.url + '.html';
+        var currentPageUrl = window.location.href;
+        if (currentPageUrl.indexOf('127') > -1) {
+            window.location = self.url + '.html';
+        } else {
+            window.location = self.url;
+        }
     };
 
     self.courseUrl = ko.pureComputed(function () {
