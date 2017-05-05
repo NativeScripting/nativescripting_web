@@ -17,7 +17,24 @@
             return decodeURIComponent(results[2].replace(/\+/g, " "));
         }
 
-        console.log('course id: ' + getParameterByName('id'));
+        function getBaseName(url) {
+            if (!url || (url && url.length === 0)) {
+                return "";
+            }
+            var index = url.lastIndexOf("/") + 1;
+            var filenameWithExtension = url.substr(index);
+            var basename = filenameWithExtension.split(/[.?&#]+/)[0];
+
+            if (basename.length === 0) {
+                url = url.substr(0, index - 1);
+                basename = getBaseName(url);
+            }
+            return basename ? basename : "";
+        }
+
+
+        console.log('query course id: ' + getParameterByName('id'));
+        console.log('basename course id: ' + getBaseName(window.location.href));
     </script>
 </body>
 
