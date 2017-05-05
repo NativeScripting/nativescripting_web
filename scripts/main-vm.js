@@ -159,7 +159,7 @@ function AuthorVm(a) {
     self.name = a.name;
     self.bio = a.bio;
     self.title = a.title;
-    self.picture = 'img/authors/' + a.picture;
+    self.picture = '/img/authors/' + a.picture;
 }
 
 function ProductVm(p, tag) {
@@ -286,10 +286,10 @@ function CourseVm(c) {
     self.courseIcons = ko.pureComputed(function () {
         var ret = [];
         if (self.categories.indexOf('core') > -1) {
-            ret.push('img/nativescript_white.svg');
+            ret.push('/img/nativescript_white.svg');
         }
         if (self.categories.indexOf('ng') > -1) {
-            ret.push('img/nativescript_angular.svg');
+            ret.push('/img/nativescript_angular.svg');
         }
         return ret;
     });
