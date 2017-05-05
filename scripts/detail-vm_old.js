@@ -170,7 +170,7 @@ function DetailPageVm(courseRaw) {
 }
 
 
-$.getJSON("courses.json", function (coursesData) {
+$.getJSON("coursesdata.json", function (coursesData) {
     var url = window.location.href;
     var filename = getBaseName(url);
 

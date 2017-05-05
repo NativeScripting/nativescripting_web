@@ -122,9 +122,11 @@ function BundleVm(b, allCourses, deselectAllBundlesCallback) {
         return self.teamTop().priceRegDisp();
     });
 
-    self.goToCourseDetailPage = function () {
-        window.location = self.url + '.html';
-    };
+    /*
+        self.goToCourseDetailPage = function () {
+            window.location = self.url + '.html';
+        };
+        */
 
     self.deselectBundle = function () {
         console.log('deselecting bundle: ' + self.title);
@@ -371,7 +373,8 @@ function CourseVm(c) {
         if (currentPageUrl.indexOf('127') > -1) {
             window.location = self.url + '.html';
         } else {
-            window.location = self.url;
+            window.location = 'course/' + self.url;
+            //window.location = self.url;
         }
     };
 
@@ -511,13 +514,13 @@ function DetailPageVm(coursesData, filename) {
 }
 
 function bootstrapCoursesPage() {
-    $.getJSON("courses.json", function (coursesData) {
+    $.getJSON("coursesdata.json", function (coursesData) {
         ko.applyBindings(new CoursesPageVm(coursesData));
     });
 }
 
 function bootstrapDetailsPage() {
-    $.getJSON("courses.json", function (coursesData) {
+    $.getJSON("coursesdata.json", function (coursesData) {
         var url = window.location.href;
         var filename = getBaseName(url);
         ko.applyBindings(new DetailPageVm(coursesData, filename));
