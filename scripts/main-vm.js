@@ -371,7 +371,7 @@ function CourseVm(c) {
     self.goToCourseDetailPage = function () {
         var currentPageUrl = window.location.href;
         if (currentPageUrl.indexOf('127') > -1) {
-            window.location = self.url + '.html';
+            window.location = 'detail.html?id=' + self.url;
         } else {
             window.location = 'course/' + self.url;
             //window.location = self.url;
@@ -521,8 +521,11 @@ function bootstrapCoursesPage() {
 
 function bootstrapDetailsPage() {
     $.getJSON("coursesdata.json", function (coursesData) {
-        var url = window.location.href;
-        var filename = getBaseName(url);
+        var currentPageUrl = window.location.href;
+        var filename = getBaseName(currentPageUrl);
+        if (currentPageUrl.indexOf('127') > -1) {
+            filename = getParameterByName('id');
+        }
         ko.applyBindings(new DetailPageVm(coursesData, filename));
     });
 }
@@ -542,3 +545,12 @@ function getBaseName(url) {
     return basename ? basename : "";
 }
 
+function getParameterByName(name, url) {
+    if (!url) url = window.location.href;
+    name = name.replace(/[\[\]]/g, "\\$&");
+    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+        results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, " "));
+}
