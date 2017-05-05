@@ -63,7 +63,15 @@
                             <img class="logo" src="/img/logo_2.svg">
                             <h2 class="detail-header" data-bind="text: course.title"></h2>
                             <p class="detail-time"><span> </span>
-                                <lessons data-bind="text: course.numLessons"></lessons> lessons<span></span><strong class="course-tag hidden-lg hidden-md hidden-sm" data-bind="text: course.tag"></strong>
+                                <!-- ko if: course.numLessons() > 0 -->
+                                <lessons data-bind="text: course.numLessons"></lessons> lessons<span></span>
+                                <!-- /ko -->
+                                <!-- ko if: course.numLessons() === 0 -->
+                                <span>Curriculum coming soon</span>
+                                <!-- /ko -->
+
+
+                                <strong class="course-tag hidden-lg hidden-md hidden-sm" data-bind="text: course.tag"></strong>
                                 <!-- ko with: course -->
                                 <img data-bind="attr: { src: getLevelIcon({
                                             l1: '/img/level_icon1.svg',
@@ -175,6 +183,8 @@
                     </div>
                 </div>
             </div>
+
+
             <div class="lessons-block">
                 <div class="container">
                     <div class="row">
@@ -184,7 +194,12 @@
                             </div>
                         </div>
                         <div class="col-md-8 col-sm-12 col-xs-12">
-                            <h2 class="lessons-header">Lessons</h2>
+                            <h2 class="lessons-header">Curriculum</h2>
+
+                            <!-- ko if: course.chapters().length === 0 -->
+                            <h4 style="color: #ffffff;">Curriculum coming soon. Sign up below to get notified when lessons are posted.</h4>
+                            <!-- /ko -->
+
                             <!-- ko foreach: course.chapters -->
                             <p class="get-started" data-bind="text: name"></p>
 
