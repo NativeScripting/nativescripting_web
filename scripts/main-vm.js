@@ -411,9 +411,9 @@ function MainNavVm() {
 
     self.goToAboutPage = function () {
         if (isLocalDevEnvironment()) {
-            window.location = 'about.html';
+            window.location = '/about.html';
         } else {
-            window.location = 'about';
+            window.location = '/about';
         }
     };
 }
