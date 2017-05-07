@@ -3826,6 +3826,9 @@ right: -130px;
 .about-authors-container {
   color: #ffffff;
 }
+.about-authors-container a {
+  color: #11f5ff;
+}
 .about-authors-container h2 {
   color: #12FFCD;
   font-family: "MonoRegular";
