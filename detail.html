@@ -22,8 +22,9 @@
     <div class="container-fluid">
         <div class="row">
             <div class="header">
+                <!-- ko with: mainNav -->
                 <div class="mobile-header">
-                    <a href="#">About</a>
+                    <a href="" data-bind="click: goToAboutPage">About</a>
                     <a href="https://sso.teachable.com/secure/89912/users/sign_in?reset_purchase_session=1" class="sign">Login</a>
                 </div>
                 <div class="container">
@@ -33,7 +34,7 @@
                                 <img src="/img/logo_full.svg" class="detail-logo">
                             </a>
                             <div class="header-page">
-                                <a href="#">About</a>
+                                <a href="" data-bind="click: goToAboutPage">About</a>
                                 <a href="https://sso.teachable.com/secure/89912/users/sign_in?reset_purchase_session=1" class="sign">Login</a>
                             </div>
                             <div class="burger">
@@ -46,7 +47,10 @@
                         </div>
                     </div>
                 </div>
+                <!-- /ko -->
             </div>
+
+
             <div class="pagination">
                 <div class="container">
                     <p class="new course-tag hidden-xs" data-bind="text: course.tag"></p>
@@ -56,6 +60,8 @@
                     </ul>
                 </div>
             </div>
+
+
             <div class="detail-top-block">
                 <div class="container">
                     <div class="row">
@@ -368,8 +374,10 @@
                         <p>@2017 NativeScripting</p>
                     </div>
                     <div class="footer-right">
-                        <a href="#">About</a>
+                        <!-- ko with: mainNav -->
+                        <a href="" data-bind="click: goToAboutPage">About</a>
                         <a href="https://sso.teachable.com/secure/89912/users/sign_in?reset_purchase_session=1" class="sign">Login</a>
+                        <!-- /ko -->
                     </div>
                 </div>
             </div>

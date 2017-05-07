@@ -21,10 +21,12 @@
     <div class="container-fluid">
         <div class="row">
             <div class="header">
+                <!-- ko with: mainNav -->
                 <div class="mobile-header">
-                    <a href="#">About</a>
+                    <a href="" data-bind="click: goToAboutPage">About</a>
                     <a href="https://sso.teachable.com/secure/89912/users/sign_in?reset_purchase_session=1" class="sign">Login</a>
                 </div>
+
                 <div class="container">
                     <div class="col-md-12">
                         <div class="row">
@@ -32,7 +34,7 @@
                                 <img src="img/logo_full.svg" class="">
                             </a>
                             <div class="header-page">
-                                <a href="#">About</a>
+                                <a href="" data-bind="click: goToAboutPage">About</a>
                                 <a href="https://sso.teachable.com/secure/89912/users/sign_in?reset_purchase_session=1" class="sign">Login</a>
                             </div>
                             <div class="burger">
@@ -46,6 +48,7 @@
                         </div>
                     </div>
                 </div>
+                <!-- /ko -->
             </div>
             <div class="bottom-header">
                 <div class="container">
@@ -296,15 +299,15 @@
                         <p>@2017 NativeScripting</p>
                     </div>
                     <div class="footer-right">
-                        <a href="#">About</a>
+                        <!-- ko with: mainNav -->
+                        <a href="" data-bind="click: goToAboutPage">About</a>
                         <a href="https://sso.teachable.com/secure/89912/users/sign_in?reset_purchase_session=1" class="sign">Login</a>
+                        <!-- /ko -->
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
-    <input type="submit" value="Update me" name="subscribe" id="mc-embedded-subscribe" class="button subscribe-btn" />
 
     <script src="node_modules/jquery/dist/jquery.min.js"></script>
     <script src="node_modules/knockout/build/output/knockout-latest.js"></script>

@@ -370,7 +370,7 @@ function CourseVm(c) {
 
     self.goToCourseDetailPage = function () {
         var currentPageUrl = window.location.href;
-        if (currentPageUrl.indexOf('127') > -1) {
+        if (isLocalDevEnvironment()) {
             window.location = 'detail.html?id=' + self.url;
         } else {
             window.location = 'course/' + self.url;
@@ -406,8 +406,22 @@ function CourseVm(c) {
 }
 
 
+function MainNavVm() {
+    var self = this;
+
+    self.goToAboutPage = function () {
+        if (isLocalDevEnvironment()) {
+            window.location = 'about.html';
+        } else {
+            window.location = 'about';
+        }
+    };
+}
+
 function CoursesPageVm(coursesData) {
     var self = this;
+
+    self.mainNav = new MainNavVm();
 
     self.courses = ko.observableArray([]);
     self.bundles = ko.observableArray([]);
@@ -491,6 +505,8 @@ function CoursesPageVm(coursesData) {
 function DetailPageVm(coursesData, filename) {
     var self = this;
 
+    self.mainNav = new MainNavVm();
+
     var courseRaw = coursesData.courses.find(function (course) {
         return course.url === filename;
     });
@@ -523,7 +539,7 @@ function bootstrapDetailsPage() {
     $.getJSON("coursesdata.json", function (coursesData) {
         var currentPageUrl = window.location.href;
         var filename = getBaseName(currentPageUrl);
-        if (currentPageUrl.indexOf('127') > -1) {
+        if (isLocalDevEnvironment()) {
             filename = getParameterByName('id');
         }
         ko.applyBindings(new DetailPageVm(coursesData, filename));
@@ -553,4 +569,8 @@ function getParameterByName(name, url) {
     if (!results) return null;
     if (!results[2]) return '';
     return decodeURIComponent(results[2].replace(/\+/g, " "));
+}
+
+function isLocalDevEnvironment() {
+    return window.location.href.indexOf('127.') > -1;
 }
