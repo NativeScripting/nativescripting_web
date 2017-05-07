@@ -3824,7 +3824,6 @@ right: -130px;
 /*subscribe box end*/
 
 .about-authors-container {
-  border: 3px solid green;
   color: #ffffff;
 }
 .about-authors-container h2 {
@@ -3891,7 +3890,6 @@ right: -130px;
 }
 
 .about-author-img-wrapper {
-   border: 1px solid blue;
    z-index: 5;
    position: relative;
 }
@@ -3918,7 +3916,6 @@ right: -130px;
 
 @media (min-width: 768px) {
   .about-author-wrapper {
-    border: 1px solid red;
     flex: 1;
     flex-basis: 100px;
   }
@@ -3926,7 +3923,6 @@ right: -130px;
 
 @media (max-width: 767px) {
   .about-author-wrapper {
-    border: 1px solid green;
     flex-basis: 100%;
   }
 }
