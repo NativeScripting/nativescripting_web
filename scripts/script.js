@@ -6,6 +6,11 @@ $(function () {
     var detail = document.getElementsByClassName('lessons-block');
     var main = document.getElementsByClassName('bottom-header');
 
+    $('.header .burger').on('click', function () {
+        $(this).toggleClass('burger-anim');
+        $('.header .mobile-header').toggleClass('active-burger')
+    });
+
     /*setTimeout(function () {
         $('.card-block .learn-card .top-block .card-header').each(function () {
             //console.log($(this).height());
@@ -256,10 +261,7 @@ $(function () {
     });
 
 
-    $('.header .burger').on('click', function () {
-        $(this).toggleClass('burger-anim');
-        $('.header .mobile-header').toggleClass('active-burger')
-    });
+
 
 
 
