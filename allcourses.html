@@ -5,15 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>NativeScripting</title>
-    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
-    <link rel="manifest" href="img/favicon/manifest.json">
-    <link rel="mask-icon" href="img/favicon/safari-pinned-tab.svg" color="#5bbad5">
-    <link rel="shortcut icon" href="img/favicon/favicon.ico">
-    <meta name="msapplication-config" content="img/favicon/browserconfig.xml">
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/img/favicon/manifest.json">
+    <link rel="mask-icon" href="/img/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="/img/favicon/favicon.ico">
+    <meta name="msapplication-config" content="/img/favicon/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
-    <link type="text/css" rel="stylesheet" href="styles/style.css">
+    <link type="text/css" rel="stylesheet" href="/styles/style.css">
 
 </head>
 
@@ -31,7 +31,7 @@
                     <div class="col-md-12">
                         <div class="row">
                             <a href="/">
-                                <img src="img/logo_full.svg" class="">
+                                <img src="/img/logo_full.svg" class="">
                             </a>
                             <div class="header-page">
                                 <a href="" data-bind="click: goToAboutPage">About</a>
@@ -105,9 +105,9 @@
                                 <div class="learn-card main-card">
                                     <div class="top-block">
                                         <img class="top-left-image" data-bind="attr: { src: getLevelIcon({
-                                            l1: 'img/level_icon1.svg',
-                                            l2: 'img/level_icon2.svg',
-                                            l3: 'img/level_icon3.svg'
+                                            l1: '/img/level_icon1.svg',
+                                            l2: '/img/level_icon2.svg',
+                                            l3: '/img/level_icon3.svg'
                                         }) }" title="Course level" />
                                         <p class="new"><span class="course-tag" data-bind="text: tag"></span></p>
                                         <div class="card-header">
@@ -163,7 +163,7 @@
                                 <div class="border-right"></div>
                                 <div class="top-block" data-bind="css: { 'included-active': coursesShowing }">
                                     <div class="included" data-bind="click: toggleCoursesShowing">
-                                        <numcourses data-bind="text: courseIds.length"></numcourses> courses included <img src="img/arrow.png"></div>
+                                        <numcourses data-bind="text: courseIds.length"></numcourses> courses included <img src="/img/arrow.png"></div>
                                     <h2 data-bind="text: title"></h2>
                                     <p data-bind="text: subtitle"></p>
                                     <div class="lessons-list">
@@ -172,9 +172,9 @@
                                             <h2 data-bind="text: authorNames"></h2>
                                             <p data-bind="text: title"></p>
                                             <img data-bind="attr: { src: getLevelIcon({
-                                                                l1: 'img/level_icon1.svg',
-                                                                l2: 'img/level_icon2.svg',
-                                                                l3: 'img/level_icon3.svg'
+                                                                l1: '/img/level_icon1.svg',
+                                                                l2: '/img/level_icon2.svg',
+                                                                l3: '/img/level_icon3.svg'
                                                             }) }" title="Course level" />
 
                                             <div class="line"></div>
@@ -208,7 +208,7 @@
 
 
                                     <div class="teams" data-bind="click: toggleTeamSelecting, css: { 'team-list-active': teamSelected, 'teams-active': teamSelecting }">
-                                        <p class="team">team <img src="img/arrow.png"></p>
+                                        <p class="team">team <img src="/img/arrow.png"></p>
 
                                         <ul>
 
@@ -254,7 +254,7 @@
 
             <div class="special subscribe-container">
                 <div class="logo-wrapper">
-                    <img class="logo" src="img/logo_2.svg">
+                    <img class="logo" src="/img/logo_2.svg">
                 </div>
                 <!-- Begin Signup Form -->
                 <div id="mc_embed_signup">
@@ -311,10 +311,10 @@
         </div>
     </div>
 
-    <script src="node_modules/jquery/dist/jquery.min.js"></script>
-    <script src="node_modules/knockout/build/output/knockout-latest.js"></script>
-    <script src="scripts/main-vm.js"></script>
-    <script src="scripts/script.js"></script>
+    <script src="/node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="/node_modules/knockout/build/output/knockout-latest.js"></script>
+    <script src="/scripts/main-vm.js"></script>
+    <script src="/scripts/script.js"></script>
 
     <script>
         bootstrapCoursesPage();
