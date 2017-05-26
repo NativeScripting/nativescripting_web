@@ -530,13 +530,13 @@ function DetailPageVm(coursesData, filename) {
 }
 
 function bootstrapCoursesPage() {
-    $.getJSON("coursesdata.json", function (coursesData) {
+    $.getJSON("coursesdata.json?ts=1495801899", function (coursesData) {
         ko.applyBindings(new CoursesPageVm(coursesData));
     });
 }
 
 function bootstrapDetailsPage() {
-    $.getJSON("coursesdata.json", function (coursesData) {
+    $.getJSON("coursesdata.json?ts=1495801899", function (coursesData) {
         var currentPageUrl = window.location.href;
         var filename = getBaseName(currentPageUrl);
         if (isLocalDevEnvironment()) {
