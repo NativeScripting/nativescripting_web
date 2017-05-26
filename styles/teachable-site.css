@@ -57,7 +57,9 @@ h3 {
 }
 
 /*courses page*/
-
+.progressbar {
+    background: #032e74;
+}
 .view-directory .course-listing {
     background-color: #0949b2;
 }
@@ -104,6 +106,24 @@ input.form-control.search {
 .navbar-course-hero {
     background: #032e74;
 }
+
+.course-mainbar .next-lecture-wrapper {
+    background: #032e74;
+}
+
+.course-sidebar ul.sidebar-nav li.selected a {
+    background: #032e74;
+    border-right: 1px solid #032e74;
+}
+
+.course-sidebar ul.sidebar-nav li a {
+    color: #ffffff;
+}
+
+.course-sidebar ul.sidebar-nav li a:hover {
+    background-color: #073A8D;
+}
+
 .course-top-row {
     background-color: #09224a;
 }
@@ -159,6 +179,18 @@ input.form-control.search {
     list-style-type: none;
     border-bottom: 5px solid #09224a;
 }
+
+.course-section ul.section-list .section-item.completed a.item {
+    background-color: #032e74;
+}
+.course-section ul.section-list .section-item.completed a.item:hover {
+    background-color: #052D6F;
+}
+
+.course-section ul.section-list .section-item.completed .status-icon {
+    background-color: #12ffcd !important;
+}
+
 .course-section ul.section-list .section-item .lecture-start {
     opacity: 1;
 }
@@ -257,7 +289,9 @@ header.half-height .lecture-nav a.nav-btn.complete, header.half-height .lecture-
 .checkout-page {
     background: #032e74;
 }
-.checkout-page h1 {
+.content-box h1,
+.checkout-page h1,
+.checkout-page .checkout-main-content h1 {
     color: #12FFCD;
 }
 
@@ -322,6 +356,9 @@ header.half-height .lecture-nav a.nav-btn.complete, header.half-height .lecture-
 
 
 /*login page */
+.gray-layout {
+    background-color: #09224a;
+}
 .devise-layout .content {
     background-color: #073A8D;
 }
