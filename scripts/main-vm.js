@@ -198,7 +198,7 @@ function LessonVm(chap, less) {
     self.chapter = chap;
 
     self.startLesson = function () {
-        window.location = tBaseUrl + '/courses/' + self.chapter.course.url + '/lectures/2543888';
+        window.location = tBaseUrl + '/courses/' + self.chapter.course.url + '/lectures/' + self.id;
     };
 }
 
