@@ -13,7 +13,7 @@
     <link rel="shortcut icon" href="/img/favicon/favicon.ico">
     <meta name="msapplication-config" content="/img/favicon/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
-    <link type="text/css" rel="stylesheet" href="/styles/style.css">
+    <link type="text/css" rel="stylesheet" href="/styles/style.css?ts=1495801900">
 
 </head>
 
@@ -53,7 +53,7 @@
 
             <div class="pagination">
                 <div class="container">
-                    <p class="new course-tag hidden-xs" data-bind="text: course.tag"></p>
+                    <p class="new course-tag hidden-xs" data-bind="text: course.tag, css: { 'course-tag-new': course.tag === 'NEW' }"></p>
                     <ul>
                         <li><a href="/">All Courses</a><img src="/img/arrow.png"></li>
                         <li><a>Course details</a></li>
@@ -77,7 +77,7 @@
                                 <!-- /ko -->
 
 
-                                <strong class="course-tag hidden-lg hidden-md hidden-sm" data-bind="text: course.tag"></strong>
+                                <strong class="course-tag hidden-lg hidden-md hidden-sm" data-bind="text: course.tag, css: { 'course-tag-new': course.tag === 'NEW' }"></strong>
                                 <!-- ko with: course -->
                                 <img data-bind="attr: { src: getLevelIcon({
                                             l1: '/img/level_icon1.svg',

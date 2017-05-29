@@ -3686,6 +3686,10 @@ a:hover, a:focus, a:active {
   background-color: #F0AE26;
 }
 
+.course-tag.course-tag-new {
+  color: #ffffff !important;;
+  background-color: #B517EC;
+}
 
 /*subscribe box start*/
 .subscribe-container {
