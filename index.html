@@ -5,50 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>NativeScripting</title>
-    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
-    <link rel="manifest" href="img/favicon/manifest.json">
-    <link rel="mask-icon" href="img/favicon/safari-pinned-tab.svg" color="#5bbad5">
-    <link rel="shortcut icon" href="img/favicon/favicon.ico">
-    <meta name="msapplication-config" content="img/favicon/browserconfig.xml">
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/img/favicon/manifest.json">
+    <link rel="mask-icon" href="/img/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="/img/favicon/favicon.ico">
+    <meta name="msapplication-config" content="/img/favicon/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
-    <link type="text/css" rel="stylesheet" href="styles/style.css">
-
-    <style>
-        body {
-            color: #ffffff;
-        }
-
-        .cs-container {
-            position: relative;
-            height: 150px;
-            display: flex;
-            justify-content: center;
-            padding: 20px;
-        }
-
-        .cs-bk-img-wrapper {
-            position: absolute;
-            right: 200px;
-            top: 30px;
-            width: 100px;
-        }
-
-        .cs-text-wrapper {
-            font-family: "MonoRegular";
-            font-size: 17px;
-            font-weight: bold;
-            line-height: 22px;
-            width: 100%;
-            position: relative;
-            align-self: center;
-        }
-
-        .cs-text {
-            text-align: center;
-        }
-    </style>
+    <link type="text/css" rel="stylesheet" href="/styles/style.css">
 
 </head>
 
@@ -56,32 +21,240 @@
     <div class="container-fluid">
         <div class="row">
             <div class="header">
+                <!-- ko with: mainNav -->
+                <div class="mobile-header">
+                    <a href="" data-bind="click: goToAboutPage">About</a>
+                    <a href="https://sso.teachable.com/secure/89912/users/sign_in?reset_purchase_session=1" class="sign">Login</a>
+                </div>
 
                 <div class="container">
                     <div class="col-md-12">
                         <div class="row">
-
-                            <img src="img/logo_full.svg">
+                            <a href="/">
+                                <img src="/img/logo_full.svg" class="">
+                            </a>
+                            <div class="header-page">
+                                <a href="" data-bind="click: goToAboutPage">About</a>
+                                <a href="https://sso.teachable.com/secure/89912/users/sign_in?reset_purchase_session=1" class="sign">Login</a>
+                            </div>
+                            <div class="burger">
+                                <div class="line-2"></div>
+                                <div class="line-2"></div>
+                                <div class="line"></div>
+                                <div class="line"></div>
+                                <div class="line"></div>
+                            </div>
 
                         </div>
+                    </div>
+                </div>
+                <!-- /ko -->
+            </div>
+            <div class="bottom-header">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="select-cat">
+                                <!-- ko foreach: categories -->
+                                <a data-bind="click: function() { $parent.selectCategory($data.catId) }"><span data-bind="text: name"></span></a>
+                                <!-- /ko -->
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-sm-6" id="left-filter">
+                            <div class="row">
+                                <a class="text-left" data-bind="click: function() { selectCategory('core') }"><span data-bind="css: { selected: selectedType() === 'core' }">NativeScript Core</span></a>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-6" id="right-filter">
+                            <div class="row">
+                                <a class="text-right" data-bind="click: function() { selectCategory('ng') }"><span data-bind="css: { selected: selectedType() === 'ng' }">NativeScript with Angular</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="left cat-underline" data-bind="css: { selected: selectedType() === 'core' }"></div>
+                <div class="right cat-underline" data-bind="css: { selected: selectedType() === 'ng' }"></div>
+            </div>
+
+            <div class="top-text-block">
+                <div class="container">
+                    <div class="col-md-12 text-padding">
+                        <h2>The most comprehensive NativeScript training</h2>
+                        <p>
+                            Are you ready to start learning NativeScript? Sign up for the FREE getting started guides, coming soon in Core and Angular
+                            versions. Be sure to sign up to be notified as the chapters get released so you can stay up to
+                            date. Pick a course or save big by purchasing a bundle.
+                        </p>
+                        <p>
+                            Do you already know the basics and want to go deeper? Our NativeScript Pro courses will take you to a finished and polished
+                            product that you can launch in the app stores.
+                        </p>
                     </div>
                 </div>
             </div>
 
 
 
-            <div class="cs-container">
+            <div class="card-block">
+                <div class="container">
+                    <div class="col-md-12" id="loadCard">
+                        <!-- ko foreach: courses -->
+                        <div class="col-md-4 col-sm-6 col-xs-12">
+                            <div class="row">
+                                <div class="learn-card main-card">
+                                    <div class="top-block">
+                                        <img class="top-left-image" data-bind="attr: { src: getLevelIcon({
+                                            l1: '/img/level_icon1.svg',
+                                            l2: '/img/level_icon2.svg',
+                                            l3: '/img/level_icon3.svg'
+                                        }) }" title="Course level" />
+                                        <p class="new"><span class="course-tag" data-bind="text: tag"></span></p>
+                                        <div class="card-header">
+                                            <div style="position: relative;">
+                                                <ul style="position: absolute; margin: 0; top: 15px; right: 16px;list-style: none;">
+                                                    <!-- ko foreach: courseIcons -->
+                                                    <li style="margin-left: -30px; margin-bottom: 5px;">
+                                                        <img style="display:block;" data-bind="attr: { src: $data }" />
+                                                    </li>
+                                                    <!-- /ko -->
+                                                </ul>
+                                            </div>
+                                            <!-- ko foreach: authors -->
+                                            <h3 data-bind="text: name"></h3>
+                                            <!-- /ko -->
+                                            <p data-bind="text: title"></p>
+                                        </div>
+                                        <p class="error">Please select the number of users</p>
+                                    </div>
 
-                <div class="cs-text-wrapper">
-                    <p class="cs-text">The most comprehensive NativeScript training on the web will be here soon.</p>
+                                    <div class="bottom">
+                                        <a data-bind="click: goToCourseDetailPage"><span>learn more</span></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /ko -->
+                    </div>
+
                 </div>
+            </div>
 
+
+
+            <div class="special">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <h2 class="text-header">Special Offers</h2>
+                        </div>
+
+                        <div class="for-flex">
+
+                            <!-- ko foreach: bundles -->
+                            <div class="bundle-card" data-bind="css: { 'supreme-bundle': bundleLevel === 2, 'ultimate-bundle': bundleLevel === 3, 'select-bundle': bundleSelected }">
+                                <!-- ko if: promoremaining > 0 -->
+                                <div class="top-price">
+                                    <promoremaining data-bind="text: promoremaining"></promoremaining>/
+                                    <promototal data-bind="text: promototal"></promototal> left at this price</div>
+                                <!-- /ko -->
+                                <div class="border-top"></div>
+                                <div class="border-left"></div>
+                                <div class="border-right"></div>
+                                <div class="top-block" data-bind="css: { 'included-active': coursesShowing }">
+                                    <div class="included" data-bind="click: toggleCoursesShowing">
+                                        <numcourses data-bind="text: courseIds.length"></numcourses> courses included <img src="/img/arrow.png"></div>
+                                    <h2 data-bind="text: title"></h2>
+                                    <p data-bind="text: subtitle"></p>
+                                    <div class="lessons-list">
+                                        <!-- ko foreach: courseSummaries -->
+                                        <div class="card-lessons">
+                                            <h2 data-bind="text: authorNames"></h2>
+                                            <p data-bind="text: title"></p>
+                                            <img data-bind="attr: { src: getLevelIcon({
+                                                                l1: '/img/level_icon1.svg',
+                                                                l2: '/img/level_icon2.svg',
+                                                                l3: '/img/level_icon3.svg'
+                                                            }) }" title="Course level" />
+
+                                            <div class="line"></div>
+                                        </div>
+                                        <!-- /ko -->
+                                    </div>
+                                    <div class="error" data-bind="css: { 'error-active': showMessage }"><span>Please select the number of users</span></div>
+                                </div>
+                                <div class="medium-block" data-bind="css: { 'medium-block-active': showMessage }">
+                                    <div class="medium-border-left"></div>
+                                    <div class="medium-border-right"></div>
+                                    <div class="medium-border-top"></div>
+                                    <div class="glow-border"></div>
+
+
+                                    <div class="single-user" data-bind="click: function() { selectProduct('single'); }, css: { 'active-single': singleSelected }">
+                                        <!-- ko with: productSingle -->
+                                        <div class="border-medium"></div>
+                                        <p class="user">single user</p>
+                                        <!-- ko if: pricereg === pricesale -->
+                                        <p class="team">Bundle special<span><price data-bind="text: priceSaleDisp"></price></span>
+                                        </p>
+                                        <!-- /ko -->
+                                        <!-- ko if: pricereg !== pricesale -->
+                                        <p class="team">Bundle special<span><price data-bind="text: priceSaleDisp"></price><span data-bind="text: priceRegDisp"></span></span>
+                                        </p>
+                                        <!-- /ko -->
+                                        <!-- /ko -->
+                                    </div>
+
+
+
+                                    <div class="teams" data-bind="click: toggleTeamSelecting, css: { 'team-list-active': teamSelected, 'teams-active': teamSelecting }">
+                                        <p class="team">team <img src="/img/arrow.png"></p>
+
+                                        <ul>
+
+                                            <li>
+                                                <!-- ko if: teamPriceRegTop() == teamPriceSaleTop() && !teamTopIsContact() -->
+                                                <users data-bind="text: teamUsersTop"></users><span><price data-bind="text: teamPriceSaleTop"></price></span>
+                                                <!-- /ko -->
+                                                <!-- ko if: teamPriceRegTop() != teamPriceSaleTop() && !teamTopIsContact() -->
+                                                <users data-bind="text: teamUsersTop"></users><span><price data-bind="text: teamPriceSaleTop"></price><span data-bind="text: teamPriceRegTop"></span></span>
+                                                <!-- /ko -->
+                                                <!-- ko if: teamTopIsContact -->
+                                                <users>11+ users</users><span><a href="mailto:info@nuvious.com?Subject=NativeScripting%20team" target="_top">email us</a></span>
+                                                <!-- /ko -->
+                                            </li>
+
+                                            <!-- ko foreach: productsTeam -->
+                                            <li data-bind="click: function() { $parent.selectProduct($data); }">
+                                                <!-- ko if: pricereg === pricesale && type !== 'contact' -->
+                                                <users data-bind="text: usersDisp"></users><span><price data-bind="text: priceSaleDisp"></price></span>
+                                                <!-- /ko -->
+                                                <!-- ko if: pricereg !== pricesale && type !== 'contact' -->
+                                                <users data-bind="text: usersDisp"></users><span><price data-bind="text: priceSaleDisp"></price><span data-bind="text: priceRegDisp"></span></span>
+                                                <!-- /ko -->
+                                                <!-- ko if: type === 'contact' -->
+                                                <users>11+ users</users><span><a href="mailto:info@nuvious.com?Subject=NativeScripting%20team" target="_top">email us</a></span>
+                                                <!-- /ko -->
+                                            </li>
+                                            <!-- /ko -->
+
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="bottom">
+                                    <a data-bind="click: buyBundle"><span>Buy Bundle</span></a>
+                                </div>
+                            </div>
+                            <!-- /ko -->
+                        </div>
+                    </div>
+                </div>
             </div>
 
 
             <div class="special subscribe-container">
                 <div class="logo-wrapper">
-                    <img class="logo" src="img/logo_2.svg">
+                    <img class="logo" src="/img/logo_2.svg">
                 </div>
                 <!-- Begin Signup Form -->
                 <div id="mc_embed_signup">
@@ -122,21 +295,31 @@
             </div>
 
 
-
-
-
             <div class="footer">
                 <div class="container">
                     <div class="footer-left">
-                        <p>©2017 NativeScripting. All rights reserved.</p>
+                        <p>@2017 NativeScripting</p>
                     </div>
                     <div class="footer-right">
-
+                        <!-- ko with: mainNav -->
+                        <a href="" data-bind="click: goToAboutPage">About</a>
+                        <a href="https://sso.teachable.com/secure/89912/users/sign_in?reset_purchase_session=1" class="sign">Login</a>
+                        <!-- /ko -->
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
+    <script src="/node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="/node_modules/knockout/build/output/knockout-latest.js"></script>
+    <script src="/scripts/main-vm.js?ts=1495801899"></script>
+    <script src="/scripts/script.js?ts=1495801899"></script>
+
+    <script>
+        bootstrapCoursesPage();
+    </script>
+
 
     <script>
         (function (i, s, o, g, r, a, m) {
