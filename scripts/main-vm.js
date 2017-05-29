@@ -491,15 +491,15 @@ function CoursesPageVm(coursesData) {
     ];
 
     if (localStorage.getItem('cat-value') === undefined) {
-        localStorage.setItem('cat-value', 'core');
-    } else if (localStorage.getItem('cat-value') === 'ng') {
+        localStorage.setItem('cat-value', 'ng');
+    } else if (localStorage.getItem('cat-value') === 'core') {
         var tCat1 = tCats[1];
         tCats[1] = tCats[0];
         tCats[0] = tCat1;
     }
 
     self.categories(tCats);
-    self.selectedCategory(tCats[0]);
+    self.selectedCategory(tCats[1]);
     self.filterCoursesByCategory();
 }
 
