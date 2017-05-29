@@ -1,4 +1,5 @@
 var tBaseUrl = 'http://nativescripting.teachable.com';
+var coursesDataUrl = 'coursesdata.json?ts=1495801900';
 
 function CategoryVm(c) {
     var self = this;
@@ -530,13 +531,13 @@ function DetailPageVm(coursesData, filename) {
 }
 
 function bootstrapCoursesPage() {
-    $.getJSON("coursesdata.json?ts=1495801899", function (coursesData) {
+    $.getJSON(coursesDataUrl, function (coursesData) {
         ko.applyBindings(new CoursesPageVm(coursesData));
     });
 }
 
 function bootstrapDetailsPage() {
-    $.getJSON("coursesdata.json?ts=1495801899", function (coursesData) {
+    $.getJSON(coursesDataUrl, function (coursesData) {
         var currentPageUrl = window.location.href;
         var filename = getBaseName(currentPageUrl);
         if (isLocalDevEnvironment()) {
