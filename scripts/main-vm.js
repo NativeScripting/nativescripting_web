@@ -1,5 +1,5 @@
 var tBaseUrl = 'http://nativescripting.teachable.com';
-var coursesDataUrl = 'coursesdata.json?ts=1495801902';
+var coursesDataUrl = 'coursesdata.json?ts=1495801903';
 
 function CategoryVm(c) {
     var self = this;
