@@ -1,5 +1,17 @@
 var tBaseUrl = 'http://nativescripting.teachable.com';
-var coursesDataUrl = 'coursesdata.json?ts=1495801903';
+var coursesDataUrl = 'coursesdata.json?ts=1495801904';
+var tCats = [
+    new CategoryVm({ catId: 'core', name: 'NativeScript Core' }),
+    new CategoryVm({ catId: 'ng', name: 'NativeScript with Angular' }),
+];
+var initialCatId = 'ng';
+
+function reorderCats(firstCatId) {
+    tCats.unshift(
+        tCats.splice(
+            tCats.findIndex(cat => cat.catId === firstCatId), 1)[0]
+    );
+}
 
 function CategoryVm(c) {
     var self = this;
@@ -419,25 +431,47 @@ function MainNavVm() {
     };
 }
 
+function CatPickerVm() {
+    var self = this;
+
+    self.selectedCategory = ko.observable();
+
+    self.categories = ko.pureComputed(function () {
+        var selCat = self.selectedCategory();
+        return tCats;
+    });
+
+    self.syncSelectedCat = function (catVm) {
+        localStorage.setItem('sel-cat', catVm.catId);
+    };
+
+    self.selectCategory = function (catId) {
+        reorderCats(catId);
+        self.selectedCategory(tCats[0]);
+        self.syncSelectedCat(tCats[0]);
+    };
+
+    if (localStorage.getItem('sel-cat') === null) {
+        self.selectCategory(initialCatId);
+    } else {
+        var storedCatId = localStorage.getItem('sel-cat');
+        self.selectCategory(storedCatId);
+    }
+}
+
 function CoursesPageVm(coursesData) {
     var self = this;
 
     self.mainNav = new MainNavVm();
+    self.catPicker = new CatPickerVm();
+    self.catPicker.selectedCategory.subscribe(function () {
+        self.filterCoursesByCategory();
+    });
+
+    self.catSelectorActive = ko.observable(false);
 
     self.courses = ko.observableArray([]);
     self.bundles = ko.observableArray([]);
-
-    self.categories = ko.observableArray([]);
-    self.selectedCategory = ko.observable();
-
-    self.selectedType = ko.pureComputed(function () {
-        var theCat = self.selectedCategory();
-        if (theCat) {
-            return theCat.catId;
-        } else {
-            return '';
-        }
-    });
 
     self.deselectAllBundles = function () {
         var bundles = self.bundles();
@@ -457,27 +491,22 @@ function CoursesPageVm(coursesData) {
         self.bundles.push(new BundleVm(coursesData.bundles[i], coursesData.courses, self.deselectAllBundles));
     }
 
+    self.toggleCatSelectorActive = function () {
+        self.catSelectorActive(!self.catSelectorActive());
+    };
 
-
-    self.selectCategory = function (catId) {
-        if (self.selectedCategory().catId !== catId) {
-            var newCat = self.categories().find(function (cat) {
-                return cat.catId === catId;
-            });
-            self.selectedCategory(newCat);
-            localStorage.setItem('cat-value', catId);
-            self.filterCoursesByCategory();
-
-            var tCats = self.categories();
-            var tCat1 = tCats[1];
-            tCats[1] = tCats[0];
-            tCats[0] = tCat1;
-            self.categories(tCats);
+    self.selectCategoryParent = function (catId) {
+        if (self.catSelectorActive()) {
+            self.selectCategoryDirect(catId);
         }
     }
 
+    self.selectCategoryDirect = function (catId) {
+        self.catPicker.selectCategory(catId);
+    }
+
     self.filterCoursesByCategory = function () {
-        var selectedCat = self.selectedCategory();
+        var selectedCat = self.catPicker.selectedCategory();
         var filteredCourses = self.allCourses.filter(function (course) {
             return course.categories.indexOf(selectedCat.catId) > -1;
         });
@@ -485,21 +514,6 @@ function CoursesPageVm(coursesData) {
         self.courses(filteredCourses);
     };
 
-    var tCats = [
-        new CategoryVm({ catId: 'core', name: 'NativeScript Core' }),
-        new CategoryVm({ catId: 'ng', name: 'NativeScript with Angular' }),
-    ];
-
-    if (localStorage.getItem('cat-value') === undefined) {
-        localStorage.setItem('cat-value', 'ng');
-    } else if (localStorage.getItem('cat-value') === 'core') {
-        var tCat1 = tCats[1];
-        tCats[1] = tCats[0];
-        tCats[0] = tCat1;
-    }
-
-    self.categories(tCats);
-    self.selectedCategory(tCats[1]);
     self.filterCoursesByCategory();
 }
 

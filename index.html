@@ -54,27 +54,27 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12">
-                            <div class="select-cat">
-                                <!-- ko foreach: categories -->
-                                <a data-bind="click: function() { $parent.selectCategory($data.catId) }"><span data-bind="text: name"></span></a>
+                            <div class="select-cat" data-bind="click: toggleCatSelectorActive, css: { 'select-cat-active': catSelectorActive }">
+                                <!-- ko foreach: catPicker.categories -->
+                                <a data-bind="click: function() { $parent.selectCategoryParent($data.catId) }"><span data-bind="text: name"></span></a>
                                 <!-- /ko -->
                             </div>
                         </div>
 
                         <div class="col-md-6 col-sm-6" id="left-filter">
                             <div class="row">
-                                <a class="text-left" data-bind="click: function() { selectCategory('core') }"><span data-bind="css: { selected: selectedType() === 'core' }">NativeScript Core</span></a>
+                                <a class="text-left" data-bind="click: function() { selectCategoryDirect('core') }"><span data-bind="css: { selected: catPicker.selectedCategory().catId === 'core' }">NativeScript Core</span></a>
                             </div>
                         </div>
                         <div class="col-md-6 col-sm-6" id="right-filter">
                             <div class="row">
-                                <a class="text-right" data-bind="click: function() { selectCategory('ng') }"><span data-bind="css: { selected: selectedType() === 'ng' }">NativeScript with Angular</span></a>
+                                <a class="text-right" data-bind="click: function() { selectCategoryDirect('ng') }"><span data-bind="css: { selected: catPicker.selectedCategory().catId === 'ng' }">NativeScript with Angular</span></a>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="left cat-underline" data-bind="css: { selected: selectedType() === 'core' }"></div>
-                <div class="right cat-underline" data-bind="css: { selected: selectedType() === 'ng' }"></div>
+                <div class="left cat-underline" data-bind="css: { selected: catPicker.selectedCategory().catId === 'core' }"></div>
+                <div class="right cat-underline" data-bind="css: { selected: catPicker.selectedCategory().catId === 'ng' }"></div>
             </div>
 
             <div class="top-text-block">
@@ -312,8 +312,8 @@
 
     <script src="/node_modules/jquery/dist/jquery.min.js"></script>
     <script src="/node_modules/knockout/build/output/knockout-latest.js"></script>
-    <script src="/scripts/main-vm.js?ts=1495801903"></script>
-    <script src="/scripts/script.js?ts=1495801903"></script>
+    <script src="/scripts/main-vm.js?ts=1495801904"></script>
+    <script src="/scripts/script.js?ts=1495801904"></script>
 
     <script>
         bootstrapCoursesPage();
