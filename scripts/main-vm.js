@@ -1,5 +1,5 @@
 var tBaseUrl = 'http://nativescripting.teachable.com';
-var coursesDataUrl = 'coursesdata.json?ts=1495801904';
+var coursesDataUrl = 'coursesdata.json?ts=1495801905';
 var tCats = [
     new CategoryVm({ catId: 'core', name: 'NativeScript Core' }),
     new CategoryVm({ catId: 'ng', name: 'NativeScript with Angular' }),
