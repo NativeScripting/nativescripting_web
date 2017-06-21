@@ -114,21 +114,33 @@
                                                 <ul style="position: absolute; margin: 0; top: 15px; right: 16px;list-style: none;">
                                                     <!-- ko foreach: courseIcons -->
                                                     <li style="margin-left: -30px; margin-bottom: 5px;">
-                                                        <img style="display:block;" data-bind="attr: { src: $data }" />
+                                                        <img style="display:block; position:relative; z-index:5;" data-bind="attr: { src: $data }" />
                                                     </li>
                                                     <!-- /ko -->
                                                 </ul>
                                             </div>
+                                            <p data-bind="text: title, css: { 'pre-text': tag === 'PRESALE' }"></p>
+
                                             <!-- ko foreach: authors -->
                                             <h3 data-bind="text: name"></h3>
                                             <!-- /ko -->
-                                            <p data-bind="text: title, css: { 'pre-text': tag === 'PRESALE' }"></p>
+
+
+                                            <!-- ko if: productSingle().pricesale === 0 -->
+                                            <p class="card-price-info">FREE COURSE</p>
+                                            <!-- /ko -->
+
                                         </div>
                                         <p class="error">Please select the number of users</p>
                                     </div>
 
                                     <div class="bottom" data-bind="css: { 'pre-bottom': tag === 'PRESALE' }">
+                                        <!-- ko if: productSingle().pricesale === 0 -->
+                                        <a data-bind="click: goToCourseDetailPage"><span>free course</span></a>
+                                        <!-- /ko -->
+                                        <!-- ko if: productSingle().pricesale !== 0 -->
                                         <a data-bind="click: goToCourseDetailPage"><span>learn more</span></a>
+                                        <!-- /ko -->
                                     </div>
                                 </div>
                             </div>

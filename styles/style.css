@@ -1494,7 +1494,7 @@ a:hover, a:focus, a:active {
         color: #fff; }
       .card-block .learn-card .top-block .card-header {
         position: absolute;
-        top: 120px;
+        top: 80px;
         width: 100%; 
         }
         .card-block .learn-card .top-block .card-header h3 {
@@ -1521,6 +1521,12 @@ a:hover, a:focus, a:active {
           height: 42px; }
         .card-block .learn-card .top-block .card-header .pre-text {
           color: #3CDBFF !important; }
+        .card-block .learn-card .top-block .card-header .card-price-info {
+          font-weight: bold;
+          font-size: 12px;
+          font-family: "OpenSansLight";
+          color: #ffffff;
+        }
     .card-block .learn-card .medium-block {
       height: 56px;
       cursor: pointer;
