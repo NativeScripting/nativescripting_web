@@ -122,12 +122,12 @@
                                             <!-- ko foreach: authors -->
                                             <h3 data-bind="text: name"></h3>
                                             <!-- /ko -->
-                                            <p data-bind="text: title"></p>
+                                            <p data-bind="text: title, css: { 'pre-text': tag === 'PRESALE' }"></p>
                                         </div>
                                         <p class="error">Please select the number of users</p>
                                     </div>
 
-                                    <div class="bottom">
+                                    <div class="bottom" data-bind="css: { 'pre-bottom': tag === 'PRESALE' }">
                                         <a data-bind="click: goToCourseDetailPage"><span>learn more</span></a>
                                     </div>
                                 </div>
