@@ -7,7 +7,8 @@ var es6transpiler = require('gulp-es6-transpiler');
 var cssnano = require('gulp-cssnano');
 var gVersionAppend = require('gulp-version-append');
 var htmlmin = require('gulp-htmlmin');
-var gulpSequence = require('gulp-sequence')
+var gulpSequence = require('gulp-sequence');
+var jsonminify = require('gulp-jsonminify');
 
 
 gulp.task('version-main-vm', function () {
@@ -41,6 +42,12 @@ gulp.task('scripts', function () {
         .pipe(rename({ suffix: '.min' })).pipe(gulp.dest("./scripts/"));
 });
 
+gulp.task('json', function () {
+    return gulp.src(['src/coursesdata.json'])
+        .pipe(jsonminify())
+        .pipe(gulp.dest('./'));
+});
+
 gulp.task('styles', function () {
     return gulp.src('styles/style.css')
         .pipe(cssnano())
@@ -48,7 +55,7 @@ gulp.task('styles', function () {
 });
 
 
-gulp.task('minify', ['scripts', 'styles', 'html'], function () {
+gulp.task('minify', ['scripts', 'styles', 'html', 'json'], function () {
     console.log('Minifying files');
 });
 

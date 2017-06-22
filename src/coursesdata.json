@@ -1,0 +1,1933 @@
+{
+    "courses": [
+        {
+            "id": "169856",
+            "title": "NativeScript with Angular Getting Started Guide",
+            "subtitle": "A free course to get you started with NativeScript and Angular",
+            "description": "Welcome to the NativeScript Getting Started Guide. In this course you'll use NativeScript, a cross-platform JavaScript framework for building native mobile apps, to build an iOS and Android app from scratch. This course is the video version of the Groceries tutorial found on nativescript.org.",
+            "url": "nativescript-with-angular-getting-started-guide",
+            "categories": [
+                "ng"
+            ],
+            "level": 1,
+            "tag": "NEW",
+            "launchdate": "05/29/2017",
+            "authors": [
+                {
+                    "name": "Alex Ziskind",
+                    "picture": "alex_ziskind.png",
+                    "bio": "Alex lives in Washington, DC. He's a speaker, trainer, and a Telerik Developer Expert. He's been invloved in NativeScript projects since 2015 and has created courses for Pluralsight.",
+                    "title": "Trainer and Owner"
+                }
+            ],
+            "products": [
+                {
+                    "id": "303801",
+                    "name": "Single user regular price",
+                    "description": "License for a single user. \n",
+                    "pricesale": 0,
+                    "pricereg": 0,
+                    "licensesMin": 1,
+                    "licensesMax": 1
+                },
+                {
+                    "id": "305781",
+                    "name": "Team of 2 - 10 regular price",
+                    "description": "License for a team of 2 - 10 users. \n",
+                    "pricesale": 0,
+                    "pricereg": 0,
+                    "licensesMin": 2,
+                    "licensesMax": 10
+                }
+            ],
+            "chapters": [
+                {
+                    "id": 10,
+                    "name": "Building Apps with NativeScript and Angular",
+                    "lessons": [
+                        {
+                            "chapterId": 10,
+                            "id": "2692194",
+                            "name": "Welcome"
+                        },
+                        {
+                            "chapterId": 10,
+                            "id": "2543888",
+                            "name": "About this course"
+                        }
+                    ]
+                },
+                {
+                    "id": 20,
+                    "name": "Learning the NativeScript Basics",
+                    "lessons": [
+                        {
+                            "chapterId": 20,
+                            "id": "2543904",
+                            "name": "Overview"
+                        },
+                        {
+                            "chapterId": 20,
+                            "id": "2543905",
+                            "name": "Creating apps"
+                        },
+                        {
+                            "chapterId": 20,
+                            "id": "2543906",
+                            "name": "Running apps"
+                        },
+                        {
+                            "chapterId": 20,
+                            "id": "2543907",
+                            "name": "Debugging apps"
+                        },
+                        {
+                            "chapterId": 20,
+                            "id": "2543908",
+                            "name": "Choosing an editor"
+                        }
+                    ]
+                },
+                {
+                    "id": 30,
+                    "name": "Creating User Interfaces",
+                    "lessons": [
+                        {
+                            "chapterId": 30,
+                            "id": "2573640",
+                            "name": "Overview"
+                        },
+                        {
+                            "chapterId": 30,
+                            "id": "2573641",
+                            "name": "What you're building"
+                        },
+                        {
+                            "chapterId": 30,
+                            "id": "2573642",
+                            "name": "Folder structure"
+                        },
+                        {
+                            "chapterId": 30,
+                            "id": "2573643",
+                            "name": "Starting up"
+                        },
+                        {
+                            "chapterId": 30,
+                            "id": "2573644",
+                            "name": "Adding UI elements"
+                        },
+                        {
+                            "chapterId": 30,
+                            "id": "2573645",
+                            "name": "Layouts"
+                        },
+                        {
+                            "chapterId": 30,
+                            "id": "2573646",
+                            "name": "Global CSS"
+                        },
+                        {
+                            "chapterId": 30,
+                            "id": "2573648",
+                            "name": "Component-specific CSS"
+                        },
+                        {
+                            "chapterId": 30,
+                            "id": "2573649",
+                            "name": "Images"
+                        }
+                    ]
+                },
+                {
+                    "id": 40,
+                    "name": "Application Logic",
+                    "lessons": [
+                        {
+                            "chapterId": 40,
+                            "id": "2573651",
+                            "name": "Overview"
+                        },
+                        {
+                            "chapterId": 40,
+                            "id": "2573654",
+                            "name": "Events"
+                        },
+                        {
+                            "chapterId": 40,
+                            "id": "2573655",
+                            "name": "Data binding"
+                        },
+                        {
+                            "chapterId": 40,
+                            "id": "2573657",
+                            "name": "Structuring your app"
+                        },
+                        {
+                            "chapterId": 40,
+                            "id": "2573658",
+                            "name": "Services"
+                        },
+                        {
+                            "chapterId": 40,
+                            "id": "2573660",
+                            "name": "Routing"
+                        }
+                    ]
+                },
+                {
+                    "id": 50,
+                    "name": "NativeScript Modules",
+                    "lessons": [
+                        {
+                            "chapterId": 50,
+                            "id": "2573661",
+                            "name": "Overview"
+                        },
+                        {
+                            "chapterId": 50,
+                            "id": "2573662",
+                            "name": "UI elements"
+                        },
+                        {
+                            "chapterId": 50,
+                            "id": "2573663",
+                            "name": "Animations"
+                        },
+                        {
+                            "chapterId": 50,
+                            "id": "2573664",
+                            "name": "ListView"
+                        },
+                        {
+                            "chapterId": 50,
+                            "id": "2573666",
+                            "name": "GridLayout"
+                        },
+                        {
+                            "chapterId": 50,
+                            "id": "2573667",
+                            "name": "ActivityIndicator"
+                        }
+                    ]
+                },
+                {
+                    "id": 60,
+                    "name": "Plugins and npm Modules",
+                    "lessons": [
+                        {
+                            "chapterId": 60,
+                            "id": "2573669",
+                            "name": "Overview"
+                        },
+                        {
+                            "chapterId": 60,
+                            "id": "2573670",
+                            "name": "Using npm modules"
+                        },
+                        {
+                            "chapterId": 60,
+                            "id": "2573673",
+                            "name": "Using NativeScript plugins"
+                        }
+                    ]
+                },
+                {
+                    "id": 70,
+                    "name": "Accessing Native APIs",
+                    "lessons": [
+                        {
+                            "chapterId": 70,
+                            "id": "2573675",
+                            "name": "Overview"
+                        },
+                        {
+                            "chapterId": 70,
+                            "id": "2573677",
+                            "name": "Accessing iOS APIs"
+                        },
+                        {
+                            "chapterId": 70,
+                            "id": "2573678",
+                            "name": "Accessing Android APIs"
+                        },
+                        {
+                            "chapterId": 70,
+                            "id": "2573679",
+                            "name": "Customizing the status bar"
+                        }
+                    ]
+                },
+                {
+                    "id": 80,
+                    "name": "Next Steps",
+                    "lessons": [
+                        {
+                            "chapterId": 80,
+                            "id": "2573681",
+                            "name": "Community"
+                        },
+                        {
+                            "chapterId": 80,
+                            "id": "2573682",
+                            "name": "Learning Materials"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "171132",
+            "title": "NativeScript Core Getting Started Guide",
+            "subtitle": "A free course to get you started with NativeScript Core using TypeScript",
+            "description": "Welcome to the NativeScript Getting Started Guide. In this tutorial you'll use NativeScript, a cross-platform JavaScript framework for building native mobile apps, to build an iOS and Android app from scratch. You'll use just TypeScript and CSS in this course.\n\n\n",
+            "url": "nativescript-core-getting-started-guide",
+            "categories": [
+                "core"
+            ],
+            "level": 1,
+            "tag": "PRESALE",
+            "launchdate": "07/01/2017",
+            "authors": [
+                {
+                    "name": "Alex Ziskind",
+                    "picture": "alex_ziskind.png",
+                    "bio": "Alex lives in Washington, DC. He's a speaker, trainer, and a Telerik Developer Expert. He's been invloved in NativeScript projects since 2015 and has created courses for Pluralsight.",
+                    "title": "Trainer and Owner"
+                }
+            ],
+            "products": [
+                {
+                    "id": "306840",
+                    "name": "Single user regular price",
+                    "description": "License for a single user. \n",
+                    "pricesale": 0,
+                    "pricereg": 0,
+                    "licensesMin": 1,
+                    "licensesMax": 1
+                },
+                {
+                    "id": "306839",
+                    "name": "Team 2 - 10 regular price",
+                    "description": "License for a team of 2 - 10 users. \n",
+                    "pricesale": 0,
+                    "pricereg": 0,
+                    "licensesMin": 2,
+                    "licensesMax": 10
+                }
+            ],
+            "chapters": [
+                {
+                    "id": 10,
+                    "name": "NativeScript Getting Started Guide",
+                    "lessons": [
+                        {
+                            "chapterId": 10,
+                            "id": "2564664",
+                            "name": "Start What is NativeScript?"
+                        },
+                        {
+                            "chapterId": 10,
+                            "id": "2564665",
+                            "name": "Start Prerequisites"
+                        },
+                        {
+                            "chapterId": 10,
+                            "id": "2564666",
+                            "name": "Start Installation"
+                        }
+                    ]
+                },
+                {
+                    "id": 20,
+                    "name": "Learning the NativeScript Basics",
+                    "lessons": [
+                        {
+                            "chapterId": 20,
+                            "id": "2564659",
+                            "name": "Start Overview"
+                        },
+                        {
+                            "chapterId": 20,
+                            "id": "2564660",
+                            "name": "Start Creating apps"
+                        },
+                        {
+                            "chapterId": 20,
+                            "id": "2564661",
+                            "name": "Start Running apps"
+                        },
+                        {
+                            "chapterId": 20,
+                            "id": "2564662",
+                            "name": "Start Debugging apps"
+                        },
+                        {
+                            "chapterId": 20,
+                            "id": "2564663",
+                            "name": "Start Choosing an editor"
+                        }
+                    ]
+                },
+                {
+                    "id": 30,
+                    "name": "Creating User Interfaces",
+                    "lessons": [
+                        {
+                            "chapterId": 30,
+                            "id": "2573578",
+                            "name": "Start Overview"
+                        },
+                        {
+                            "chapterId": 30,
+                            "id": "2573579",
+                            "name": "Start What you're building"
+                        },
+                        {
+                            "chapterId": 30,
+                            "id": "2573580",
+                            "name": "Start Directory structure"
+                        },
+                        {
+                            "chapterId": 30,
+                            "id": "2573581",
+                            "name": "Start Adding UI components"
+                        },
+                        {
+                            "chapterId": 30,
+                            "id": "2573583",
+                            "name": "Start Layouts"
+                        },
+                        {
+                            "chapterId": 30,
+                            "id": "2573584",
+                            "name": "Start CSS"
+                        },
+                        {
+                            "chapterId": 30,
+                            "id": "2573585",
+                            "name": "Start Images"
+                        }
+                    ]
+                },
+                {
+                    "id": 40,
+                    "name": "Application Logic",
+                    "lessons": [
+                        {
+                            "chapterId": 40,
+                            "id": "2573590",
+                            "name": "Start Overview"
+                        },
+                        {
+                            "chapterId": 40,
+                            "id": "2573592",
+                            "name": "Start The code-behind"
+                        },
+                        {
+                            "chapterId": 40,
+                            "id": "2573593",
+                            "name": "Start Navigating screens"
+                        },
+                        {
+                            "chapterId": 40,
+                            "id": "2573595",
+                            "name": "Start Accessing UI components"
+                        },
+                        {
+                            "chapterId": 40,
+                            "id": "2573596",
+                            "name": "Start Adding a view model"
+                        }
+                    ]
+                },
+                {
+                    "id": 50,
+                    "name": "NativeScript Modules",
+                    "lessons": [
+                        {
+                            "chapterId": 50,
+                            "id": "2573600",
+                            "name": "Start Overview"
+                        },
+                        {
+                            "chapterId": 50,
+                            "id": "2573601",
+                            "name": "Start Connecting to a backend"
+                        },
+                        {
+                            "chapterId": 50,
+                            "id": "2573602",
+                            "name": "Start Dialog module"
+                        },
+                        {
+                            "chapterId": 50,
+                            "id": "2573603",
+                            "name": "Start ListView"
+                        },
+                        {
+                            "chapterId": 50,
+                            "id": "2573604",
+                            "name": "Start Working with arrays"
+                        },
+                        {
+                            "chapterId": 50,
+                            "id": "2573605",
+                            "name": "Start GridLayout"
+                        },
+                        {
+                            "chapterId": 50,
+                            "id": "2573607",
+                            "name": "Start ActivityIndicator"
+                        },
+                        {
+                            "chapterId": 50,
+                            "id": "2573608",
+                            "name": "Start Animations"
+                        }
+                    ]
+                },
+                {
+                    "id": 60,
+                    "name": "Plugins and npm Modules",
+                    "lessons": [
+                        {
+                            "chapterId": 60,
+                            "id": "2573612",
+                            "name": "Start Overview"
+                        },
+                        {
+                            "chapterId": 60,
+                            "id": "2573613",
+                            "name": "Start Using npm modules"
+                        },
+                        {
+                            "chapterId": 60,
+                            "id": "2573614",
+                            "name": "Start Using NativeScript plugins"
+                        }
+                    ]
+                },
+                {
+                    "id": 70,
+                    "name": "Accessing Native APIs",
+                    "lessons": [
+                        {
+                            "chapterId": 70,
+                            "id": "2573616",
+                            "name": "Start Overview"
+                        },
+                        {
+                            "chapterId": 70,
+                            "id": "2573617",
+                            "name": "Start Customizing the ActionBar - iOS"
+                        },
+                        {
+                            "chapterId": 70,
+                            "id": "2573620",
+                            "name": "Start Deleting from a list - Android"
+                        },
+                        {
+                            "chapterId": 70,
+                            "id": "2573623",
+                            "name": "Start Deleting from a list - iOS"
+                        }
+                    ]
+                },
+                {
+                    "id": 80,
+                    "name": "Next Steps",
+                    "lessons": [
+                        {
+                            "chapterId": 80,
+                            "id": "2573626",
+                            "name": "Start Overview"
+                        },
+                        {
+                            "chapterId": 80,
+                            "id": "2573628",
+                            "name": "Start Join the NativeScript community"
+                        },
+                        {
+                            "chapterId": 80,
+                            "id": "2573629",
+                            "name": "Start Start your own app"
+                        },
+                        {
+                            "chapterId": 80,
+                            "id": "2573630",
+                            "name": "Start Bookmark NativeScript learning resources"
+                        },
+                        {
+                            "chapterId": 80,
+                            "id": "2573631",
+                            "name": "Start Let us know what you think"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "169916",
+            "title": "NativeScript with Angular Pro",
+            "subtitle": "The complete course for developing NativeScript with Angular mobile applications for iOS and Android.",
+            "description": "This course is an advanced course that covers everything from iOS and Android application lifecycle control to testing, transpiling, and deploying your applications.\n\n\n",
+            "url": "nativescript-with-angular-pro",
+            "categories": [
+                "ng"
+            ],
+            "level": 3,
+            "tag": "PRESALE",
+            "launchdate": "08/31/2017",
+            "authors": [
+                {
+                    "name": "Alex Ziskind",
+                    "picture": "alex_ziskind.png",
+                    "bio": "Alex lives in Washington, DC. He's a speaker, trainer, and a Telerik Developer Expert. He's been invloved in NativeScript projects since 2015 and has created courses for Pluralsight.",
+                    "title": "Trainer and Owner"
+                }
+            ],
+            "products": [
+                {
+                    "id": "303942",
+                    "name": "Single user pre-launch",
+                    "description": "License for a single user. \n",
+                    "pricesale": "$79",
+                    "pricereg": "$159",
+                    "licensesMin": 1,
+                    "licensesMax": 1
+                },
+                {
+                    "id": "308148",
+                    "name": "Team of 2 - 10 pre-launch",
+                    "description": "License for a team of 2 - 10 users. \n",
+                    "pricesale": "$319",
+                    "pricereg": "$479",
+                    "licensesMin": 2,
+                    "licensesMax": 10
+                }
+            ],
+            "chapters": [
+                {
+                    "id": 10,
+                    "name": "Welcome",
+                    "lessons": [
+                        {
+                            "chapterId": 10,
+                            "id": "2544422",
+                            "name": "Start Course Overview"
+                        },
+                        {
+                            "chapterId": 10,
+                            "id": "2544423",
+                            "name": "Start Using the exercise files"
+                        },
+                        {
+                            "chapterId": 10,
+                            "id": "2544424",
+                            "name": "Start Using native definitions"
+                        }
+                    ]
+                },
+                {
+                    "id": 20,
+                    "name": "Application Management",
+                    "lessons": [
+                        {
+                            "chapterId": 20,
+                            "id": "2544462",
+                            "name": "Start Overview"
+                        },
+                        {
+                            "chapterId": 20,
+                            "id": "2544425",
+                            "name": "Start Application Life Cycle"
+                        },
+                        {
+                            "chapterId": 20,
+                            "id": "2544427",
+                            "name": "Start iOS UIApplicationDelegate"
+                        },
+                        {
+                            "chapterId": 20,
+                            "id": "2544428",
+                            "name": "Start Android Activity Events"
+                        }
+                    ]
+                },
+                {
+                    "id": 30,
+                    "name": "Deeper UI",
+                    "lessons": [
+                        {
+                            "chapterId": 30,
+                            "id": "2544435",
+                            "name": "Start Overview"
+                        },
+                        {
+                            "chapterId": 30,
+                            "id": "2544437",
+                            "name": "Start Using the Page"
+                        },
+                        {
+                            "chapterId": 30,
+                            "id": "2544439",
+                            "name": "Start New Lecture"
+                        },
+                        {
+                            "chapterId": 30,
+                            "id": "2544440",
+                            "name": "Start View life cycle"
+                        },
+                        {
+                            "chapterId": 30,
+                            "id": "2544442",
+                            "name": "Start Dialogs"
+                        },
+                        {
+                            "chapterId": 30,
+                            "id": "2544443",
+                            "name": "Start Modals"
+                        },
+                        {
+                            "chapterId": 30,
+                            "id": "2544444",
+                            "name": "Start Multiple ListView templates"
+                        },
+                        {
+                            "chapterId": 30,
+                            "id": "2544446",
+                            "name": "Start FormattedString"
+                        },
+                        {
+                            "chapterId": 30,
+                            "id": "2544447",
+                            "name": "Start ActionBar"
+                        },
+                        {
+                            "chapterId": 30,
+                            "id": "2544448",
+                            "name": "Start Local notifications"
+                        },
+                        {
+                            "chapterId": 30,
+                            "id": "2544449",
+                            "name": "Start Controlling the keyboard"
+                        },
+                        {
+                            "chapterId": 30,
+                            "id": "2544451",
+                            "name": "Start Using icon fonts"
+                        },
+                        {
+                            "chapterId": 30,
+                            "id": "2544452",
+                            "name": "Start Lower cased and dashed components"
+                        },
+                        {
+                            "chapterId": 30,
+                            "id": "2544453",
+                            "name": "Start Programmatic components"
+                        },
+                        {
+                            "chapterId": 30,
+                            "id": "2544455",
+                            "name": "Start Custom components"
+                        },
+                        {
+                            "chapterId": 30,
+                            "id": "2544457",
+                            "name": "Start Platform specific declarations"
+                        },
+                        {
+                            "chapterId": 30,
+                            "id": "2544458",
+                            "name": "Start Screen size qualifiers"
+                        },
+                        {
+                            "chapterId": 30,
+                            "id": "2544459",
+                            "name": "Start Platform qualifiers"
+                        },
+                        {
+                            "chapterId": 30,
+                            "id": "2544460",
+                            "name": "Start Orientation qualifiers"
+                        }
+                    ]
+                },
+                {
+                    "id": 40,
+                    "name": "More UI Widgets",
+                    "lessons": [
+                        {
+                            "chapterId": 40,
+                            "id": "2573725",
+                            "name": "Start Overview"
+                        },
+                        {
+                            "chapterId": 40,
+                            "id": "2573726",
+                            "name": "Start Placeholder"
+                        },
+                        {
+                            "chapterId": 40,
+                            "id": "2573727",
+                            "name": "Start Switch"
+                        },
+                        {
+                            "chapterId": 40,
+                            "id": "2573730",
+                            "name": "Start ListPicker"
+                        },
+                        {
+                            "chapterId": 40,
+                            "id": "2573732",
+                            "name": "Start DatePicker"
+                        },
+                        {
+                            "chapterId": 40,
+                            "id": "2573734",
+                            "name": "Start TimePicker"
+                        },
+                        {
+                            "chapterId": 40,
+                            "id": "2573735",
+                            "name": "Start ImagePicker"
+                        },
+                        {
+                            "chapterId": 40,
+                            "id": "2573736",
+                            "name": "Start Slider"
+                        },
+                        {
+                            "chapterId": 40,
+                            "id": "2573737",
+                            "name": "Start Repeater"
+                        },
+                        {
+                            "chapterId": 40,
+                            "id": "2573738",
+                            "name": "Start WebView"
+                        },
+                        {
+                            "chapterId": 40,
+                            "id": "2573740",
+                            "name": "Start HtmlView"
+                        },
+                        {
+                            "chapterId": 40,
+                            "id": "2573742",
+                            "name": "Start Progress"
+                        },
+                        {
+                            "chapterId": 40,
+                            "id": "2573743",
+                            "name": "Start SearchBar"
+                        }
+                    ]
+                },
+                {
+                    "id": 50,
+                    "name": "More modules",
+                    "lessons": [
+                        {
+                            "chapterId": 50,
+                            "id": "2573747",
+                            "name": "Start Overview"
+                        },
+                        {
+                            "chapterId": 50,
+                            "id": "2573748",
+                            "name": "Start Using connectivity"
+                        },
+                        {
+                            "chapterId": 50,
+                            "id": "2573750",
+                            "name": "Start Timer"
+                        },
+                        {
+                            "chapterId": 50,
+                            "id": "2573751",
+                            "name": "Start Http"
+                        },
+                        {
+                            "chapterId": 50,
+                            "id": "2573753",
+                            "name": "Start Fetch polyfill"
+                        },
+                        {
+                            "chapterId": 50,
+                            "id": "2573754",
+                            "name": "Start Image cache"
+                        },
+                        {
+                            "chapterId": 50,
+                            "id": "2573755",
+                            "name": "Start Adding push notifications"
+                        },
+                        {
+                            "chapterId": 50,
+                            "id": "2573756",
+                            "name": "Start Firebase integration"
+                        }
+                    ]
+                },
+                {
+                    "id": 60,
+                    "name": "Events",
+                    "lessons": [
+                        {
+                            "chapterId": 60,
+                            "id": "2573757",
+                            "name": "Start Overview"
+                        },
+                        {
+                            "chapterId": 60,
+                            "id": "2573758",
+                            "name": "Start Listening for events through code"
+                        },
+                        {
+                            "chapterId": 60,
+                            "id": "2573761",
+                            "name": "Start PropertyChange event"
+                        },
+                        {
+                            "chapterId": 60,
+                            "id": "2573762",
+                            "name": "Start Custom events"
+                        },
+                        {
+                            "chapterId": 60,
+                            "id": "2573763",
+                            "name": "Start Avoiding Memory leaks"
+                        },
+                        {
+                            "chapterId": 60,
+                            "id": "2573764",
+                            "name": "Start Weak events"
+                        }
+                    ]
+                },
+                {
+                    "id": 70,
+                    "name": "Hardware Access",
+                    "lessons": [
+                        {
+                            "chapterId": 70,
+                            "id": "2573765",
+                            "name": "Start Overview"
+                        },
+                        {
+                            "chapterId": 70,
+                            "id": "2573766",
+                            "name": "Start Using Location"
+                        },
+                        {
+                            "chapterId": 70,
+                            "id": "2573767",
+                            "name": "Start Accessing the camera"
+                        }
+                    ]
+                },
+                {
+                    "id": 80,
+                    "name": "Tracing and Debugging",
+                    "lessons": [
+                        {
+                            "chapterId": 80,
+                            "id": "2573769",
+                            "name": "Start Overview"
+                        },
+                        {
+                            "chapterId": 80,
+                            "id": "2573770",
+                            "name": "Start Setting up tracing"
+                        },
+                        {
+                            "chapterId": 80,
+                            "id": "2573771",
+                            "name": "Start Using tracing"
+                        },
+                        {
+                            "chapterId": 80,
+                            "id": "2573772",
+                            "name": "Start Debugging options"
+                        },
+                        {
+                            "chapterId": 80,
+                            "id": "2573774",
+                            "name": "Start Debugging commands"
+                        },
+                        {
+                            "chapterId": 80,
+                            "id": "2573775",
+                            "name": "Start Debugging with Visual Studio Code"
+                        }
+                    ]
+                },
+                {
+                    "id": 90,
+                    "name": "Multithreaded Programming",
+                    "lessons": [
+                        {
+                            "chapterId": 90,
+                            "id": "2573776",
+                            "name": "Start Overview"
+                        },
+                        {
+                            "chapterId": 90,
+                            "id": "2573777",
+                            "name": "Start Workers API"
+                        },
+                        {
+                            "chapterId": 90,
+                            "id": "2573778",
+                            "name": "Start General Guidelines"
+                        },
+                        {
+                            "chapterId": 90,
+                            "id": "2573779",
+                            "name": "Start Limitations"
+                        }
+                    ]
+                },
+                {
+                    "id": 100,
+                    "name": "Testing",
+                    "lessons": [
+                        {
+                            "chapterId": 100,
+                            "id": "2573780",
+                            "name": "Start Overview"
+                        },
+                        {
+                            "chapterId": 100,
+                            "id": "2573781",
+                            "name": "Start Configuring your project"
+                        },
+                        {
+                            "chapterId": 100,
+                            "id": "2573782",
+                            "name": "Start Creating tests"
+                        },
+                        {
+                            "chapterId": 100,
+                            "id": "2573783",
+                            "name": "Start Running tests"
+                        },
+                        {
+                            "chapterId": 100,
+                            "id": "2573784",
+                            "name": "Start Configuring Karma"
+                        }
+                    ]
+                },
+                {
+                    "id": 110,
+                    "name": "Transpilers",
+                    "lessons": [
+                        {
+                            "chapterId": 110,
+                            "id": "2573786",
+                            "name": "Start Overview"
+                        },
+                        {
+                            "chapterId": 110,
+                            "id": "2573787",
+                            "name": "Start TypeScript"
+                        },
+                        {
+                            "chapterId": 110,
+                            "id": "2573788",
+                            "name": "Start Babel"
+                        }
+                    ]
+                },
+                {
+                    "id": 120,
+                    "name": "Preparing for deployment",
+                    "lessons": [
+                        {
+                            "chapterId": 120,
+                            "id": "2573791",
+                            "name": "Start Overview"
+                        },
+                        {
+                            "chapterId": 120,
+                            "id": "2573793",
+                            "name": "Start AOT"
+                        },
+                        {
+                            "chapterId": 120,
+                            "id": "2573794",
+                            "name": "Start Configuring WebPack"
+                        },
+                        {
+                            "chapterId": 120,
+                            "id": "2573795",
+                            "name": "Start Bundling with WebPack"
+                        },
+                        {
+                            "chapterId": 120,
+                            "id": "2573796",
+                            "name": "Start Bundling Extra Assets"
+                        },
+                        {
+                            "chapterId": 120,
+                            "id": "2573797",
+                            "name": "Start Advanced WebPack"
+                        },
+                        {
+                            "chapterId": 120,
+                            "id": "2573798",
+                            "name": "Start iOS Launch screen"
+                        },
+                        {
+                            "chapterId": 120,
+                            "id": "2573800",
+                            "name": "Start iOS App Icons"
+                        },
+                        {
+                            "chapterId": 120,
+                            "id": "2573801",
+                            "name": "Start iOS publishing"
+                        },
+                        {
+                            "chapterId": 120,
+                            "id": "2573802",
+                            "name": "Start Android Launch screen"
+                        },
+                        {
+                            "chapterId": 120,
+                            "id": "2573803",
+                            "name": "Start Android App Icons"
+                        },
+                        {
+                            "chapterId": 120,
+                            "id": "2573804",
+                            "name": "Start Android publishing"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "171131",
+            "title": "NativeScript Core Pro",
+            "subtitle": "The complete course for developing NativeScript mobile applications for iOS and Android.",
+            "description": "This course is an advanced course that covers everything from iOS and Android application lifecycle control to testing, transpiling, and deploying your applications. This is the NativeScript Core course so we're using TypeScript and CSS in this course.\n\n\n",
+            "url": "nativescript-core-pro",
+            "categories": [
+                "core"
+            ],
+            "level": 3,
+            "tag": "PRESALE",
+            "launchdate": "09/30/2017",
+            "authors": [
+                {
+                    "name": "Alex Ziskind",
+                    "picture": "alex_ziskind.png",
+                    "bio": "Alex lives in Washington, DC. He's a speaker, trainer, and a Telerik Developer Expert. He's been invloved in NativeScript projects since 2015 and has created courses for Pluralsight.",
+                    "title": "Trainer and Owner"
+                }
+            ],
+            "products": [
+                {
+                    "id": "306837",
+                    "name": "Single user pre-launch",
+                    "description": "License for a single user. \n",
+                    "pricesale": "$69",
+                    "pricereg": "$139",
+                    "licensesMin": 1,
+                    "licensesMax": 1
+                },
+                {
+                    "id": "308150",
+                    "name": "Team of 2 - 10 pre-launch",
+                    "description": "License for a team of 2 - 10 users. \n",
+                    "pricesale": "$279",
+                    "pricereg": "$419",
+                    "licensesMin": 2,
+                    "licensesMax": 10
+                }
+            ],
+            "chapters": [
+                {
+                    "id": 10,
+                    "name": "Welcome",
+                    "lessons": [
+                        {
+                            "chapterId": 10,
+                            "id": "2573812",
+                            "name": "Start Course Overview"
+                        },
+                        {
+                            "chapterId": 10,
+                            "id": "2573814",
+                            "name": "Start Using the exercise files"
+                        },
+                        {
+                            "chapterId": 10,
+                            "id": "2573815",
+                            "name": "Start Using native definitions"
+                        }
+                    ]
+                },
+                {
+                    "id": 20,
+                    "name": "Application Management",
+                    "lessons": [
+                        {
+                            "chapterId": 20,
+                            "id": "2573816",
+                            "name": "Start Overview"
+                        },
+                        {
+                            "chapterId": 20,
+                            "id": "2573818",
+                            "name": "Start Application Life Cycle"
+                        },
+                        {
+                            "chapterId": 20,
+                            "id": "2573820",
+                            "name": "Start iOS UIApplicationDelegate"
+                        },
+                        {
+                            "chapterId": 20,
+                            "id": "2573822",
+                            "name": "Start Android Activity Events"
+                        }
+                    ]
+                },
+                {
+                    "id": 30,
+                    "name": "Deeper UI",
+                    "lessons": [
+                        {
+                            "chapterId": 30,
+                            "id": "2573823",
+                            "name": "Start Overview"
+                        },
+                        {
+                            "chapterId": 30,
+                            "id": "2573825",
+                            "name": "Start What is a frame?"
+                        },
+                        {
+                            "chapterId": 30,
+                            "id": "2573826",
+                            "name": "Start Using the Page"
+                        },
+                        {
+                            "chapterId": 30,
+                            "id": "2573827",
+                            "name": "Start View life cycle"
+                        },
+                        {
+                            "chapterId": 30,
+                            "id": "2573829",
+                            "name": "Start Dialogs"
+                        },
+                        {
+                            "chapterId": 30,
+                            "id": "2573830",
+                            "name": "Start Modals"
+                        },
+                        {
+                            "chapterId": 30,
+                            "id": "2573831",
+                            "name": "Start Multiple ListView templates"
+                        },
+                        {
+                            "chapterId": 30,
+                            "id": "2573832",
+                            "name": "Start FormattedString"
+                        },
+                        {
+                            "chapterId": 30,
+                            "id": "2573833",
+                            "name": "Start ActionBar"
+                        },
+                        {
+                            "chapterId": 30,
+                            "id": "2573834",
+                            "name": "Start Local notifications"
+                        },
+                        {
+                            "chapterId": 30,
+                            "id": "2573835",
+                            "name": "Start Controlling the keyboard"
+                        },
+                        {
+                            "chapterId": 30,
+                            "id": "2573836",
+                            "name": "Start Using icon fonts"
+                        },
+                        {
+                            "chapterId": 30,
+                            "id": "2573837",
+                            "name": "Start Lower cased and dashed components"
+                        },
+                        {
+                            "chapterId": 30,
+                            "id": "2573838",
+                            "name": "Start Programmatic components"
+                        },
+                        {
+                            "chapterId": 30,
+                            "id": "2573839",
+                            "name": "Start Custom components"
+                        },
+                        {
+                            "chapterId": 30,
+                            "id": "2573840",
+                            "name": "Start Platform specific declarations"
+                        },
+                        {
+                            "chapterId": 30,
+                            "id": "2573841",
+                            "name": "Start Screen size qualifiers"
+                        },
+                        {
+                            "chapterId": 30,
+                            "id": "2573842",
+                            "name": "Start Platform qualifiers"
+                        },
+                        {
+                            "chapterId": 30,
+                            "id": "2573843",
+                            "name": "Start Orientation qualifiers"
+                        }
+                    ]
+                },
+                {
+                    "id": 40,
+                    "name": "More UI Widgets",
+                    "lessons": [
+                        {
+                            "chapterId": 40,
+                            "id": "2573844",
+                            "name": "Start Overview"
+                        },
+                        {
+                            "chapterId": 40,
+                            "id": "2573845",
+                            "name": "Start Placeholder"
+                        },
+                        {
+                            "chapterId": 40,
+                            "id": "2573846",
+                            "name": "Start Switch"
+                        },
+                        {
+                            "chapterId": 40,
+                            "id": "2573847",
+                            "name": "Start ListPicker"
+                        },
+                        {
+                            "chapterId": 40,
+                            "id": "2573848",
+                            "name": "Start DatePicker"
+                        },
+                        {
+                            "chapterId": 40,
+                            "id": "2573849",
+                            "name": "Start TimePicker"
+                        },
+                        {
+                            "chapterId": 40,
+                            "id": "2573851",
+                            "name": "Start ImagePicker"
+                        },
+                        {
+                            "chapterId": 40,
+                            "id": "2573854",
+                            "name": "Start Slider"
+                        },
+                        {
+                            "chapterId": 40,
+                            "id": "2573856",
+                            "name": "Start Repeater"
+                        },
+                        {
+                            "chapterId": 40,
+                            "id": "2573857",
+                            "name": "Start WebView"
+                        },
+                        {
+                            "chapterId": 40,
+                            "id": "2573858",
+                            "name": "Start HtmlView"
+                        },
+                        {
+                            "chapterId": 40,
+                            "id": "2573859",
+                            "name": "Start Progress"
+                        },
+                        {
+                            "chapterId": 40,
+                            "id": "2573860",
+                            "name": "Start SearchBar"
+                        }
+                    ]
+                },
+                {
+                    "id": 50,
+                    "name": "More Modules",
+                    "lessons": [
+                        {
+                            "chapterId": 50,
+                            "id": "2573862",
+                            "name": "Start Overview"
+                        },
+                        {
+                            "chapterId": 50,
+                            "id": "2573863",
+                            "name": "Start Using connectivity"
+                        },
+                        {
+                            "chapterId": 50,
+                            "id": "2573864",
+                            "name": "Start Timer"
+                        },
+                        {
+                            "chapterId": 50,
+                            "id": "2573865",
+                            "name": "Start Http"
+                        },
+                        {
+                            "chapterId": 50,
+                            "id": "2573866",
+                            "name": "Start Fetch polyfill"
+                        },
+                        {
+                            "chapterId": 50,
+                            "id": "2573867",
+                            "name": "Start Image cache"
+                        },
+                        {
+                            "chapterId": 50,
+                            "id": "2573868",
+                            "name": "Start Adding push notifications"
+                        }
+                    ]
+                },
+                {
+                    "id": 60,
+                    "name": "Events",
+                    "lessons": [
+                        {
+                            "chapterId": 60,
+                            "id": "2573871",
+                            "name": "Start Overview"
+                        },
+                        {
+                            "chapterId": 60,
+                            "id": "2573882",
+                            "name": "Start Listening for events through code"
+                        },
+                        {
+                            "chapterId": 60,
+                            "id": "2573883",
+                            "name": "Start PropertyChange event"
+                        },
+                        {
+                            "chapterId": 60,
+                            "id": "2573884",
+                            "name": "Start Custom events"
+                        },
+                        {
+                            "chapterId": 60,
+                            "id": "2573886",
+                            "name": "Start Avoiding Memory leaks"
+                        },
+                        {
+                            "chapterId": 60,
+                            "id": "2573887",
+                            "name": "Start Weak events"
+                        }
+                    ]
+                },
+                {
+                    "id": 70,
+                    "name": "Hardware Access",
+                    "lessons": [
+                        {
+                            "chapterId": 70,
+                            "id": "2573888",
+                            "name": "Start New Lecture"
+                        },
+                        {
+                            "chapterId": 70,
+                            "id": "2573889",
+                            "name": "Start Overview"
+                        },
+                        {
+                            "chapterId": 70,
+                            "id": "2573890",
+                            "name": "Start Using Location"
+                        },
+                        {
+                            "chapterId": 70,
+                            "id": "2573891",
+                            "name": "Start Accessing the camera"
+                        }
+                    ]
+                },
+                {
+                    "id": 80,
+                    "name": "Tracing and Debugging",
+                    "lessons": [
+                        {
+                            "chapterId": 80,
+                            "id": "2573892",
+                            "name": "Start Overview"
+                        },
+                        {
+                            "chapterId": 80,
+                            "id": "2573893",
+                            "name": "Start Setting up tracing"
+                        },
+                        {
+                            "chapterId": 80,
+                            "id": "2573894",
+                            "name": "Start Using tracing"
+                        },
+                        {
+                            "chapterId": 80,
+                            "id": "2573895",
+                            "name": "Start Debugging options"
+                        },
+                        {
+                            "chapterId": 80,
+                            "id": "2573896",
+                            "name": "Start Debugging commands"
+                        },
+                        {
+                            "chapterId": 80,
+                            "id": "2573897",
+                            "name": "Start Debugging with Visual Studio Code"
+                        }
+                    ]
+                },
+                {
+                    "id": 90,
+                    "name": "Multithreaded Programming",
+                    "lessons": [
+                        {
+                            "chapterId": 90,
+                            "id": "2573898",
+                            "name": "Start Overview"
+                        },
+                        {
+                            "chapterId": 90,
+                            "id": "2573899",
+                            "name": "Start Workers API"
+                        },
+                        {
+                            "chapterId": 90,
+                            "id": "2573900",
+                            "name": "Start General Guidelines"
+                        },
+                        {
+                            "chapterId": 90,
+                            "id": "2573901",
+                            "name": "Start Limitations"
+                        }
+                    ]
+                },
+                {
+                    "id": 100,
+                    "name": "Testing",
+                    "lessons": [
+                        {
+                            "chapterId": 100,
+                            "id": "2573902",
+                            "name": "Start Overview"
+                        },
+                        {
+                            "chapterId": 100,
+                            "id": "2573903",
+                            "name": "Start Configuring your project"
+                        },
+                        {
+                            "chapterId": 100,
+                            "id": "2573904",
+                            "name": "Start Creating tests"
+                        },
+                        {
+                            "chapterId": 100,
+                            "id": "2573906",
+                            "name": "Start Running tests"
+                        },
+                        {
+                            "chapterId": 100,
+                            "id": "2573907",
+                            "name": "Start Configuring Karma"
+                        }
+                    ]
+                },
+                {
+                    "id": 110,
+                    "name": "Transpilers",
+                    "lessons": [
+                        {
+                            "chapterId": 110,
+                            "id": "2573909",
+                            "name": "Start Overview"
+                        },
+                        {
+                            "chapterId": 110,
+                            "id": "2573911",
+                            "name": "Start TypeScript"
+                        },
+                        {
+                            "chapterId": 110,
+                            "id": "2573912",
+                            "name": "Start Babel"
+                        }
+                    ]
+                },
+                {
+                    "id": 120,
+                    "name": "Preparing for Deployment",
+                    "lessons": [
+                        {
+                            "chapterId": 120,
+                            "id": "2573913",
+                            "name": "Start Overview"
+                        },
+                        {
+                            "chapterId": 120,
+                            "id": "2573916",
+                            "name": "Start Configuring WebPack"
+                        },
+                        {
+                            "chapterId": 120,
+                            "id": "2573917",
+                            "name": "Start Bundling with WebPack"
+                        },
+                        {
+                            "chapterId": 120,
+                            "id": "2573918",
+                            "name": "Start Bundling Extra Assets"
+                        },
+                        {
+                            "chapterId": 120,
+                            "id": "2573919",
+                            "name": "Start Advanced WebPack"
+                        },
+                        {
+                            "chapterId": 120,
+                            "id": "2573920",
+                            "name": "Start iOS Launch screen"
+                        },
+                        {
+                            "chapterId": 120,
+                            "id": "2573921",
+                            "name": "Start iOS App Icons"
+                        },
+                        {
+                            "chapterId": 120,
+                            "id": "2573923",
+                            "name": "Start iOS publishing"
+                        },
+                        {
+                            "chapterId": 120,
+                            "id": "2573925",
+                            "name": "Start Android Launch screen"
+                        },
+                        {
+                            "chapterId": 120,
+                            "id": "2573926",
+                            "name": "Start Android App Icons"
+                        },
+                        {
+                            "chapterId": 120,
+                            "id": "2573927",
+                            "name": "Start Android publishing"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "171149",
+            "title": "NativeScript with Angular Web Application Conversion",
+            "subtitle": "Moving your web app to a native mobile app",
+            "description": "This course is specifically for those people that need to convert an existing web application to a native mobile application. We will do this using NativeScript with Angular.\n\n\n",
+            "url": "nativescript-with-angular-web-application-conversion",
+            "categories": [
+                "ng"
+            ],
+            "level": 2,
+            "tag": "PRESALE",
+            "launchdate": "10/31/2017",
+            "authors": [
+                {
+                    "name": "Alex Ziskind",
+                    "picture": "alex_ziskind.png",
+                    "bio": "Alex lives in Washington, DC. He's a speaker, trainer, and a Telerik Developer Expert. He's been invloved in NativeScript projects since 2015 and has created courses for Pluralsight.",
+                    "title": "Trainer and Owner"
+                }
+            ],
+            "products": [
+                {
+                    "id": "308156",
+                    "name": "Single user pre-launch price",
+                    "description": "License for a single user. \n",
+                    "pricesale": "$59",
+                    "pricereg": "$99",
+                    "licensesMin": 1,
+                    "licensesMax": 1
+                },
+                {
+                    "id": "308157",
+                    "name": "Team of 2 - 10 pre-launch price",
+                    "description": "License for a team of 2 - 10 users. \n",
+                    "pricesale": "$239",
+                    "pricereg": "$299",
+                    "licensesMin": 2,
+                    "licensesMax": 10
+                }
+            ],
+            "chapters": []
+        },
+        {
+            "id": "171150",
+            "title": "Securing NativeScript Applications",
+            "subtitle": "Making your NativeScript Applications Bulletproof",
+            "description": "In this course, we will learn how to deal with security in your NativeScript applications. We will look at both Core as well as Angular versions of the framework.\n\n\n",
+            "url": "securing-nativescript-applications",
+            "categories": [
+                "core",
+                "ng"
+            ],
+            "level": 3,
+            "tag": "PRESALE",
+            "launchdate": "3/01/2018",
+            "authors": [
+                {
+                    "name": "Alex Ziskind",
+                    "picture": "alex_ziskind.png",
+                    "bio": "Alex lives in Washington, DC. He's a speaker, trainer, and a Telerik Developer Expert. He's been invloved in NativeScript projects since 2015 and has created courses for Pluralsight.",
+                    "title": "Trainer and Owner"
+                }
+            ],
+            "products": [
+                {
+                    "id": "308161",
+                    "name": "Single user pre-launch price",
+                    "description": "License for a single user. \n",
+                    "pricesale": "$49",
+                    "pricereg": "$69",
+                    "licensesMin": 1,
+                    "licensesMax": 1
+                },
+                {
+                    "id": "308162",
+                    "name": "Team of 2 - 10 pre-launch price",
+                    "description": "License for a team of 2 - 10 users. \n",
+                    "pricesale": "$199",
+                    "pricereg": "$209",
+                    "licensesMin": 2,
+                    "licensesMax": 10
+                }
+            ],
+            "chapters": []
+        },
+        {
+            "id": "171152",
+            "title": "Styling NativeScript Core Applications",
+            "subtitle": "Everything about CSS in NativeScript Core",
+            "description": "In this course, we will learn in depth styling techniques with NativeScript Core. We'll learn how to use global NativeScript styling constructs as well as how to best approach separation of styles into composable rules. We'll also look at using platform specific styling and using style preprocessors like LESS and SASS. Finally we will see how to defined CSS animations in NativeScript.\n\n\n",
+            "url": "styling-nativescript-core-applications",
+            "categories": [
+                "core"
+            ],
+            "level": 2,
+            "tag": "PRESALE",
+            "launchdate": "11/30/2017",
+            "authors": [
+                {
+                    "name": "Alex Ziskind",
+                    "picture": "alex_ziskind.png",
+                    "bio": "Alex lives in Washington, DC. He's a speaker, trainer, and a Telerik Developer Expert. He's been invloved in NativeScript projects since 2015 and has created courses for Pluralsight.",
+                    "title": "Trainer and Owner"
+                }
+            ],
+            "products": [
+                {
+                    "id": "308164",
+                    "name": "Single user pre-launch price",
+                    "description": "License for a single user. \n",
+                    "pricesale": "$29",
+                    "pricereg": "$49",
+                    "licensesMin": 1,
+                    "licensesMax": 1
+                },
+                {
+                    "id": "308166",
+                    "name": "Team of 2 - 10 pre-launch price",
+                    "description": "License for a team of 2 - 10 users. \n",
+                    "pricesale": "$119",
+                    "pricereg": "$149",
+                    "licensesMin": 2,
+                    "licensesMax": 10
+                }
+            ],
+            "chapters": []
+        },
+        {
+            "id": "171151",
+            "title": "Styling NativeScript with Angular Applications",
+            "subtitle": "Everything about CSS in NativeScript with Angular",
+            "description": "In this course, we will learn in depth styling techniques with NativeScript and Angular. We'll learn how to define styles for Angular components in NativeScript, as well as how to use global NativeScript styling constructs. We'll also look at using platform specific styling and using style preprocessors like LESS and SASS.\n\n\n",
+            "url": "styling-nativescript-with-angular-applications",
+            "categories": [
+                "ng"
+            ],
+            "level": 2,
+            "tag": "PRESALE",
+            "launchdate": "11/30/2017",
+            "authors": [
+                {
+                    "name": "Alex Ziskind",
+                    "picture": "alex_ziskind.png",
+                    "bio": "Alex lives in Washington, DC. He's a speaker, trainer, and a Telerik Developer Expert. He's been invloved in NativeScript projects since 2015 and has created courses for Pluralsight.",
+                    "title": "Trainer and Owner"
+                }
+            ],
+            "products": [
+                {
+                    "id": "308168",
+                    "name": "Single user pre-launch price",
+                    "description": "License for a single user. \n",
+                    "pricesale": "$29",
+                    "pricereg": "$59",
+                    "licensesMin": 1,
+                    "licensesMax": 1
+                },
+                {
+                    "id": "308170",
+                    "name": "Team of 2 - 10 pre-launch price",
+                    "description": "License for a team of 2 - 10 users. \n",
+                    "pricesale": "$129",
+                    "pricereg": "$179",
+                    "licensesMin": 2,
+                    "licensesMax": 10
+                }
+            ],
+            "chapters": []
+        }
+    ],
+    "bundles": [
+        {
+            "id": "171481",
+            "title": "NativeScript with Angular Super",
+            "subtitle": "Get the most useful knowledge about NativeScript with Angular",
+            "description": "\n",
+            "url": "nativescript-with-angular-super-bundle",
+            "promototal": 100,
+            "promoremaining": 93,
+            "bundleLevel": 1,
+            "products": [
+                {
+                    "id": "308174",
+                    "name": "Single user pre-launch price",
+                    "description": "License for a single user. \n",
+                    "pricesale": "$79",
+                    "pricereg": "$139",
+                    "licensesMin": 1,
+                    "licensesMax": 1
+                },
+                {
+                    "id": "308176",
+                    "name": "Team of 2 - 10 pre-launch price",
+                    "description": "License for a team of 2 - 10 users. \n",
+                    "pricesale": "$319",
+                    "pricereg": "$419",
+                    "licensesMin": 2,
+                    "licensesMax": 10
+                }
+            ],
+            "courseIds": [
+                "169856",
+                "171149",
+                "171151"
+            ]
+        },
+        {
+            "id": "171483",
+            "title": "NativeScript with Angular Ultra",
+            "subtitle": "Get as much NativeScript with Angular Knowledge as You Can Handle",
+            "description": "\n",
+            "url": "nativescript-with-angular-ultra-bundle",
+            "promototal": 100,
+            "promoremaining": 85,
+            "bundleLevel": 2,
+            "products": [
+                {
+                    "id": "308178",
+                    "name": "Single user pre-launch price",
+                    "description": "License for a single user. \n",
+                    "pricesale": "$139",
+                    "pricereg": "$259",
+                    "licensesMin": 1,
+                    "licensesMax": 1
+                },
+                {
+                    "id": "308181",
+                    "name": "Team of 2 - 10 pre-launch price",
+                    "description": "License for a team of 2 - 10 users. \n",
+                    "pricesale": "$559",
+                    "pricereg": "$779",
+                    "licensesMin": 2,
+                    "licensesMax": 10
+                }
+            ],
+            "courseIds": [
+                "169856",
+                "169916",
+                "171149",
+                "171151"
+            ]
+        },
+        {
+            "id": "171486",
+            "title": "NativeScript Core Master Bundle",
+            "subtitle": "Learn Anything and Everything About NativeScript Core",
+            "description": "\n",
+            "url": "nativescript-core-master-bundle",
+            "promototal": 100,
+            "promoremaining": 89,
+            "bundleLevel": 3,
+            "products": [
+                {
+                    "id": "308184",
+                    "name": "Single user pre-launch price",
+                    "description": "License for a single user. \n",
+                    "pricesale": "$89",
+                    "pricereg": "$169",
+                    "licensesMin": 1,
+                    "licensesMax": 1
+                },
+                {
+                    "id": "308186",
+                    "name": "Team of 2 - 10 pre-launch price",
+                    "description": "License for a team of 2 - 10 users. \n",
+                    "pricesale": "$359",
+                    "pricereg": "$509",
+                    "licensesMin": 2,
+                    "licensesMax": 10
+                }
+            ],
+            "courseIds": [
+                "171132",
+                "171131",
+                "171152"
+            ]
+        }
+    ]
+}
