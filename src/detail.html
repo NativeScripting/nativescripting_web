@@ -70,7 +70,7 @@
                             <h2 class="detail-header" data-bind="text: course.title"></h2>
                             <p class="detail-time"><span> </span>
                                 <!-- ko if: course.numLessons() > 0 -->
-                                <lessons data-bind="text: course.numLessons"></lessons> lessons<span></span>
+                                <lessons data-bind="text: course.numLessons"></lessons>&nbsp;<span> lessons</span>
                                 <!-- /ko -->
                                 <!-- ko if: course.numLessons() === 0 -->
                                 <span>Curriculum coming soon</span>
@@ -236,7 +236,7 @@
                                 <div class="border-right"></div>
                                 <div class="top-block" data-bind="css: { 'included-active': coursesShowing }">
                                     <div class="included" data-bind="click: toggleCoursesShowing">
-                                        <numcourses data-bind="text: courseIds.length"></numcourses> courses included <img src="/img/arrow.png"></div>
+                                        <numcourses data-bind="text: courseIds.length"></numcourses>&nbsp;courses included <img src="/img/arrow.png"></div>
                                     <h2 data-bind="text: title"></h2>
                                     <p data-bind="text: subtitle"></p>
                                     <div class="lessons-list">
