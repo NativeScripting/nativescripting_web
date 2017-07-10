@@ -1,6 +1,197 @@
 {
     "courses": [
         {
+            "id": "193399",
+            "title": "NativeScript with @ngrx",
+            "subtitle": "Start using @ngrx in your NativeScript with Angular apps",
+            "description": "In this course, we build a simplified cryptocurrency price viewer powered by @ngrx/store and @ngrx/effects. This allows us to use the power of RxJS based state management in our NativeScript with Angular applications and allows us to better reason about our projects.",
+            "url": "nativescript-with-@ngrx",
+            "categories": [
+                "ng"
+            ],
+            "level": 2,
+            "tag": "NEW",
+            "launchdate": "07/10/2017",
+            "authors": [
+                {
+                    "name": "Paul Halliday",
+                    "picture": "paul_halliday.png",
+                    "bio": "Paul Halliday is a tech entrepreneur that specialises in cross platform mobile development. He graduated with a first class honours in BSc Computer Science from the University of Sunderland and has received numerous awards including the SIEM Prize, Sunderland University Professional Award, and more.",
+                    "title": "NativeScript Trainer"
+                }
+            ],
+            "products": [
+                {
+                    "id": "354984",
+                    "name": "Single user launch",
+                    "description": "License for a single user.",
+                    "pricesale": "$19",
+                    "pricereg": "$29",
+                    "licensesMin": 1,
+                    "licensesMax": 1
+                },
+                {
+                    "id": "354987",
+                    "name": "Team of 2 - 10 launch",
+                    "description": "License for a team of 2 - 10 users.",
+                    "pricesale": "$79",
+                    "pricereg": "$119",
+                    "licensesMin": 2,
+                    "licensesMax": 10
+                }
+            ],
+            "chapters": [
+                {
+                    "id": 10,
+                    "name": "Introduction",
+                    "lessons": [
+                        {
+                            "chapterId": 10,
+                            "id": "2942738",
+                            "name": "Introduction (1:15)"
+                        },
+                        {
+                            "chapterId": 10,
+                            "id": "2942739",
+                            "name": "Project Setup (1:09)"
+                        },
+                        {
+                            "chapterId": 10,
+                            "id": "2942740",
+                            "name": "Scaffolding our Project (4:08)"
+                        },
+                        {
+                            "chapterId": 10,
+                            "id": "2942741",
+                            "name": "Creating a Data Model (3:48)"
+                        },
+                        {
+                            "chapterId": 10,
+                            "id": "2942743",
+                            "name": "Currency List (3:10)"
+                        },
+                        {
+                            "chapterId": 10,
+                            "id": "2942744",
+                            "name": "Currency Service (9:08)"
+                        }
+                    ]
+                },
+                {
+                    "id": 20,
+                    "name": "@ngrx",
+                    "lessons": [
+                        {
+                            "chapterId": 20,
+                            "id": "2942746",
+                            "name": "Creating an Application State (8:09)"
+                        },
+                        {
+                            "chapterId": 20,
+                            "id": "2942747",
+                            "name": "Creating and Dispatching Actions (3:46)"
+                        },
+                        {
+                            "chapterId": 20,
+                            "id": "2942748",
+                            "name": "Reducers (5:52)"
+                        },
+                        {
+                            "chapterId": 20,
+                            "id": "2942749",
+                            "name": "Adding Effects with @ngrx/effects (6:59)"
+                        },
+                        {
+                            "chapterId": 20,
+                            "id": "2942750",
+                            "name": "Manual Observable Unsubscription (1:42)"
+                        },
+                        {
+                            "chapterId": 20,
+                            "id": "2942751",
+                            "name": "Currency Detail (2:59)"
+                        },
+                        {
+                            "chapterId": 20,
+                            "id": "2942752",
+                            "name": "Actions and Currency Detail (3:28)"
+                        },
+                        {
+                            "chapterId": 20,
+                            "id": "2942753",
+                            "name": "Combining Reducers (4:18)"
+                        },
+                        {
+                            "chapterId": 20,
+                            "id": "2942754",
+                            "name": "Refactoring the Currency Reducer (2:41)"
+                        },
+                        {
+                            "chapterId": 20,
+                            "id": "2942756",
+                            "name": "Getting Prices (8:41)"
+                        },
+                        {
+                            "chapterId": 20,
+                            "id": "2942757",
+                            "name": "Displaying Selected Currency Data (1:32)"
+                        },
+                        {
+                            "chapterId": 20,
+                            "id": "2942758",
+                            "name": "Fade In Loading (3:44)"
+                        }
+                    ]
+                },
+                {
+                    "id": 30,
+                    "name": "Smart/Presentational Components & Change Detection",
+                    "lessons": [
+                        {
+                            "chapterId": 30,
+                            "id": "2942766",
+                            "name": "Smart/Presentational Components Introduction (0:56)"
+                        },
+                        {
+                            "chapterId": 30,
+                            "id": "2942768",
+                            "name": "Creating Application Pages (2:36)"
+                        },
+                        {
+                            "chapterId": 30,
+                            "id": "2942769",
+                            "name": "Presentational Component (2:12)"
+                        },
+                        {
+                            "chapterId": 30,
+                            "id": "2942770",
+                            "name": "Creating a Smart Component (4:32)"
+                        },
+                        {
+                            "chapterId": 30,
+                            "id": "2942772",
+                            "name": "Increased Performance (2:08)"
+                        },
+                        {
+                            "chapterId": 30,
+                            "id": "2942773",
+                            "name": "Converting (2:43)"
+                        },
+                        {
+                            "chapterId": 30,
+                            "id": "2942774",
+                            "name": "Smart Details (3:20)"
+                        },
+                        {
+                            "chapterId": 30,
+                            "id": "2942775",
+                            "name": "End (1:54)"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
             "id": "169856",
             "title": "NativeScript with Angular Getting Started Guide",
             "subtitle": "A free course to get you started with NativeScript and Angular",
