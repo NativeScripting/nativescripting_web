@@ -784,15 +784,6 @@
                     "name": "Single user pre-launch",
                     "description": "License for a single user. \n",
                     "pricesale": "$79",
-                    "pricereg": "$79",
-                    "licensesMin": 1,
-                    "licensesMax": 1
-                },
-                {
-                    "id": "308145",
-                    "name": "Single user regular price",
-                    "description": "License for a single user. \n",
-                    "pricesale": "$159",
                     "pricereg": "$159",
                     "licensesMin": 1,
                     "licensesMax": 1
@@ -802,15 +793,6 @@
                     "name": "Team of 2 - 10 pre-launch",
                     "description": "License for a team of 2 - 10 users. \n",
                     "pricesale": "$319",
-                    "pricereg": "$319",
-                    "licensesMin": 2,
-                    "licensesMax": 10
-                },
-                {
-                    "id": "308147",
-                    "name": "Team of 2 - 10 regular price",
-                    "description": "License for a team of 2 - 10 users. \n",
-                    "pricesale": "$479",
                     "pricereg": "$479",
                     "licensesMin": 2,
                     "licensesMax": 10
@@ -1342,15 +1324,6 @@
                     "name": "Single user pre-launch",
                     "description": "License for a single user. \n",
                     "pricesale": "$69",
-                    "pricereg": "$69",
-                    "licensesMin": 1,
-                    "licensesMax": 1
-                },
-                {
-                    "id": "308149",
-                    "name": "Single user regular price",
-                    "description": "License for a single user. \n",
-                    "pricesale": "$139",
                     "pricereg": "$139",
                     "licensesMin": 1,
                     "licensesMax": 1
@@ -1360,15 +1333,6 @@
                     "name": "Team of 2 - 10 pre-launch price",
                     "description": "License for a team of 2 - 10 users. \n",
                     "pricesale": "$279",
-                    "pricereg": "$279",
-                    "licensesMin": 2,
-                    "licensesMax": 10
-                },
-                {
-                    "id": "308150",
-                    "name": "Team of 2 - 10 regular price",
-                    "description": "License for a team of 2 - 10 users. \n",
-                    "pricesale": "$419",
                     "pricereg": "$419",
                     "licensesMin": 2,
                     "licensesMax": 10
@@ -2037,7 +2001,7 @@
             "description": "\n",
             "url": "nativescript-with-angular-super-bundle",
             "promototal": 100,
-            "promoremaining": 85,
+            "promoremaining": 81,
             "bundleLevel": 1,
             "products": [
                 {
@@ -2072,7 +2036,7 @@
             "description": "\n",
             "url": "nativescript-with-angular-ultra-bundle",
             "promototal": 100,
-            "promoremaining": 74,
+            "promoremaining": 72,
             "bundleLevel": 2,
             "products": [
                 {
@@ -2108,7 +2072,7 @@
             "description": "\n",
             "url": "nativescript-core-master-bundle",
             "promototal": 100,
-            "promoremaining": 83,
+            "promoremaining": 82,
             "bundleLevel": 3,
             "products": [
                 {
