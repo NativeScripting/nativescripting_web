@@ -192,6 +192,129 @@
             ]
         },
         {
+            "id": "193924",
+            "title": "NativeScript Plugins: Creating Custom View Components",
+            "subtitle": "",
+            "description": "In this course, Nathan shows how to use the official NativeScript plugin seed to create a custom view component plugin for iOS and Android.​ He systematically shows how to expose a native API to JavaScript on the iOS side, then he shows how to build up the same API in Android, exposing a common plugin API to be consumed by the NativeScript application. \n Along the way, he shows how to determine the quality of available source CocoaPods and Gradle projects, as well as how to deal with some hurdles that you may face while building your own plugins. \n This short course will teach you a lot of intermediate to advanced techniques in a short amount of time, so put your attention hats on and hold on.",
+            "url": "nativescript-plugins-creating-custom-view-components",
+            "categories": [
+                "core",
+                "ng"
+            ],
+            "level": 2,
+            "tag": "NEW",
+            "launchdate": "07/13/2017",
+            "authors": [
+                {
+                    "name": "Nathan Walker",
+                    "picture": "nathan_walker.png",
+                    "bio": "Nathan Ross Walker has enjoyed the opportunity to work in the web/mobile app development arena for over 15 years. His varied background rooted in the world of design and the arts provides him a unique approach to problem solving. Spending several years working across multiple industries including entertainment, audio/video production, manufacturing, b2b marketing, communications, and technology helped establish a focused sensibility with client needs.",
+                    "title": "NativeScript Trainer"
+                }
+            ],
+            "products": [
+                {
+                    "id": "359703",
+                    "name": "Single user launch price",
+                    "description": "License for a single user.",
+                    "pricesale": "$39",
+                    "pricereg": "$49",
+                    "licensesMin": 1,
+                    "licensesMax": 1
+                },
+                {
+                    "id": "359704",
+                    "name": "Team of 2 - 10 launch price",
+                    "description": "License for a team of 2 - 10 users.",
+                    "pricesale": "$149",
+                    "pricereg": "$199",
+                    "licensesMin": 2,
+                    "licensesMax": 10
+                }
+            ],
+            "chapters": [
+                {
+                    "id": 10,
+                    "name": "Introduction to creating plugins for NativeScript",
+                    "lessons": [
+                        {
+                            "chapterId": 10,
+                            "id": "2953344",
+                            "name": "Overview"
+                        },
+                        {
+                            "chapterId": 10,
+                            "id": "2976294",
+                            "name": "Plugin Types"
+                        },
+                        {
+                            "chapterId": 10,
+                            "id": "2976299",
+                            "name": "Using the Plugin Seed"
+                        }
+                    ]
+                },
+                {
+                    "id": 20,
+                    "name": "Developing a Custom iOS View Component Plugin",
+                    "lessons": [
+                        {
+                            "chapterId": 20,
+                            "id": "2976326",
+                            "name": "Installing a CocoaPod"
+                        },
+                        {
+                            "chapterId": 20,
+                            "id": "2976327",
+                            "name": "Creating a Custom View Component"
+                        },
+                        {
+                            "chapterId": 20,
+                            "id": "2976329",
+                            "name": "Generating TypeScript Definitions"
+                        },
+                        {
+                            "chapterId": 20,
+                            "id": "2976331",
+                            "name": "Differences Between View and ContentView Components"
+                        }
+                    ]
+                },
+                {
+                    "id": 30,
+                    "name": "Developing a Custom Android View Component Plugin",
+                    "lessons": [
+                        {
+                            "chapterId": 30,
+                            "id": "2976335",
+                            "name": "Working with Gradle"
+                        },
+                        {
+                            "chapterId": 30,
+                            "id": "2976336",
+                            "name": "Creating a Custom View Component"
+                        }
+                    ]
+                },
+                {
+                    "id": 40,
+                    "name": "Preparing for Release",
+                    "lessons": [
+                        {
+                            "chapterId": 40,
+                            "id": "2976342",
+                            "name": "Consistent iOS and Android APIs"
+                        },
+                        {
+                            "chapterId": 40,
+                            "id": "2976345",
+                            "name": "What about Angular?"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
             "id": "169856",
             "title": "NativeScript with Angular Getting Started Guide",
             "subtitle": "A free course to get you started with NativeScript and Angular",
