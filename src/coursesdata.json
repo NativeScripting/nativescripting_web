@@ -594,14 +594,14 @@
             "id": "171132",
             "title": "NativeScript Core Getting Started Guide",
             "subtitle": "A free course to get you started with NativeScript Core using TypeScript",
-            "description": "Welcome to the NativeScript Getting Started Guide. In this tutorial you'll use NativeScript, a cross-platform JavaScript framework for building native mobile apps, to build an iOS and Android app from scratch. You'll use just TypeScript and CSS in this course.\n\n\n",
+            "description": "Welcome to the NativeScript Getting Started Guide. In this tutorial you'll use NativeScript, a cross-platform JavaScript framework for building native mobile apps, to build an iOS and Android app from scratch. This course is based on the NativeScript Core Groceries Tutorial found in the documentation section of nativescript.org, and you'll use just JavaScript and CSS in this course.\n\n\n",
             "url": "nativescript-core-getting-started-guide",
             "categories": [
                 "core"
             ],
             "level": 1,
-            "tag": "PRESALE",
-            "launchdate": "07/01/2017",
+            "tag": "NEW",
+            "launchdate": "07/17/2017",
             "authors": [
                 {
                     "name": "Alex Ziskind",
@@ -614,7 +614,7 @@
                 {
                     "id": "306840",
                     "name": "Single user regular price",
-                    "description": "License for a single user. \n",
+                    "description": "License for a single user.",
                     "pricesale": 0,
                     "pricereg": 0,
                     "licensesMin": 1,
@@ -623,7 +623,7 @@
                 {
                     "id": "306839",
                     "name": "Team 2 - 10 regular price",
-                    "description": "License for a team of 2 - 10 users. \n",
+                    "description": "License for a team of 2 - 10 users.",
                     "pricesale": 0,
                     "pricereg": 0,
                     "licensesMin": 2,
@@ -638,17 +638,12 @@
                         {
                             "chapterId": 10,
                             "id": "2564664",
-                            "name": "Start What is NativeScript?"
+                            "name": "Welcome (1:15)"
                         },
                         {
                             "chapterId": 10,
                             "id": "2564665",
-                            "name": "Start Prerequisites"
-                        },
-                        {
-                            "chapterId": 10,
-                            "id": "2564666",
-                            "name": "Start Installation"
+                            "name": "About this course"
                         }
                     ]
                 },
@@ -659,27 +654,27 @@
                         {
                             "chapterId": 20,
                             "id": "2564659",
-                            "name": "Start Overview"
+                            "name": "Overview (0:24)"
                         },
                         {
                             "chapterId": 20,
                             "id": "2564660",
-                            "name": "Start Creating apps"
+                            "name": "Creating apps (1:40)"
                         },
                         {
                             "chapterId": 20,
                             "id": "2564661",
-                            "name": "Start Running apps"
+                            "name": "Running apps (5:29)"
                         },
                         {
                             "chapterId": 20,
                             "id": "2564662",
-                            "name": "Start Debugging apps"
+                            "name": "Debugging apps (3:37)"
                         },
                         {
                             "chapterId": 20,
                             "id": "2564663",
-                            "name": "Start Choosing an editor"
+                            "name": "Choosing an editor (2:28)"
                         }
                     ]
                 },
@@ -690,37 +685,37 @@
                         {
                             "chapterId": 30,
                             "id": "2573578",
-                            "name": "Start Overview"
+                            "name": "Overview (0:41)"
                         },
                         {
                             "chapterId": 30,
                             "id": "2573579",
-                            "name": "Start What you're building"
+                            "name": "What you're building (1:26)"
                         },
                         {
                             "chapterId": 30,
                             "id": "2573580",
-                            "name": "Start Directory structure"
+                            "name": "Directory structure (5:30)"
                         },
                         {
                             "chapterId": 30,
                             "id": "2573581",
-                            "name": "Start Adding UI components"
+                            "name": "Adding UI components (2:33)"
                         },
                         {
                             "chapterId": 30,
                             "id": "2573583",
-                            "name": "Start Layouts"
+                            "name": "Layouts (2:12)"
                         },
                         {
                             "chapterId": 30,
                             "id": "2573584",
-                            "name": "Start CSS"
+                            "name": "CSS (4:36)"
                         },
                         {
                             "chapterId": 30,
                             "id": "2573585",
-                            "name": "Start Images"
+                            "name": "Images (2:36)"
                         }
                     ]
                 },
@@ -731,27 +726,27 @@
                         {
                             "chapterId": 40,
                             "id": "2573590",
-                            "name": "Start Overview"
+                            "name": "Overview (1:29)"
                         },
                         {
                             "chapterId": 40,
                             "id": "2573592",
-                            "name": "Start The code-behind"
+                            "name": "The code-behind (2:25)"
                         },
                         {
                             "chapterId": 40,
                             "id": "2573593",
-                            "name": "Start Navigating screens"
+                            "name": "Navigating screens (1:22)"
                         },
                         {
                             "chapterId": 40,
                             "id": "2573595",
-                            "name": "Start Accessing UI components"
+                            "name": "Accessing UI components (2:07)"
                         },
                         {
                             "chapterId": 40,
                             "id": "2573596",
-                            "name": "Start Adding a view model"
+                            "name": "Adding a view model (3:11)"
                         }
                     ]
                 },
@@ -762,42 +757,42 @@
                         {
                             "chapterId": 50,
                             "id": "2573600",
-                            "name": "Start Overview"
+                            "name": "Overview (1:49)"
                         },
                         {
                             "chapterId": 50,
                             "id": "2573601",
-                            "name": "Start Connecting to a backend"
+                            "name": "Connecting to a backend (5:16)"
                         },
                         {
                             "chapterId": 50,
                             "id": "2573602",
-                            "name": "Start Dialog module"
+                            "name": "Dialog module (2:23)"
                         },
                         {
                             "chapterId": 50,
                             "id": "2573603",
-                            "name": "Start ListView"
+                            "name": "ListView (1:50)"
                         },
                         {
                             "chapterId": 50,
                             "id": "2573604",
-                            "name": "Start Working with arrays"
+                            "name": "Working with arrays (4:16)"
                         },
                         {
                             "chapterId": 50,
                             "id": "2573605",
-                            "name": "Start GridLayout"
+                            "name": "GridLayout (3:28)"
                         },
                         {
                             "chapterId": 50,
                             "id": "2573607",
-                            "name": "Start ActivityIndicator"
+                            "name": "ActivityIndicator (2:11)"
                         },
                         {
                             "chapterId": 50,
                             "id": "2573608",
-                            "name": "Start Animations"
+                            "name": "Animations (3:00)"
                         }
                     ]
                 },
@@ -808,17 +803,17 @@
                         {
                             "chapterId": 60,
                             "id": "2573612",
-                            "name": "Start Overview"
+                            "name": "Overview (0:53)"
                         },
                         {
                             "chapterId": 60,
                             "id": "2573613",
-                            "name": "Start Using npm modules"
+                            "name": "Using npm modules (4:49)"
                         },
                         {
                             "chapterId": 60,
                             "id": "2573614",
-                            "name": "Start Using NativeScript plugins"
+                            "name": "Using NativeScript plugins (4:04)"
                         }
                     ]
                 },
@@ -829,22 +824,22 @@
                         {
                             "chapterId": 70,
                             "id": "2573616",
-                            "name": "Start Overview"
+                            "name": "Overview (0:50)"
                         },
                         {
                             "chapterId": 70,
                             "id": "2573617",
-                            "name": "Start Customizing the ActionBar - iOS"
+                            "name": "Customizing the ActionBar - iOS (4:40)"
                         },
                         {
                             "chapterId": 70,
                             "id": "2573620",
-                            "name": "Start Deleting from a list - Android"
+                            "name": "Deleting from a list - Android (3:23)"
                         },
                         {
                             "chapterId": 70,
                             "id": "2573623",
-                            "name": "Start Deleting from a list - iOS"
+                            "name": "Deleting from a list - iOS (2:55)"
                         }
                     ]
                 },
@@ -855,27 +850,12 @@
                         {
                             "chapterId": 80,
                             "id": "2573626",
-                            "name": "Start Overview"
+                            "name": "Community (1:49)"
                         },
                         {
                             "chapterId": 80,
                             "id": "2573628",
-                            "name": "Start Join the NativeScript community"
-                        },
-                        {
-                            "chapterId": 80,
-                            "id": "2573629",
-                            "name": "Start Start your own app"
-                        },
-                        {
-                            "chapterId": 80,
-                            "id": "2573630",
-                            "name": "Start Bookmark NativeScript learning resources"
-                        },
-                        {
-                            "chapterId": 80,
-                            "id": "2573631",
-                            "name": "Start Let us know what you think"
+                            "name": "Learning Materials (1:16)"
                         }
                     ]
                 }
