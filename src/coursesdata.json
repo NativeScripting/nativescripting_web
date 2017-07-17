@@ -214,19 +214,19 @@
             ],
             "products": [
                 {
-                    "id": "359703",
+                    "id": "361874",
                     "name": "Single user launch price",
                     "description": "License for a single user.",
-                    "pricesale": "$39",
+                    "pricesale": "$29",
                     "pricereg": "$49",
                     "licensesMin": 1,
                     "licensesMax": 1
                 },
                 {
-                    "id": "359704",
+                    "id": "361884",
                     "name": "Team of 2 - 10 launch price",
                     "description": "License for a team of 2 - 10 users.",
-                    "pricesale": "$149",
+                    "pricesale": "$139",
                     "pricereg": "$199",
                     "licensesMin": 2,
                     "licensesMax": 10
