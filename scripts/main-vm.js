@@ -135,12 +135,6 @@ function BundleVm(b, allCourses, deselectAllBundlesCallback) {
         return self.teamTop().priceRegDisp();
     });
 
-    /*
-        self.goToCourseDetailPage = function () {
-            window.location = self.url + '.html';
-        };
-        */
-
     self.deselectBundle = function () {
         self.bundleSelected(false);
         self.selectedProduct(null);
@@ -156,8 +150,7 @@ function BundleVm(b, allCourses, deselectAllBundlesCallback) {
 
     self.buyBundle = function () {
         if (self.selectedProduct()) {
-            var url = self.getBundleUrl();
-            window.location = url;
+            window.location = appendExistingQuery(self.getBundleUrl());
         } else {
             self.deselectAllBundlesCallback();
             self.showMessage(true);
@@ -210,7 +203,9 @@ function LessonVm(chap, less) {
     self.chapter = chap;
 
     self.startLesson = function () {
-        window.location = tBaseUrl + '/courses/' + self.chapter.course.url + '/lectures/' + self.id;
+        var url = tBaseUrl + '/courses/' + self.chapter.course.url + '/lectures/' + self.id;
+        url = appendExistingQuery(url);
+        window.location = url;
     };
 }
 
@@ -382,10 +377,9 @@ function CourseVm(c) {
     self.goToCourseDetailPage = function () {
         var currentPageUrl = window.location.href;
         if (isLocalDevEnvironment()) {
-            window.location = 'detail.html?id=' + self.url;
+            window.location = appendExistingQuery('detail.html?id=' + self.url);
         } else {
-            window.location = 'course/' + self.url;
-            //window.location = self.url;
+            window.location = appendExistingQuery('course/' + self.url);
         }
     };
 
@@ -405,8 +399,7 @@ function CourseVm(c) {
                 self.showMessage(true);
                 return false;
             } else {
-                var url = self.courseUrl();
-                window.location = url;
+                window.location = appendExistingQuery(self.courseUrl());
             }
         }
         else {
@@ -422,9 +415,9 @@ function MainNavVm() {
 
     self.goToAboutPage = function () {
         if (isLocalDevEnvironment()) {
-            window.location = '/about.html';
+            window.location = appendExistingQuery('/about.html');
         } else {
-            window.location = '/about';
+            window.location = appendExistingQuery('/about');
         }
     };
 }
@@ -585,4 +578,12 @@ function getParameterByName(name, url) {
 
 function isLocalDevEnvironment() {
     return window.location.href.indexOf('127.') > -1;
+}
+
+function appendExistingQuery(url) {
+    if (url.indexOf('?') > -1) {
+        return url + window.location.search.replace(/\?/g, '&');
+    } else {
+        return url + window.location.search;
+    }
 }

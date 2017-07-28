@@ -1,7 +1,7 @@
 var ko = ko || {};
 var $ = $ || {};
 var tBaseUrl = 'http://nativescripting.teachable.com';
-var coursesDataUrl = 'coursesdata.json?v=1.0.10';
+var coursesDataUrl = 'coursesdata.json?v=1.1.0';
 var tCats = [
     new CategoryVm({ catId: 'core', name: 'NativeScript Core' }),
     new CategoryVm({ catId: 'ng', name: 'NativeScript with Angular' }),
@@ -74,7 +74,6 @@ function BundleVm(b, allCourses, deselectAllBundlesCallback) {
     });
 
     self.toggleTeamSelecting = function () {
-        console.log('bundle toggleTeamSelecting');
         self.teamSelecting(!self.teamSelecting());
     };
 
@@ -88,7 +87,6 @@ function BundleVm(b, allCourses, deselectAllBundlesCallback) {
     });
 
     self.toggleCoursesShowing = function () {
-        console.log('bundle toggleCoursesShowing');
         self.coursesShowing(!self.coursesShowing());
     };
 
@@ -137,14 +135,7 @@ function BundleVm(b, allCourses, deselectAllBundlesCallback) {
         return self.teamTop().priceRegDisp();
     });
 
-    /*
-        self.goToCourseDetailPage = function () {
-            window.location = self.url + '.html';
-        };
-        */
-
     self.deselectBundle = function () {
-        console.log('deselecting bundle: ' + self.title);
         self.bundleSelected(false);
         self.selectedProduct(null);
         self.showMessage(false);
@@ -159,8 +150,7 @@ function BundleVm(b, allCourses, deselectAllBundlesCallback) {
 
     self.buyBundle = function () {
         if (self.selectedProduct()) {
-            var url = self.getBundleUrl();
-            window.location = url;
+            window.location = appendExistingQuery(self.getBundleUrl());
         } else {
             self.deselectAllBundlesCallback();
             self.showMessage(true);
@@ -213,7 +203,9 @@ function LessonVm(chap, less) {
     self.chapter = chap;
 
     self.startLesson = function () {
-        window.location = tBaseUrl + '/courses/' + self.chapter.course.url + '/lectures/' + self.id;
+        var url = tBaseUrl + '/courses/' + self.chapter.course.url + '/lectures/' + self.id;
+        url = appendExistingQuery(url);
+        window.location = url;
     };
 }
 
@@ -347,7 +339,6 @@ function CourseVm(c) {
     self.contactSelected = ko.observable(null);
 
     self.selectProduct = function (prod) {
-        console.log('selectProduct');
         if (typeof prod === 'string' && prod === 'single') {
             self.selectedProduct(self.productSingle());
         } else if (prod.type === 'contact') {
@@ -386,10 +377,9 @@ function CourseVm(c) {
     self.goToCourseDetailPage = function () {
         var currentPageUrl = window.location.href;
         if (isLocalDevEnvironment()) {
-            window.location = 'detail.html?id=' + self.url;
+            window.location = appendExistingQuery('detail.html?id=' + self.url);
         } else {
-            window.location = 'course/' + self.url;
-            //window.location = self.url;
+            window.location = appendExistingQuery('course/' + self.url);
         }
     };
 
@@ -409,8 +399,7 @@ function CourseVm(c) {
                 self.showMessage(true);
                 return false;
             } else {
-                var url = self.courseUrl();
-                window.location = url;
+                window.location = appendExistingQuery(self.courseUrl());
             }
         }
         else {
@@ -426,9 +415,9 @@ function MainNavVm() {
 
     self.goToAboutPage = function () {
         if (isLocalDevEnvironment()) {
-            window.location = '/about.html';
+            window.location = appendExistingQuery('/about.html');
         } else {
-            window.location = '/about';
+            window.location = appendExistingQuery('/about');
         }
     };
 }
@@ -532,7 +521,6 @@ function DetailPageVm(coursesData, filename) {
     self.bundles = ko.observableArray([]);
 
     self.deselectAllBundles = function () {
-        console.log('details deseleccting all bundles');
         var bundles = self.bundles();
         for (var i = 0; i < bundles.length; i++) {
             bundles[i].deselectBundle();
@@ -590,4 +578,12 @@ function getParameterByName(name, url) {
 
 function isLocalDevEnvironment() {
     return window.location.href.indexOf('127.') > -1;
+}
+
+function appendExistingQuery(url) {
+    if (url.indexOf('?') > -1) {
+        return url + window.location.search.replace(/\?/g, '&');
+    } else {
+        return url + window.location.search;
+    }
 }
