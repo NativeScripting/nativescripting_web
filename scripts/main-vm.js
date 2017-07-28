@@ -74,7 +74,6 @@ function BundleVm(b, allCourses, deselectAllBundlesCallback) {
     });
 
     self.toggleTeamSelecting = function () {
-        console.log('bundle toggleTeamSelecting');
         self.teamSelecting(!self.teamSelecting());
     };
 
@@ -88,7 +87,6 @@ function BundleVm(b, allCourses, deselectAllBundlesCallback) {
     });
 
     self.toggleCoursesShowing = function () {
-        console.log('bundle toggleCoursesShowing');
         self.coursesShowing(!self.coursesShowing());
     };
 
@@ -144,7 +142,6 @@ function BundleVm(b, allCourses, deselectAllBundlesCallback) {
         */
 
     self.deselectBundle = function () {
-        console.log('deselecting bundle: ' + self.title);
         self.bundleSelected(false);
         self.selectedProduct(null);
         self.showMessage(false);
@@ -347,7 +344,6 @@ function CourseVm(c) {
     self.contactSelected = ko.observable(null);
 
     self.selectProduct = function (prod) {
-        console.log('selectProduct');
         if (typeof prod === 'string' && prod === 'single') {
             self.selectedProduct(self.productSingle());
         } else if (prod.type === 'contact') {
@@ -532,7 +528,6 @@ function DetailPageVm(coursesData, filename) {
     self.bundles = ko.observableArray([]);
 
     self.deselectAllBundles = function () {
-        console.log('details deseleccting all bundles');
         var bundles = self.bundles();
         for (var i = 0; i < bundles.length; i++) {
             bundles[i].deselectBundle();
