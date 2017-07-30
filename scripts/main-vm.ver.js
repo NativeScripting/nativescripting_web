@@ -1,7 +1,7 @@
 var ko = ko || {};
 var $ = $ || {};
 var tBaseUrl = 'http://nativescripting.teachable.com';
-var coursesDataUrl = 'coursesdata.json?v=1.1.0';
+var coursesDataUrl = 'coursesdata.json?v=1.1.1';
 var tCats = [
     new CategoryVm({ catId: 'core', name: 'NativeScript Core' }),
     new CategoryVm({ catId: 'ng', name: 'NativeScript with Angular' }),
@@ -531,6 +531,8 @@ function DetailPageVm(coursesData, filename) {
     for (var i = 0; i < coursesData.bundles.length; i++) {
         self.bundles.push(new BundleVm(coursesData.bundles[i], coursesData.courses, self.deselectAllBundles));
     }
+
+    window.document.title += ': ' + courseRaw.title;
 
 }
 
