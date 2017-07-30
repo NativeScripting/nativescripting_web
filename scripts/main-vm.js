@@ -532,6 +532,8 @@ function DetailPageVm(coursesData, filename) {
         self.bundles.push(new BundleVm(coursesData.bundles[i], coursesData.courses, self.deselectAllBundles));
     }
 
+    window.document.title += ': ' + courseRaw.title;
+
 }
 
 function bootstrapCoursesPage() {
