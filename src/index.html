@@ -163,6 +163,7 @@
 
 
             <div class="special">
+                <a id="specials" name="specials"></a>
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12 col-sm-12 col-xs-12">
@@ -340,6 +341,17 @@
 
     <script>
         bootstrapCoursesPage();
+
+        $(function () {
+            if (window.location.hash && window.location.hash != '') {
+                var myloc = $(window.location.hash);
+                if (myloc.length > 0) {
+                    $('html, body').animate({
+                        scrollTop: myloc.offset().top
+                    }, 1000);
+                }
+            }
+        });
     </script>
 
 
