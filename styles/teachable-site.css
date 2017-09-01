@@ -282,6 +282,73 @@ header.half-height .lecture-nav a.nav-btn.complete, header.half-height .lecture-
 }
 
 /*checkout page */
+/*new checkout 8/31/17 start */
+
+.view-school .spc {
+    background: #09224a;
+}
+
+.spc__section--review .spc__row {
+    border-bottom: 1px solid #488dfb;
+}
+
+.spc__tabs {
+    background: #032e74;
+    border-bottom: 1px solid #488dfb;
+}
+
+.spc__tabs-tab {
+    background: #0442a6;
+}
+
+.spc__tabs-tab:nth-child(1),
+.spc__tabs-tab.is-active:nth-of-type(2) {
+    border-right: 1px solid #488dfb;
+}
+
+.view-school .spc__section h1 {
+    color: #12FFCD;
+}
+
+.spc__inline-form-input {
+    background-color: #032e74;
+    border: 1px solid #12ffcd;
+    border-radius: 0;
+    box-shadow: 0px 0px 0px 0px #E6E9EC;
+    color: #ffffff;
+}
+
+.spc__inline-form-button button {
+    border-radius: 0;
+}
+
+.spc__password {
+    background-color: #0442a6;
+    border-radius: 0;
+}
+.spc__update .spc__update-subtitle, .spc__password .spc__update-subtitle, .spc__update .spc__password-subtitle, .spc__password .spc__password-subtitle {
+    color: #FFC347;
+}
+
+.btn-primary, .btn-primary:active, .btn-primary:focus {
+    border-radius: 0;
+}
+
+
+.spc__primary-submit button {
+    border-radius: 0;
+}
+
+.spc__secure-text,
+.spc__summary-item,
+.spc__summary-item,
+.cc__existing-number-section,
+.spc__authenticated {
+    color: #FFC347;
+}
+
+
+/*new checkout 8/31/17 end */
 #checkout-total {
     color: #FFC347;
 }
