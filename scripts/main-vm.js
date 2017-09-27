@@ -413,6 +413,14 @@ function CourseVm(c) {
 function MainNavVm() {
     var self = this;
 
+    self.goToTrainingPage = function () {
+        if (isLocalDevEnvironment()) {
+            window.location = appendExistingQuery('/training.html');
+        } else {
+            window.location = appendExistingQuery('/training');
+        }
+    };
+
     self.goToAboutPage = function () {
         if (isLocalDevEnvironment()) {
             window.location = appendExistingQuery('/about.html');

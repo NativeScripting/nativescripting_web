@@ -1,7 +1,7 @@
 var ko = ko || {};
 var $ = $ || {};
 var tBaseUrl = 'http://nativescripting.teachable.com';
-var coursesDataUrl = 'coursesdata.json?v=1.1.7';
+var coursesDataUrl = 'coursesdata.json?v=1.2.0';
 var tCats = [
     new CategoryVm({ catId: 'core', name: 'NativeScript Core' }),
     new CategoryVm({ catId: 'ng', name: 'NativeScript with Angular' }),
@@ -412,6 +412,14 @@ function CourseVm(c) {
 
 function MainNavVm() {
     var self = this;
+
+    self.goToTrainingPage = function () {
+        if (isLocalDevEnvironment()) {
+            window.location = appendExistingQuery('/training.html');
+        } else {
+            window.location = appendExistingQuery('/training');
+        }
+    };
 
     self.goToAboutPage = function () {
         if (isLocalDevEnvironment()) {
