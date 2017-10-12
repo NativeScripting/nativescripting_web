@@ -99,7 +99,7 @@ gulp.task('gen', ['gen-index', 'gen-details'], function () {
 });
 
 gulp.task('json', function () {
-    return gulp.src(['src/coursesdata.json'])
+    return gulp.src(['src/data/coursesdata.json'])
         .pipe(jsonminify())
         .pipe(gulp.dest('./'));
 });
@@ -111,7 +111,7 @@ gulp.task('styles', function () {
 });
 
 
-gulp.task('minify', ['scripts', 'styles', 'main-html', 'course-html'], function () {
+gulp.task('minify', ['scripts', 'json', 'styles', 'main-html', 'course-html'], function () {
     console.log('Minifying files');
 });
 
