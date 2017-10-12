@@ -1,7 +1,7 @@
 var ko = ko || {};
 var $ = $ || {};
 var tBaseUrl = 'http://nativescripting.teachable.com';
-var coursesDataUrl = 'coursesdata.json?v=1.2.0';
+var coursesDataUrl = '/coursesdata.json?v=@version@';
 var tCats = [
     new CategoryVm({ catId: 'core', name: 'NativeScript Core' }),
     new CategoryVm({ catId: 'ng', name: 'NativeScript with Angular' }),
@@ -13,6 +13,14 @@ function reorderCats(firstCatId) {
         tCats.splice(
             tCats.findIndex(cat => cat.catId === firstCatId), 1)[0]
     );
+}
+
+function appendExistingQuery(url) {
+    if (url.indexOf('?') > -1) {
+        return url + window.location.search.replace(/\?/g, '&');
+    } else {
+        return url + window.location.search;
+    }
 }
 
 function CategoryVm(c) {
@@ -207,6 +215,12 @@ function LessonVm(chap, less) {
         url = appendExistingQuery(url);
         window.location = url;
     };
+
+    self.getLessonStartUrl = function () {
+        var url = tBaseUrl + '/courses/' + self.chapter.course.url + '/lectures/' + self.id;
+        url = appendExistingQuery(url);
+        return url;
+    };
 }
 
 function ChapterVm(course, chap) {
@@ -383,6 +397,14 @@ function CourseVm(c) {
         }
     };
 
+    self.getCourseDetailPageUrl = function () {
+        if (isLocalDevEnvironment()) {
+            return appendExistingQuery('course/' + self.url + '.html');
+        } else {
+            return appendExistingQuery('course/' + self.url);
+        }
+    }
+
     self.courseUrl = ko.pureComputed(function () {
         var url = 'https://sso.teachable.com/secure/89912/checkout/confirmation?product_id=' +
             self.selectedProduct().id +
@@ -409,17 +431,8 @@ function CourseVm(c) {
     }
 }
 
-
 function MainNavVm() {
     var self = this;
-
-    self.goToTrainingPage = function () {
-        if (isLocalDevEnvironment()) {
-            window.location = appendExistingQuery('/training.html');
-        } else {
-            window.location = appendExistingQuery('/training');
-        }
-    };
 
     self.goToAboutPage = function () {
         if (isLocalDevEnvironment()) {
@@ -469,8 +482,9 @@ function CoursesPageVm(coursesData) {
 
     self.catSelectorActive = ko.observable(false);
 
-    self.courses = ko.observableArray([]);
+    //self.courses = ko.observableArray([]);
     self.bundles = ko.observableArray([]);
+
 
     self.deselectAllBundles = function () {
         var bundles = self.bundles();
@@ -479,16 +493,19 @@ function CoursesPageVm(coursesData) {
         }
     }
 
-    self.allCourses = [];
+    //self.allCourses = [];
 
+    /*
     for (var i = 0; i < coursesData.courses.length; i++) {
         self.allCourses.push(new CourseVm(coursesData.courses[i]));
     }
+    */
 
     var tBundles = [];
     for (var j = 0; j < coursesData.bundles.length; j++) {
         self.bundles.push(new BundleVm(coursesData.bundles[j], coursesData.courses, self.deselectAllBundles));
     }
+
 
     self.toggleCatSelectorActive = function () {
         self.catSelectorActive(!self.catSelectorActive());
@@ -506,11 +523,21 @@ function CoursesPageVm(coursesData) {
 
     self.filterCoursesByCategory = function () {
         var selectedCat = self.catPicker.selectedCategory();
-        var filteredCourses = self.allCourses.filter(function (course) {
-            return course.categories.indexOf(selectedCat.catId) > -1;
-        });
+        console.log('filter courses by cat ' + selectedCat.name);
 
-        self.courses(filteredCourses);
+        if (selectedCat.catId === 'ng') {
+            $("[data-zko-hook~='core']").hide();
+            $("[data-zko-hook~='ng']").show();
+        } else if (selectedCat.catId === 'core') {
+            $("[data-zko-hook~='ng']").hide();
+            $("[data-zko-hook~='core']").show();
+        }
+
+        //var filteredCourses = self.allCourses.filter(function (course) {
+        //    return course.categories.indexOf(selectedCat.catId) > -1;
+        //});
+
+        //self.courses(filteredCourses);
     };
 
     self.filterCoursesByCategory();
@@ -548,52 +575,14 @@ function bootstrapCoursesPage() {
     $.getJSON(coursesDataUrl, function (coursesData) {
         ko.applyBindings(new CoursesPageVm(coursesData));
     });
+    fixEnvironmentUrls();
 }
 
 function bootstrapDetailsPage() {
     $.getJSON(coursesDataUrl, function (coursesData) {
         var currentPageUrl = window.location.href;
         var filename = getBaseName(currentPageUrl);
-        if (isLocalDevEnvironment()) {
-            filename = getParameterByName('id');
-        }
         ko.applyBindings(new DetailPageVm(coursesData, filename));
     });
-}
-
-function getBaseName(url) {
-    if (!url || (url && url.length === 0)) {
-        return "";
-    }
-    var index = url.lastIndexOf("/") + 1;
-    var filenameWithExtension = url.substr(index);
-    var basename = filenameWithExtension.split(/[.?&#]+/)[0];
-
-    if (basename.length === 0) {
-        url = url.substr(0, index - 1);
-        basename = getBaseName(url);
-    }
-    return basename ? basename : "";
-}
-
-function getParameterByName(name, url) {
-    if (!url) url = window.location.href;
-    name = name.replace(/[\[\]]/g, "\\$&");
-    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
-        results = regex.exec(url);
-    if (!results) return null;
-    if (!results[2]) return '';
-    return decodeURIComponent(results[2].replace(/\+/g, " "));
-}
-
-function isLocalDevEnvironment() {
-    return window.location.href.indexOf('127.') > -1;
-}
-
-function appendExistingQuery(url) {
-    if (url.indexOf('?') > -1) {
-        return url + window.location.search.replace(/\?/g, '&');
-    } else {
-        return url + window.location.search;
-    }
+    fixEnvironmentUrls();
 }

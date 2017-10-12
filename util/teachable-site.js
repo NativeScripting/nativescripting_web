@@ -1,6 +1,6 @@
 <script>
 
-    $(function(){
+    $(function() {
         $('.powered-by').remove();
     });
 

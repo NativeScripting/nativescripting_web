@@ -1,18 +1,78 @@
+"use strict";
+
+function getBaseName(url) {
+    if (!url || url && url.length === 0) {
+        return "";
+    }
+    var index = url.lastIndexOf("/") + 1;
+    var filenameWithExtension = url.substr(index);
+    var basename = filenameWithExtension.split(/[.?&#]+/)[0];
+
+    if (basename.length === 0) {
+        url = url.substr(0, index - 1);
+        basename = getBaseName(url);
+    }
+    return basename ? basename : "";
+}
+
+function getParameterByName(name, url) {
+    if (!url) url = window.location.href;
+    name = name.replace(/[\[\]]/g, "\\$&");
+    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+        results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, " "));
+}
+
+function appendExistingQuery(url) {
+    if (url.indexOf('?') > -1) {
+        return url + window.location.search.replace(/\?/g, '&');
+    } else {
+        return url + window.location.search;
+    }
+}
+
+function isLocalDevEnvironment() {
+    return window.location.href.indexOf('127.') > -1;
+}
+
+function fixEnvironmentUrls() {
+    if (isLocalDevEnvironment()) {
+        var linksToBeFixed = $('[data-z-url-fix]');
+        for (var i = 0; i < linksToBeFixed.length; i++) {
+            var linkObj = $(linksToBeFixed[i]);
+            linkObj.attr('href', linkObj.attr('href') + '.html');
+        }
+    }
+}
+
+function bootstrapCommonPage() {
+    $(function () {
+        fixEnvironmentUrls();
+    });
+}
+'use strict';
+
 var ko = ko || {};
 var $ = $ || {};
 var tBaseUrl = 'http://nativescripting.teachable.com';
-var coursesDataUrl = 'coursesdata.json?v=@version@';
-var tCats = [
-    new CategoryVm({ catId: 'core', name: 'NativeScript Core' }),
-    new CategoryVm({ catId: 'ng', name: 'NativeScript with Angular' }),
-];
+var coursesDataUrl = '/coursesdata.json?v=1.2.0';
+var tCats = [new CategoryVm({ catId: 'core', name: 'NativeScript Core' }), new CategoryVm({ catId: 'ng', name: 'NativeScript with Angular' })];
 var initialCatId = 'ng';
 
 function reorderCats(firstCatId) {
-    tCats.unshift(
-        tCats.splice(
-            tCats.findIndex(cat => cat.catId === firstCatId), 1)[0]
-    );
+    tCats.unshift(tCats.splice(tCats.findIndex(function (cat) {
+        return cat.catId === firstCatId;
+    }), 1)[0]);
+}
+
+function appendExistingQuery(url) {
+    if (url.indexOf('?') > -1) {
+        return url + window.location.search.replace(/\?/g, '&');
+    } else {
+        return url + window.location.search;
+    }
 }
 
 function CategoryVm(c) {
@@ -39,7 +99,6 @@ function BundleVm(b, allCourses, deselectAllBundlesCallback) {
 
     var tProductsTeam = [];
 
-
     for (var i = 0; i < b.products.length; i++) {
         var newProd = new ProductVm(b.products[i], b.tag);
         if (newProd.licensesMin === 1) {
@@ -60,7 +119,6 @@ function BundleVm(b, allCourses, deselectAllBundlesCallback) {
     }
 
     self.courseSummaries(tCourseSummaries);
-
 
     self.showMessage = ko.observable(false);
 
@@ -142,9 +200,7 @@ function BundleVm(b, allCourses, deselectAllBundlesCallback) {
     };
 
     self.getBundleUrl = ko.pureComputed(function () {
-        var url = 'https://sso.teachable.com/secure/89912/checkout/confirmation?product_id=' +
-            self.selectedProduct().id +
-            '&course_id=' + self.id;
+        var url = 'https://sso.teachable.com/secure/89912/checkout/confirmation?product_id=' + self.selectedProduct().id + '&course_id=' + self.id;
         return url;
     });
 
@@ -206,6 +262,12 @@ function LessonVm(chap, less) {
         var url = tBaseUrl + '/courses/' + self.chapter.course.url + '/lectures/' + self.id;
         url = appendExistingQuery(url);
         window.location = url;
+    };
+
+    self.getLessonStartUrl = function () {
+        var url = tBaseUrl + '/courses/' + self.chapter.course.url + '/lectures/' + self.id;
+        url = appendExistingQuery(url);
+        return url;
     };
 }
 
@@ -288,7 +350,6 @@ function CourseVm(c) {
     self.productsTeam(tProductsTeam);
     self.chapters(tChapters);
     self.numLessons(lessonCount);
-
 
     self.courseIcons = ko.pureComputed(function () {
         var ret = [];
@@ -383,10 +444,16 @@ function CourseVm(c) {
         }
     };
 
+    self.getCourseDetailPageUrl = function () {
+        if (isLocalDevEnvironment()) {
+            return appendExistingQuery('course/' + self.url + '.html');
+        } else {
+            return appendExistingQuery('course/' + self.url);
+        }
+    };
+
     self.courseUrl = ko.pureComputed(function () {
-        var url = 'https://sso.teachable.com/secure/89912/checkout/confirmation?product_id=' +
-            self.selectedProduct().id +
-            '&course_id=' + self.id;
+        var url = 'https://sso.teachable.com/secure/89912/checkout/confirmation?product_id=' + self.selectedProduct().id + '&course_id=' + self.id;
         return url;
     });
 
@@ -401,25 +468,15 @@ function CourseVm(c) {
             } else {
                 window.location = appendExistingQuery(self.courseUrl());
             }
-        }
-        else {
+        } else {
             self.showMessage(true);
             return false;
         }
-    }
+    };
 }
-
 
 function MainNavVm() {
     var self = this;
-
-    self.goToTrainingPage = function () {
-        if (isLocalDevEnvironment()) {
-            window.location = appendExistingQuery('/training.html');
-        } else {
-            window.location = appendExistingQuery('/training');
-        }
-    };
 
     self.goToAboutPage = function () {
         if (isLocalDevEnvironment()) {
@@ -469,7 +526,7 @@ function CoursesPageVm(coursesData) {
 
     self.catSelectorActive = ko.observable(false);
 
-    self.courses = ko.observableArray([]);
+    //self.courses = ko.observableArray([]);
     self.bundles = ko.observableArray([]);
 
     self.deselectAllBundles = function () {
@@ -477,13 +534,15 @@ function CoursesPageVm(coursesData) {
         for (var i = 0; i < bundles.length; i++) {
             bundles[i].deselectBundle();
         }
-    }
+    };
 
-    self.allCourses = [];
+    //self.allCourses = [];
 
+    /*
     for (var i = 0; i < coursesData.courses.length; i++) {
         self.allCourses.push(new CourseVm(coursesData.courses[i]));
     }
+    */
 
     var tBundles = [];
     for (var j = 0; j < coursesData.bundles.length; j++) {
@@ -498,19 +557,29 @@ function CoursesPageVm(coursesData) {
         if (self.catSelectorActive()) {
             self.selectCategoryDirect(catId);
         }
-    }
+    };
 
     self.selectCategoryDirect = function (catId) {
         self.catPicker.selectCategory(catId);
-    }
+    };
 
     self.filterCoursesByCategory = function () {
         var selectedCat = self.catPicker.selectedCategory();
-        var filteredCourses = self.allCourses.filter(function (course) {
-            return course.categories.indexOf(selectedCat.catId) > -1;
-        });
+        console.log('filter courses by cat ' + selectedCat.name);
 
-        self.courses(filteredCourses);
+        if (selectedCat.catId === 'ng') {
+            $("[data-zko-hook~='core']").hide();
+            $("[data-zko-hook~='ng']").show();
+        } else if (selectedCat.catId === 'core') {
+            $("[data-zko-hook~='ng']").hide();
+            $("[data-zko-hook~='core']").show();
+        }
+
+        //var filteredCourses = self.allCourses.filter(function (course) {
+        //    return course.categories.indexOf(selectedCat.catId) > -1;
+        //});
+
+        //self.courses(filteredCourses);
     };
 
     self.filterCoursesByCategory();
@@ -533,7 +602,7 @@ function DetailPageVm(coursesData, filename) {
         for (var i = 0; i < bundles.length; i++) {
             bundles[i].deselectBundle();
         }
-    }
+    };
 
     var tBundles = [];
     for (var i = 0; i < coursesData.bundles.length; i++) {
@@ -541,59 +610,85 @@ function DetailPageVm(coursesData, filename) {
     }
 
     window.document.title += ': ' + courseRaw.title;
-
 }
 
 function bootstrapCoursesPage() {
     $.getJSON(coursesDataUrl, function (coursesData) {
         ko.applyBindings(new CoursesPageVm(coursesData));
     });
+    fixEnvironmentUrls();
 }
 
 function bootstrapDetailsPage() {
     $.getJSON(coursesDataUrl, function (coursesData) {
         var currentPageUrl = window.location.href;
         var filename = getBaseName(currentPageUrl);
-        if (isLocalDevEnvironment()) {
-            filename = getParameterByName('id');
-        }
         ko.applyBindings(new DetailPageVm(coursesData, filename));
     });
+    fixEnvironmentUrls();
 }
+'use strict';
 
-function getBaseName(url) {
-    if (!url || (url && url.length === 0)) {
-        return "";
+$(function () {
+
+    var detail = document.getElementsByClassName('lessons-block');
+    var main = document.getElementsByClassName('bottom-header');
+
+    $('.header .burger').on('click', function () {
+        $(this).toggleClass('burger-anim');
+        $('.header .mobile-header').toggleClass('active-burger');
+    });
+
+    if (main.length > 0) {
+        $('.card-block .learn-card .medium-block .right').on('click', function () {
+            $(this).toggleClass('right-active');
+        });
     }
-    var index = url.lastIndexOf("/") + 1;
-    var filenameWithExtension = url.substr(index);
-    var basename = filenameWithExtension.split(/[.?&#]+/)[0];
 
-    if (basename.length === 0) {
-        url = url.substr(0, index - 1);
-        basename = getBaseName(url);
+    $('.bundle-card .bottom a').on('click', function (e) {
+        e.preventDefault();
+        if ($(this).parent().prev().find('.active-single,.team-list-active').length > 0) {
+            $(this).parent().parent().addClass('select-bundle');
+        } else {
+            $(this).parent().parent().addClass('select-bundle');
+        }
+    });
+
+    $('.learn-card .medium-block .right ul li').on('click', function () {
+        if ($(this).parent().parent().hasClass('right-active')) {
+            $(this).parent().parent().parent().find('.learn-user').removeClass('active active-pre');
+            $(this).parent().parent().parent().find('.active-users').removeClass('active-users');
+            $(this).parent().find('.active-li').removeClass('active-li');
+            $(this).parent().parent().addClass('active-users');
+        }
+    });
+
+    $('.main-card .learn-user').on('click', function () {
+        $(this).parent().find('.active-li').removeClass('active-li');
+        $(this).parent().find('.active-users').removeClass('active-users');
+    });
+
+    $('.pre-card .learn-user').on('click', function () {
+        $(this).parent().find('.active-li').removeClass('active-li');
+        $(this).parent().find('.active-users').removeClass('active-users');
+        $(this).toggleClass('active-pre');
+    });
+
+    if (detail.length > 0) {
+        $('.detail-top-block .learn-user').on('click', function () {
+            $(this).parent().find('.li-active').removeClass('li-active');
+        });
+
+        $('.detail-top-block .bottom a').on('click', function (e) {
+            e.preventDefault();
+        });
+
+        if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+            var detailStyle = window.getComputedStyle(document.getElementById('detailForHeight'));
+
+            var setHeight = detailStyle.getPropertyValue('height');
+
+            document.getElementById('detailSetHeight').style.height = setHeight;
+        }
     }
-    return basename ? basename : "";
-}
-
-function getParameterByName(name, url) {
-    if (!url) url = window.location.href;
-    name = name.replace(/[\[\]]/g, "\\$&");
-    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
-        results = regex.exec(url);
-    if (!results) return null;
-    if (!results[2]) return '';
-    return decodeURIComponent(results[2].replace(/\+/g, " "));
-}
-
-function isLocalDevEnvironment() {
-    return window.location.href.indexOf('127.') > -1;
-}
-
-function appendExistingQuery(url) {
-    if (url.indexOf('?') > -1) {
-        return url + window.location.search.replace(/\?/g, '&');
-    } else {
-        return url + window.location.search;
-    }
-}
+});
