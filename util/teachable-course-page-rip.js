@@ -28,7 +28,7 @@ $('.course-section').each((i, section) => {
 var products = [];
 $('.checkout-button-group').each((i, group) => {
     var prodId = $(group).find('input[type="radio"]')[0].value;
-    var price = $(group).find('.default-product-price')[0].innerText;
+    var price = parseFloat($(group).find('.default-product-price')[0].innerText.replace('$', ''));
     if (price == 'FREE') price = 0;
     var prodName = $(group).find('.product-name')[0].innerText;
     var prodDesc = $(group).find('.description')[0].innerText;

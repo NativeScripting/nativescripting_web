@@ -1,6 +1,172 @@
 {
     "courses": [
         {
+            "id": "171149",
+            "title": "NativeScript with Angular Web Application Conversion",
+            "subtitle": "Sharing your web and native mobile application code",
+            "description": "This course is for those that need to be able to have as much code reuse as possible between their Angular applications for the web and their native mobile apps written with NativeScript and Angular. You will learn how to leverage NPM scripts, naming conventions, and a smart application folder structure for maximum reusability between your code bases and use the monorepo approach to do it. Even if you aren't sharing web and NativeScript code, this course shows some best practices in architecting your solution when it comes to Angular with NativeScript.\n\nIn this intermediate level course, Paul Halliday quickly explains some of the concepts behind code sharing and then dives right into a sample project, which he builds from scratch.\n\n\n",
+            "url": "nativescript-with-angular-web-application-conversion",
+            "categories": [
+                "ng"
+            ],
+            "level": 2,
+            "tag": "NEW",
+            "launchdate": "10/30/2017",
+            "authors": [
+                {
+                    "name": "Paul Halliday",
+                    "picture": "paul_halliday.png",
+                    "bio": "Paul Halliday is a tech entrepreneur that specialises in cross platform mobile development. He graduated with a first class honours in BSc Computer Science from the University of Sunderland and has received numerous awards including the SIEM Prize, Sunderland University Professional Award, and more.",
+                    "title": "NativeScript Trainer"
+                }
+            ],
+            "products": [
+                {
+                    "id": "449466",
+                    "name": "Single user launch-price",
+                    "description": "License for a single user. \n",
+                    "pricesale": 59,
+                    "pricereg": 99,
+                    "licensesMin": 1,
+                    "licensesMax": 1
+                },
+                {
+                    "id": "449467",
+                    "name": "Team of 2 - 10 launch price",
+                    "description": "License for a team of 2 - 10 users. \n",
+                    "pricesale": 239,
+                    "pricereg": 299,
+                    "licensesMin": 2,
+                    "licensesMax": 10
+                }
+            ],
+            "chapters": [
+                {
+                    "id": 10,
+                    "name": "Introduction",
+                    "lessons": [
+                        {
+                            "chapterId": 10,
+                            "id": "3649506",
+                            "name": "Introduction (2:37) - preview"
+                        },
+                        {
+                            "chapterId": 10,
+                            "id": "3649509",
+                            "name": "NativeScript Seeds (4:01)"
+                        },
+                        {
+                            "chapterId": 10,
+                            "id": "3649517",
+                            "name": "Dependency Setup and Device (7:12)"
+                        },
+                        {
+                            "chapterId": 10,
+                            "id": "3649516",
+                            "name": "Project Overview (3:45)"
+                        },
+                        {
+                            "chapterId": 10,
+                            "id": "3649520",
+                            "name": "Recap (0:57)"
+                        }
+                    ]
+                },
+                {
+                    "id": 20,
+                    "name": "Project",
+                    "lessons": [
+                        {
+                            "chapterId": 20,
+                            "id": "3649503",
+                            "name": "Project Setup (2:09)"
+                        },
+                        {
+                            "chapterId": 20,
+                            "id": "3649510",
+                            "name": "Creating a New Module and Routes (8:26)"
+                        },
+                        {
+                            "chapterId": 20,
+                            "id": "3649514",
+                            "name": "Adding Native Views (3:02)"
+                        },
+                        {
+                            "chapterId": 20,
+                            "id": "3649515",
+                            "name": "Adding Angular Material (4:16)"
+                        },
+                        {
+                            "chapterId": 20,
+                            "id": "3649518",
+                            "name": "Search Views (4:55)"
+                        },
+                        {
+                            "chapterId": 20,
+                            "id": "3649519",
+                            "name": "Creating the GithubSearchDetail (2:44)"
+                        },
+                        {
+                            "chapterId": 20,
+                            "id": "3649522",
+                            "name": "Route Parameters (3:57)"
+                        },
+                        {
+                            "chapterId": 20,
+                            "id": "3649521",
+                            "name": "Creating a CoreModule (4:24) - preview"
+                        },
+                        {
+                            "chapterId": 20,
+                            "id": "3655693",
+                            "name": "HttpClient and User Model (8:23)"
+                        },
+                        {
+                            "chapterId": 20,
+                            "id": "3649507",
+                            "name": "Search Detail View (Web) (6:25)"
+                        },
+                        {
+                            "chapterId": 20,
+                            "id": "3649504",
+                            "name": "Search Detail View (Mobile) (9:28)"
+                        },
+                        {
+                            "chapterId": 20,
+                            "id": "3649508",
+                            "name": "Using HttpInterceptors (6:03) - preview"
+                        },
+                        {
+                            "chapterId": 20,
+                            "id": "3649512",
+                            "name": "Using Native and Web Toasts (6:44)"
+                        }
+                    ]
+                },
+                {
+                    "id": 30,
+                    "name": "Build",
+                    "lessons": [
+                        {
+                            "chapterId": 30,
+                            "id": "3649505",
+                            "name": "Building for Production (2:18)"
+                        },
+                        {
+                            "chapterId": 30,
+                            "id": "3649513",
+                            "name": "Recap (2:05)"
+                        },
+                        {
+                            "chapterId": 30,
+                            "id": "3656470",
+                            "name": "Source Code"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
             "id": "193399",
             "title": "NativeScript with @ngrx",
             "subtitle": "Start using @ngrx in your NativeScript with Angular apps",
@@ -1925,48 +2091,6 @@
                     ]
                 }
             ]
-        },
-        {
-            "id": "171149",
-            "title": "NativeScript with Angular Web Application Conversion",
-            "subtitle": "Moving your web app to a native mobile app",
-            "description": "This course is specifically for those people that need to convert an existing web application to a native mobile application. We will do this using NativeScript with Angular.\n\n\n",
-            "url": "nativescript-with-angular-web-application-conversion",
-            "categories": [
-                "ng"
-            ],
-            "level": 2,
-            "tag": "PRESALE",
-            "launchdate": "10/31/2017",
-            "authors": [
-                {
-                    "name": "Alex Ziskind",
-                    "picture": "alex_ziskind.png",
-                    "bio": "Alex lives in Washington, DC. He's a speaker, trainer, and a Telerik Developer Expert. He's been invloved in NativeScript projects since 2015 and has created courses for Pluralsight.",
-                    "title": "Trainer and Owner"
-                }
-            ],
-            "products": [
-                {
-                    "id": "308156",
-                    "name": "Single user pre-launch price",
-                    "description": "License for a single user. \n",
-                    "pricesale": 59,
-                    "pricereg": 99,
-                    "licensesMin": 1,
-                    "licensesMax": 1
-                },
-                {
-                    "id": "308157",
-                    "name": "Team of 2 - 10 pre-launch price",
-                    "description": "License for a team of 2 - 10 users. \n",
-                    "pricesale": 239,
-                    "pricereg": 299,
-                    "licensesMin": 2,
-                    "licensesMax": 10
-                }
-            ],
-            "chapters": []
         },
         {
             "id": "171150",
