@@ -1137,6 +1137,67 @@
                 },
                 {
                     "id": 30,
+                    "name": "Application Management",
+                    "lessons": [
+                        {
+                            "chapterId": 30,
+                            "id": "2544462",
+                            "name": "Overview (1:50)"
+                        },
+                        {
+                            "chapterId": 30,
+                            "id": "3843242",
+                            "name": "Bootstrapping Options (6:46)"
+                        },
+                        {
+                            "chapterId": 30,
+                            "id": "3843244",
+                            "name": "Application Configuration (8:07)"
+                        },
+                        {
+                            "chapterId": 30,
+                            "id": "3843245",
+                            "name": "Auto-Injection (5:04)"
+                        },
+                        {
+                            "chapterId": 30,
+                            "id": "3843246",
+                            "name": "Application Internationalization (8:07)"
+                        },
+                        {
+                            "chapterId": 30,
+                            "id": "3843249",
+                            "name": "Better Console Visualization"
+                        },
+                        {
+                            "chapterId": 30,
+                            "id": "3843252",
+                            "name": "Logging (7:44)"
+                        },
+                        {
+                            "chapterId": 30,
+                            "id": "3843253",
+                            "name": "Life Cycle Platform Differences (7:41)"
+                        },
+                        {
+                            "chapterId": 30,
+                            "id": "3843254",
+                            "name": "Native Application Events (7:52)"
+                        },
+                        {
+                            "chapterId": 30,
+                            "id": "3843255",
+                            "name": "Native Application Resources (6:46)"
+                        },
+                        {
+                            "chapterId": 30,
+                            "id": "3843256",
+                            "name": "Error Handling (6:19)"
+                        }
+                    ]
+                },
+                {
+                    "id": 30,
                     "name": "Deeper UI",
                     "lessons": [
                         {
