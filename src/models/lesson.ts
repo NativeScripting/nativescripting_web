@@ -3,4 +3,5 @@ export interface Lesson {
     id: string;
     name: string;
     lessonNumber: number;
+    btnText: string;
 }

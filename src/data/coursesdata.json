@@ -1075,22 +1075,26 @@
                         {
                             "chapterId": 10,
                             "id": "3766444",
-                            "name": "Message from the Author (1:22)"
+                            "name": "Message from the Author (1:22)",
+                            "btnText": "Preview"
                         },
                         {
                             "chapterId": 10,
                             "id": "2544422",
-                            "name": "Course Overview (2:57)"
+                            "name": "Course Overview (2:57)",
+                            "btnText": "Preview"
                         },
                         {
                             "chapterId": 10,
                             "id": "2544423",
-                            "name": "Using the exercise files (0:40)"
+                            "name": "Using the exercise files (0:40)",
+                            "btnText": "Start"
                         },
                         {
                             "chapterId": 10,
                             "id": "2544424",
-                            "name": "What We're Building (2:00)"
+                            "name": "What We're Building (2:00)",
+                            "btnText": "Start"
                         }
                     ]
                 },
@@ -1101,37 +1105,44 @@
                         {
                             "chapterId": 20,
                             "id": "3766433",
-                            "name": "Overview (1:22)"
+                            "name": "Overview (1:22)",
+                            "btnText": "Preview"
                         },
                         {
                             "chapterId": 20,
                             "id": "3766434",
-                            "name": "Native Platform Declarations (5:08)"
+                            "name": "Native Platform Declarations (5:08)",
+                            "btnText": "Start"
                         },
                         {
                             "chapterId": 20,
                             "id": "3766435",
-                            "name": "Project Dependencies (5:24)"
+                            "name": "Project Dependencies (5:24)",
+                            "btnText": "Start"
                         },
                         {
                             "chapterId": 20,
                             "id": "3766436",
-                            "name": "High Level App Folder Structure (13:07)"
+                            "name": "High Level App Folder Structure (13:07)",
+                            "btnText": "Start"
                         },
                         {
                             "chapterId": 20,
                             "id": "3766437",
-                            "name": "API Server (6:23)"
+                            "name": "API Server (6:23)",
+                            "btnText": "Start"
                         },
                         {
                             "chapterId": 20,
                             "id": "3766441",
-                            "name": "Consuming the API (8:04)"
+                            "name": "Consuming the API (8:04)",
+                            "btnText": "Start"
                         },
                         {
                             "chapterId": 20,
                             "id": "3766442",
-                            "name": "Code Style and Tools (4:07)"
+                            "name": "Code Style and Tools (4:07)",
+                            "btnText": "Start"
                         }
                     ]
                 },
@@ -1142,57 +1153,68 @@
                         {
                             "chapterId": 30,
                             "id": "2544462",
-                            "name": "Overview (1:50)"
+                            "name": "Overview (1:50)",
+                            "btnText": "Preview"
                         },
                         {
                             "chapterId": 30,
                             "id": "3843242",
-                            "name": "Bootstrapping Options (6:46)"
+                            "name": "Bootstrapping Options (6:46)",
+                            "btnText": "Start"
                         },
                         {
                             "chapterId": 30,
                             "id": "3843244",
-                            "name": "Application Configuration (8:07)"
+                            "name": "Application Configuration (8:07)",
+                            "btnText": "Start"
                         },
                         {
                             "chapterId": 30,
                             "id": "3843245",
-                            "name": "Auto-Injection (5:04)"
+                            "name": "Auto-Injection (5:04)",
+                            "btnText": "Start"
                         },
                         {
                             "chapterId": 30,
                             "id": "3843246",
-                            "name": "Application Internationalization (8:07)"
+                            "name": "Application Internationalization (8:07)",
+                            "btnText": "Start"
                         },
                         {
                             "chapterId": 30,
                             "id": "3843249",
-                            "name": "Better Console Visualization"
+                            "name": "Better Console Visualization",
+                            "btnText": "Preview"
                         },
                         {
                             "chapterId": 30,
                             "id": "3843252",
-                            "name": "Logging (7:44)"
+                            "name": "Logging (7:44)",
+                            "btnText": "Start"
                         },
                         {
                             "chapterId": 30,
                             "id": "3843253",
-                            "name": "Life Cycle Platform Differences (7:41)"
+                            "name": "Life Cycle Platform Differences (7:41)",
+                            "btnText": "Start"
                         },
                         {
                             "chapterId": 30,
                             "id": "3843254",
-                            "name": "Native Application Events (7:52)"
+                            "name": "Native Application Events (7:52)",
+                            "btnText": "Start"
                         },
                         {
                             "chapterId": 30,
                             "id": "3843255",
-                            "name": "Native Application Resources (6:46)"
+                            "name": "Native Application Resources (6:46)",
+                            "btnText": "Start"
                         },
                         {
                             "chapterId": 30,
                             "id": "3843256",
-                            "name": "Error Handling (6:19)"
+                            "name": "Error Handling (6:19)",
+                            "btnText": "Start"
                         }
                     ]
                 },

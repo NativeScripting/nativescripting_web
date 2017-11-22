@@ -3124,7 +3124,9 @@ a:hover, a:focus, a:active {
         text-decoration: none;
         background-color: #B517EC; }
     .lessons-block .lessons-info-block .view-pre {
-      order: 6; }
+      order: 6; 
+      margin-left: auto; 
+    }
       .lessons-block .lessons-info-block .view-pre a {
         transition: 0.5s;
         text-transform: uppercase;
@@ -3142,7 +3144,9 @@ a:hover, a:focus, a:active {
         background-color: #B517EC;
         position: relative; }
       .lessons-block .lessons-info-block .view-pre a:hover {
-        text-decoration: none; }
+        text-decoration: none; 
+        background-color: rgb(134, 18, 177);
+      }
   .lessons-block .tools {
     font-family: "OpenSansRegular";
     font-size: 16px;

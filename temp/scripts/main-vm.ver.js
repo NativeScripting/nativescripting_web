@@ -209,6 +209,7 @@ function LessonVm(chap, less) {
     self.name = less.name;
     self.lessonNumber = less.lessonNumber;
     self.chapter = chap;
+    self.btnText = less.btnText;
 
     self.startLesson = function () {
         var url = tBaseUrl + '/courses/' + self.chapter.course.url + '/lectures/' + self.id;

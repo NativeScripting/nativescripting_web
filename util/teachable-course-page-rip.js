@@ -17,11 +17,13 @@ $('.course-section').each((i, section) => {
     var sectitle = sectitleObj[0].innerText;
     var lessons = [];
     $(section).find('.section-item a').each((j, secitem) => {
-        $(secitem).find('.btn-primary').remove();
+        var secBtn = $(secitem).find('.btn-primary');
+        var secBtnText = $(secBtn).text().trim();
+        $(secBtn).remove();
         var secItemTitle = secitem.innerText.trim();
         var href = secitem.href;
         var id = href.substring(href.lastIndexOf('/') + 1);
-        lessons.push({ chapterId: chapCounter, id: id, name: secItemTitle });
+        lessons.push({ chapterId: chapCounter, id: id, name: secItemTitle, btnText: secBtnText });
     });
     chapters.push({ id: chapCounter, name: sectitle, lessons: lessons });
 });

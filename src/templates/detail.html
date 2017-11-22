@@ -289,8 +289,8 @@
                                 <!--div class="lessons-down"><a href="#">video</a></div-->
                                 <!--div class="data-info"><span>Data Info</span></div-->
                                 <!--div class="time"><span>11:12</span></div-->
-                                <div class="view">
-                                    <a data-bind="attr: { href: getLessonStartUrl() }">Start</a>
+                                <div data-bind="css: { 'view': btnText === 'Start', 'view-pre': btnText === 'Preview' }">
+                                    <a data-bind="text: btnText, attr: { href: getLessonStartUrl() }">Start</a>
                                 </div>
                             </div>
                             <!-- /ko -->

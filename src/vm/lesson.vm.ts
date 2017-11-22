@@ -10,6 +10,7 @@ export class LessonVm {
     name: string;
     id: string;
     chapterId: number;
+    btnText: string;
 
 
     constructor(chap: ChapterVm, less: Lesson) {
@@ -18,6 +19,7 @@ export class LessonVm {
         this.name = less.name;
         this.lessonNumber = less.lessonNumber;
         this.chapter = chap;
+        this.btnText = less.btnText ? less.btnText : 'Start';
     }
 
     public startLesson() {
