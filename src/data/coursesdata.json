@@ -48,7 +48,8 @@
                         {
                             "chapterId": 10,
                             "id": "3649506",
-                            "name": "Introduction (2:37) - preview"
+                            "name": "Introduction (2:37)",
+                            "btnText": "Preview"
                         },
                         {
                             "chapterId": 10,
@@ -114,7 +115,8 @@
                         {
                             "chapterId": 20,
                             "id": "3649521",
-                            "name": "Creating a CoreModule (4:24) - preview"
+                            "name": "Creating a CoreModule (4:24)",
+                            "btnText": "Preview"
                         },
                         {
                             "chapterId": 20,
@@ -134,7 +136,8 @@
                         {
                             "chapterId": 20,
                             "id": "3649508",
-                            "name": "Using HttpInterceptors (6:03) - preview"
+                            "name": "Using HttpInterceptors (6:03)",
+                            "btnText": "Preview"
                         },
                         {
                             "chapterId": 20,
@@ -406,17 +409,20 @@
                         {
                             "chapterId": 10,
                             "id": "2953344",
-                            "name": "Overview"
+                            "name": "Overview",
+                            "btnText": "Preview"
                         },
                         {
                             "chapterId": 10,
                             "id": "2976294",
-                            "name": "Plugin Types"
+                            "name": "Plugin Types",
+                            "btnText": "Preview"
                         },
                         {
                             "chapterId": 10,
                             "id": "2976299",
-                            "name": "Using the Plugin Seed"
+                            "name": "Using the Plugin Seed",
+                            "btnText": "Preview"
                         }
                     ]
                 },
@@ -427,7 +433,8 @@
                         {
                             "chapterId": 20,
                             "id": "2976326",
-                            "name": "Installing a CocoaPod"
+                            "name": "Installing a CocoaPod",
+                            "btnText": "Preview"
                         },
                         {
                             "chapterId": 20,
@@ -528,12 +535,14 @@
                         {
                             "chapterId": 10,
                             "id": "2692194",
-                            "name": "Welcome"
+                            "name": "Welcome (0:51)",
+                            "btnText": "Preview"
                         },
                         {
                             "chapterId": 10,
                             "id": "2543888",
-                            "name": "About this course"
+                            "name": "About this course (2:56)",
+                            "btnText": "Preview"
                         }
                     ]
                 },
@@ -544,27 +553,32 @@
                         {
                             "chapterId": 20,
                             "id": "2543904",
-                            "name": "Overview"
+                            "name": "Overview",
+                            "btnText": "Preview"
                         },
                         {
                             "chapterId": 20,
                             "id": "2543905",
-                            "name": "Creating apps"
+                            "name": "Creating apps",
+                            "btnText": "Preview"
                         },
                         {
                             "chapterId": 20,
                             "id": "2543906",
-                            "name": "Running apps"
+                            "name": "Running apps",
+                            "btnText": "Preview"
                         },
                         {
                             "chapterId": 20,
                             "id": "2543907",
-                            "name": "Debugging apps"
+                            "name": "Debugging apps",
+                            "btnText": "Preview"
                         },
                         {
                             "chapterId": 20,
                             "id": "2543908",
-                            "name": "Choosing an editor"
+                            "name": "Choosing an editor",
+                            "btnText": "Preview"
                         }
                     ]
                 },
@@ -804,12 +818,14 @@
                         {
                             "chapterId": 10,
                             "id": "2564664",
-                            "name": "Welcome (1:15)"
+                            "name": "Welcome (1:15)",
+                            "btnText": "Preview"
                         },
                         {
                             "chapterId": 10,
                             "id": "2564665",
-                            "name": "About this course"
+                            "name": "About this course",
+                            "btnText": "Preview"
                         }
                     ]
                 },
@@ -820,27 +836,32 @@
                         {
                             "chapterId": 20,
                             "id": "2564659",
-                            "name": "Overview (0:24)"
+                            "name": "Overview (0:24)",
+                            "btnText": "Preview"
                         },
                         {
                             "chapterId": 20,
                             "id": "2564660",
-                            "name": "Creating apps (1:40)"
+                            "name": "Creating apps (1:40)",
+                            "btnText": "Preview"
                         },
                         {
                             "chapterId": 20,
                             "id": "2564661",
-                            "name": "Running apps (5:29)"
+                            "name": "Running apps (5:29)",
+                            "btnText": "Preview"
                         },
                         {
                             "chapterId": 20,
                             "id": "2564662",
-                            "name": "Debugging apps (3:37)"
+                            "name": "Debugging apps (3:37)",
+                            "btnText": "Preview"
                         },
                         {
                             "chapterId": 20,
                             "id": "2564663",
-                            "name": "Choosing an editor (2:28)"
+                            "name": "Choosing an editor (2:28)",
+                            "btnText": "Preview"
                         }
                     ]
                 },
@@ -2331,7 +2352,7 @@
             "description": "\n",
             "url": "nativescript-with-angular-super-bundle",
             "promototal": 100,
-            "promoremaining": 66,
+            "promoremaining": 59,
             "bundleLevel": 1,
             "products": [
                 {
@@ -2366,7 +2387,7 @@
             "description": "\n",
             "url": "nativescript-with-angular-ultra-bundle",
             "promototal": 100,
-            "promoremaining": 46,
+            "promoremaining": 41,
             "bundleLevel": 2,
             "products": [
                 {
@@ -2402,7 +2423,7 @@
             "description": "\n",
             "url": "nativescript-core-master-bundle",
             "promototal": 100,
-            "promoremaining": 65,
+            "promoremaining": 63,
             "bundleLevel": 3,
             "products": [
                 {
