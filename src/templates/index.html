@@ -74,15 +74,15 @@
                         </div>
 
                         <div class="col-md-6 col-sm-6" id="left-filter">
-                            <div class="row">
-                                <a class="text-left" data-ko-keep data-bind="click: function() { selectCategoryDirect('core') }">
+                            <div class="row" data-ko-keep data-bind="click: function() { selectCategoryDirect('core') }">
+                                <a class="text-left">
                                     <span data-ko-keep data-bind="css: { selected: catPicker.selectedCategory().catId === 'core' }">NativeScript Core</span>
                                 </a>
                             </div>
                         </div>
                         <div class="col-md-6 col-sm-6" id="right-filter">
-                            <div class="row">
-                                <a class="text-right" data-ko-keep data-bind="click: function() { selectCategoryDirect('ng') }">
+                            <div class="row" data-ko-keep data-bind="click: function() { selectCategoryDirect('ng') }">
+                                <a class="text-right">
                                     <span data-ko-keep data-bind="css: { selected: catPicker.selectedCategory().catId === 'ng' }">NativeScript with Angular</span>
                                 </a>
                             </div>
