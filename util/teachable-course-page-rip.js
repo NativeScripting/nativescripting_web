@@ -42,7 +42,7 @@ $('.checkout-button-group').each((i, group) => {
 var authors = [{
     "name": "Alex Ziskind",
     "picture": "alex_ziskind.png",
-    "bio": "Alex lives in Washington, DC. He's a speaker, trainer, and a Telerik Developer Expert. He's been invloved in NativeScript projects since 2015 and has created courses for Pluralsight.",
+    "bio": "Alex lives in Washington, DC. He's a speaker, trainer, and a Telerik Developer Expert. He's been invloved in NativeScript projects since 2015 and has created courses for Pluralsight and LinkedIn.",
     "title": "Trainer and Owner"
 }];
 var courseObj = { id: courseId, title: courseTitle, subtitle: courseSubTitle, description: courseDescription, url: courseUrl, categories: ['core', 'ng'], level: 1, tag: 'PRESALE', launchdate: '05/01/2017', authors: authors, products: products, chapters: chapters };
