@@ -21,6 +21,14 @@ export class CatPickerVm {
 
     public selectedCategory: KnockoutObservable<CategoryVm>;
 
+    public isCoreSelected: KnockoutComputed<boolean> = ko.pureComputed(() => {
+        return this.selectedCategory().catId === 'core';
+    });
+
+    public isNgSelected: KnockoutComputed<boolean> = ko.pureComputed(() => {
+        return this.selectedCategory().catId === 'ng';
+    });
+
     constructor() {
 
         this.selectedCategory = ko.observable();

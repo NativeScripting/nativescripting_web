@@ -58,6 +58,188 @@
                 </div>
                 <!-- /ko -->
             </div>
+
+
+
+            <div class="top-text-block">
+                <div class="container">
+                    <div class="col-md-12 col-sm-12 col-xs-12 text-padding">
+                        <h2 style="font-size: 30px;">Turn up your NativeScript training</h2>
+                        <p>
+                            Are you ready to start learning NativeScript? Get the FREE getting started guides for NativeScript Core and NativeScript
+                            with Angular.
+                        </p>
+                        <p>
+                            Do you already know the basics and want to go deeper? Our NativeScript Pro courses will take you to a finished and polished
+                            product that you can launch in the app stores. Courses can be purchased on-demand, or save money
+                            with our bundles! Only 100 of each bundle are made available for the special pre-launch price.
+                            <br/>Grab them while we have them.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <style>
+                .top-tabs-wrapper {
+                    display: flex;
+                    justify-content: center;
+                    max-width: 1140px;
+                    width: 94%;
+                    margin: 0 auto;
+                    padding: 0 10px;
+                    margin-top: 40px;
+                    margin-bottom: 20px;
+                }
+
+                .top-cat-description {
+                    width: 100%;
+                    text-align: center;
+                    margin-bottom: 40px;
+                }
+
+                .top-cat-description h3 {
+                    font-family: MonoRegular;
+                    font-size: 16px;
+                    font-weight: 700;
+                    line-height: 24px;
+                    color: #fff;
+                }
+
+                .top-tabs {
+                    display: flex;
+                    justify-content: center;
+                    position: relative;
+                    overflow: hidden;
+                    align-items: center;
+                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+                    border: 2px solid #12ffcd;
+                }
+
+                .top-tab {
+                    position: relative;
+                    overflow: hidden;
+                    height: 80px;
+                    cursor: pointer;
+                    flex: 0 0 50%;
+                    width: 450px;
+                    height: 100%;
+                    font-size: 20px;
+                    font-family: MonoBold;
+                    color: #4a81da;
+                    line-height: 56px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 15px 30px;
+                    transition: .5s;
+                    transform: scale(1.0, 1.0);
+                }
+
+                .top-tab.selected {
+                    transition: .5s;
+                    background-color: #12ffcd;
+                    color: #19396d;
+                }
+
+                .top-tab.selected:before {
+                    transition: .5s;
+                    background-color: #05efbe;
+                }
+
+                .top-tab.selected:after {
+                    transition: .5s;
+                    background-color: #05e1b3;
+                }
+
+                .top-tab:before {
+                    content: "";
+                    transition: .5s;
+                    position: absolute;
+                    width: 360px;
+                    height: 360px;
+                    transform: rotate(45deg);
+                    top: -34px;
+                    right: -25px;
+
+                }
+
+                .top-tab:after {
+                    transition: .5s;
+                    content: "";
+                    position: absolute;
+                    width: 360px;
+                    height: 360px;
+                    transform: rotate(45deg);
+                    top: -34px;
+                    right: -100px;
+
+                }
+
+
+                .top-tab:hover {
+                    transition: .5s;
+                    transform: scale(1.02, 1.02);
+                    background-color: #0949b2;
+                    color: #11f5ff;
+                }
+
+                .top-tab:hover:before {
+                    right: -60px;
+                    background-color: #0845a9;
+                }
+
+                .top-tab:hover:after {
+                    right: -130px;
+                    background-color: #0a429c;
+                }
+
+                .top-tab.selected:hover {
+                    transition: .5s;
+                    transform: scale(1.02, 1.02);
+                    background-color: #12ffcd;
+                    color: #19396d;
+                }
+
+                .top-tab.selected:hover:before {
+                    right: -60px;
+                    background-color: #05efbe;
+
+                }
+
+                .top-tab.selected:hover:after {
+                    right: -130px;
+                    background-color: #05e1b3;
+                }
+
+
+                .top-tab img {
+                    position: relative;
+                    z-index: 3;
+                    display: inline-block;
+                    width: 30px;
+                    height: 30px;
+                    border-style: none;
+                    vertical-align: bottom;
+                }
+
+                .top-tab span {
+                    position: relative;
+                    z-index: 3;
+                    display: inline-block;
+                    margin: 0 0 0 15px;
+                }
+
+                @media all and (min-width: 768px) and (max-width: 1024px) {
+                    .top-tab {
+                        width: 450px;
+                        height: 100%;
+                        font-size: 14px;
+                        font-family: MonoBold;
+                        padding: 15px 30px;
+                    }
+                }
+            </style>
+
             <div class="bottom-header">
                 <div class="container">
                     <div class="row">
@@ -73,42 +255,38 @@
                             </div>
                         </div>
 
-                        <div class="col-md-6 col-sm-6" id="left-filter">
-                            <div class="row" data-ko-keep data-bind="click: function() { selectCategoryDirect('core') }">
-                                <a class="text-left">
-                                    <span data-ko-keep data-bind="css: { selected: catPicker.selectedCategory().catId === 'core' }">NativeScript Core</span>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-sm-6" id="right-filter">
-                            <div class="row" data-ko-keep data-bind="click: function() { selectCategoryDirect('ng') }">
-                                <a class="text-right">
-                                    <span data-ko-keep data-bind="css: { selected: catPicker.selectedCategory().catId === 'ng' }">NativeScript with Angular</span>
-                                </a>
-                            </div>
-                        </div>
                     </div>
                 </div>
-                <div class="left cat-underline" data-ko-keep data-bind="css: { selected: catPicker.selectedCategory().catId === 'core' }"></div>
-                <div class="right cat-underline" data-ko-keep data-bind="css: { selected: catPicker.selectedCategory().catId === 'ng' }"></div>
             </div>
 
-            <div class="top-text-block">
+            <div class="top-tabs-wrapper hidden-xs">
+                <div class="top-tabs">
+                    <a class="top-tab" data-ko-keep data-bind="css: { selected: catPicker.selectedCategory().catId === 'core' }, click: function() { selectCategoryDirect('core') }">
+                        <img src="/img/nativescript_white.svg">
+                        <span>NativeScript Core</span>
+                    </a>
+
+                    <a class="top-tab" data-ko-keep data-bind="css: { selected: catPicker.selectedCategory().catId === 'ng' }, click: function() { selectCategoryDirect('ng') }">
+                        <img src="/img/nativescript_angular.svg">
+                        <span>NativeScript with Angular</span>
+                    </a>
+                </div>
+            </div>
+
+
+            <div class="top-cat-description">
                 <div class="container">
-                    <div class="col-md-12 text-padding">
-                        <h2>The most comprehensive NativeScript training</h2>
-                        <p>
-                            Are you ready to start learning NativeScript? Get the FREE getting started guides for NativeScript Core and NativeScript
-                            with Angular. Both out now.
-                        </p>
-                        <p>
-                            Do you already know the basics and want to go deeper? Our NativeScript Pro courses will take you to a finished and polished
-                            product that you can launch in the app stores. Courses can be purchased on-demand, or save money
-                            with our bundles! Only 100 of each bundle are made available for the special pre-launch price.
-                        </p>
-                        <p>
-                            <div class="addthis_inline_share_toolbox"></div>
-                        </p>
+                    <div class="col-md-12 text-padding" data-ko-keep data-bind="with: catPicker">
+                        <ko data-ko-keep data-bind="visible: isCoreSelected">
+                            <h3>
+                                Courses for the NativeScript Core minded folks. MVVM, TypeScript, and no other UI frameworks.
+                            </h3>
+                        </ko>
+                        <ko data-ko-keep data-bind="visible: isNgSelected">
+                            <h3>
+                                Courses for the NativeScript with Angular folks. For those that want to use Angular in their native apps.
+                            </h3>
+                        </ko>
                     </div>
                 </div>
             </div>
@@ -383,6 +561,16 @@
                 </div>
 
                 <!--End signup-->
+            </div>
+
+            <div class="top-text-block">
+                <div class="container">
+                    <div class="col-md-12 text-padding">
+                        <p>
+                            <div class="addthis_inline_share_toolbox"></div>
+                        </p>
+                    </div>
+                </div>
             </div>
 
 

@@ -1260,8 +1260,9 @@ a:hover, a:focus, a:active {
   padding: 0px; }
 
 .bottom-header {
-  float: left;
-  width: 100%; }
+  /*float: left;*/
+  width: 100%; 
+}
   .bottom-header .select-cat {
     transition: 0.4s;
     width: 100%;
@@ -1413,7 +1414,8 @@ a:hover, a:focus, a:active {
 
 .top-text-block {
   width: 100%;
-  float: left; }
+  text-align: center;
+}
   .top-text-block .text-padding {
     padding-right: 20px;
     padding-left: 20px; }

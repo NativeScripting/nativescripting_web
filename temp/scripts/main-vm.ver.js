@@ -1,7 +1,7 @@
 var ko = ko || {};
 var $ = $ || {};
 var tBaseUrl = 'http://nativescripting.teachable.com';
-var coursesDataUrl = '/coursesdata.json?v=1.3.7';
+var coursesDataUrl = '/coursesdata.json?v=1.4.0';
 var tCats = [
     new CategoryVm({ catId: 'core', name: 'NativeScript Core' }),
     new CategoryVm({ catId: 'ng', name: 'NativeScript with Angular' }),
@@ -448,6 +448,16 @@ function CatPickerVm() {
     var self = this;
 
     self.selectedCategory = ko.observable();
+
+    self.isCoreSelected = ko.pureComputed(function () {
+        var cs = self.selectedCategory().catId === 'core';
+        console.log('core selected:' + cs);
+        return cs;
+    });
+
+    self.isNgSelected = ko.pureComputed(function () {
+        return self.selectedCategory().catId === 'ng';
+    });
 
     self.categories = ko.pureComputed(function () {
         var selCat = self.selectedCategory();

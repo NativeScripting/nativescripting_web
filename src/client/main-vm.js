@@ -449,6 +449,16 @@ function CatPickerVm() {
 
     self.selectedCategory = ko.observable();
 
+    self.isCoreSelected = ko.pureComputed(function () {
+        var cs = self.selectedCategory().catId === 'core';
+        console.log('core selected:' + cs);
+        return cs;
+    });
+
+    self.isNgSelected = ko.pureComputed(function () {
+        return self.selectedCategory().catId === 'ng';
+    });
+
     self.categories = ko.pureComputed(function () {
         var selCat = self.selectedCategory();
         return tCats;
