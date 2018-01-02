@@ -1291,112 +1291,208 @@
                 },
                 {
                     "id": 50,
-                    "name": "Deeper UI",
+                    "name": "Routing and Navigation",
                     "lessons": [
                         {
                             "chapterId": 50,
+                            "id": "4101018",
+                            "name": "Overview (2:33)",
+                            "btnText": "Preview"
+                        },
+                        {
+                            "chapterId": 50,
+                            "id": "4101021",
+                            "name": "Style and State Changes and the Navigation Plan",
+                            "btnText": "Start"
+                        },
+                        {
+                            "chapterId": 50,
+                            "id": "4101062",
+                            "name": "Router Outlet",
+                            "btnText": "Start"
+                        },
+                        {
+                            "chapterId": 50,
+                            "id": "4101024",
+                            "name": "Page Router Outlet",
+                            "btnText": "Start"
+                        },
+                        {
+                            "chapterId": 50,
+                            "id": "4101027",
+                            "name": "RouterExtensions",
+                            "btnText": "Start"
+                        },
+                        {
+                            "chapterId": 50,
+                            "id": "4101029",
+                            "name": "Routing via a Service",
+                            "btnText": "Start"
+                        },
+                        {
+                            "chapterId": 50,
+                            "id": "4101031",
+                            "name": "NavigationOptions",
+                            "btnText": "Start"
+                        },
+                        {
+                            "chapterId": 50,
+                            "id": "4101035",
+                            "name": "Module Specific Routing",
+                            "btnText": "Start"
+                        },
+                        {
+                            "chapterId": 50,
+                            "id": "4101037",
+                            "name": "Guarding Routes",
+                            "btnText": "Start"
+                        },
+                        {
+                            "chapterId": 50,
+                            "id": "4101038",
+                            "name": "Combining Routing Outlets",
+                            "btnText": "Start"
+                        },
+                        {
+                            "chapterId": 50,
+                            "id": "4101039",
+                            "name": "Navigation Menu",
+                            "btnText": "Start"
+                        },
+                        {
+                            "chapterId": 50,
+                            "id": "4101044",
+                            "name": "Menu Routing Parameters and State",
+                            "btnText": "Start"
+                        },
+                        {
+                            "chapterId": 50,
+                            "id": "4101046",
+                            "name": "Lazy Loading and NSModuleFactoryLoader",
+                            "btnText": "Start"
+                        },
+                        {
+                            "chapterId": 50,
+                            "id": "4101049",
+                            "name": "Creating a Navigation Directive",
+                            "btnText": "Start"
+                        },
+                        {
+                            "chapterId": 50,
+                            "id": "4101051",
+                            "name": "Back or Back to Previous Page?",
+                            "btnText": "Start"
+                        }
+                    ]
+                },
+                {
+                    "id": 60,
+                    "name": "Deeper UI",
+                    "lessons": [
+                        {
+                            "chapterId": 60,
                             "id": "2544435",
                             "name": "Overview",
                             "btnText": "Start"
                         },
                         {
-                            "chapterId": 50,
+                            "chapterId": 60,
                             "id": "2544437",
                             "name": "Using the Page",
                             "btnText": "Start"
                         },
                         {
-                            "chapterId": 50,
+                            "chapterId": 60,
                             "id": "2544440",
                             "name": "View life cycle",
                             "btnText": "Start"
                         },
                         {
-                            "chapterId": 50,
+                            "chapterId": 60,
                             "id": "2544442",
                             "name": "Dialogs",
                             "btnText": "Start"
                         },
                         {
-                            "chapterId": 50,
+                            "chapterId": 60,
                             "id": "2544443",
                             "name": "Modals",
                             "btnText": "Start"
                         },
                         {
-                            "chapterId": 50,
+                            "chapterId": 60,
                             "id": "2544444",
                             "name": "Multiple ListView templates",
                             "btnText": "Start"
                         },
                         {
-                            "chapterId": 50,
+                            "chapterId": 60,
                             "id": "2544446",
                             "name": "FormattedString",
                             "btnText": "Start"
                         },
                         {
-                            "chapterId": 50,
+                            "chapterId": 60,
                             "id": "2544447",
                             "name": "ActionBar",
                             "btnText": "Start"
                         },
                         {
-                            "chapterId": 50,
+                            "chapterId": 60,
                             "id": "2544448",
                             "name": "Local notifications",
                             "btnText": "Start"
                         },
                         {
-                            "chapterId": 50,
+                            "chapterId": 60,
                             "id": "2544449",
                             "name": "Controlling the keyboard",
                             "btnText": "Start"
                         },
                         {
-                            "chapterId": 50,
+                            "chapterId": 60,
                             "id": "2544451",
                             "name": "Using icon fonts",
                             "btnText": "Start"
                         },
                         {
-                            "chapterId": 50,
+                            "chapterId": 60,
                             "id": "2544452",
                             "name": "Lower cased and dashed components",
                             "btnText": "Start"
                         },
                         {
-                            "chapterId": 50,
+                            "chapterId": 60,
                             "id": "2544453",
                             "name": "Programmatic components",
                             "btnText": "Start"
                         },
                         {
-                            "chapterId": 50,
+                            "chapterId": 60,
                             "id": "2544455",
                             "name": "Custom components",
                             "btnText": "Start"
                         },
                         {
-                            "chapterId": 50,
+                            "chapterId": 60,
                             "id": "2544457",
                             "name": "Platform specific declarations",
                             "btnText": "Start"
                         },
                         {
-                            "chapterId": 50,
+                            "chapterId": 60,
                             "id": "2544458",
                             "name": "Screen size qualifiers",
                             "btnText": "Start"
                         },
                         {
-                            "chapterId": 50,
+                            "chapterId": 60,
                             "id": "2544459",
                             "name": "Platform qualifiers",
                             "btnText": "Start"
                         },
                         {
-                            "chapterId": 50,
+                            "chapterId": 60,
                             "id": "2544460",
                             "name": "Orientation qualifiers",
                             "btnText": "Start"
@@ -1404,83 +1500,83 @@
                     ]
                 },
                 {
-                    "id": 60,
+                    "id": 70,
                     "name": "More UI Widgets",
                     "lessons": [
                         {
-                            "chapterId": 60,
+                            "chapterId": 70,
                             "id": "2573725",
                             "name": "Overview",
                             "btnText": "Start"
                         },
                         {
-                            "chapterId": 60,
+                            "chapterId": 70,
                             "id": "2573726",
                             "name": "Placeholder",
                             "btnText": "Start"
                         },
                         {
-                            "chapterId": 60,
+                            "chapterId": 70,
                             "id": "2573727",
                             "name": "Switch",
                             "btnText": "Start"
                         },
                         {
-                            "chapterId": 60,
+                            "chapterId": 70,
                             "id": "2573730",
                             "name": "ListPicker",
                             "btnText": "Start"
                         },
                         {
-                            "chapterId": 60,
+                            "chapterId": 70,
                             "id": "2573732",
                             "name": "DatePicker",
                             "btnText": "Start"
                         },
                         {
-                            "chapterId": 60,
+                            "chapterId": 70,
                             "id": "2573734",
                             "name": "TimePicker",
                             "btnText": "Start"
                         },
                         {
-                            "chapterId": 60,
+                            "chapterId": 70,
                             "id": "2573735",
                             "name": "ImagePicker",
                             "btnText": "Start"
                         },
                         {
-                            "chapterId": 60,
+                            "chapterId": 70,
                             "id": "2573736",
                             "name": "Slider",
                             "btnText": "Start"
                         },
                         {
-                            "chapterId": 60,
+                            "chapterId": 70,
                             "id": "2573737",
                             "name": "Repeater",
                             "btnText": "Start"
                         },
                         {
-                            "chapterId": 60,
+                            "chapterId": 70,
                             "id": "2573738",
                             "name": "WebView",
                             "btnText": "Start"
                         },
                         {
-                            "chapterId": 60,
+                            "chapterId": 70,
                             "id": "2573740",
                             "name": "HtmlView",
                             "btnText": "Start"
                         },
                         {
-                            "chapterId": 60,
+                            "chapterId": 70,
                             "id": "2573742",
                             "name": "Progress",
                             "btnText": "Start"
                         },
                         {
-                            "chapterId": 60,
+                            "chapterId": 70,
                             "id": "2573743",
                             "name": "SearchBar",
                             "btnText": "Start"
@@ -1488,53 +1584,53 @@
                     ]
                 },
                 {
-                    "id": 70,
+                    "id": 80,
                     "name": "More modules",
                     "lessons": [
                         {
-                            "chapterId": 70,
+                            "chapterId": 80,
                             "id": "2573747",
                             "name": "Overview",
                             "btnText": "Start"
                         },
                         {
-                            "chapterId": 70,
+                            "chapterId": 80,
                             "id": "2573748",
                             "name": "Using connectivity",
                             "btnText": "Start"
                         },
                         {
-                            "chapterId": 70,
+                            "chapterId": 80,
                             "id": "2573750",
                             "name": "Timer",
                             "btnText": "Start"
                         },
                         {
-                            "chapterId": 70,
+                            "chapterId": 80,
                             "id": "2573751",
                             "name": "Http",
                             "btnText": "Start"
                         },
                         {
-                            "chapterId": 70,
+                            "chapterId": 80,
                             "id": "2573753",
                             "name": "Fetch polyfill",
                             "btnText": "Start"
                         },
                         {
-                            "chapterId": 70,
+                            "chapterId": 80,
                             "id": "2573754",
                             "name": "Image cache",
                             "btnText": "Start"
                         },
                         {
-                            "chapterId": 70,
+                            "chapterId": 80,
                             "id": "2573755",
                             "name": "Adding push notifications",
                             "btnText": "Start"
                         },
                         {
-                            "chapterId": 70,
+                            "chapterId": 80,
                             "id": "2573756",
                             "name": "Firebase integration",
                             "btnText": "Start"
@@ -1542,41 +1638,41 @@
                     ]
                 },
                 {
-                    "id": 80,
+                    "id": 90,
                     "name": "Events",
                     "lessons": [
                         {
-                            "chapterId": 80,
+                            "chapterId": 90,
                             "id": "2573757",
                             "name": "Overview",
                             "btnText": "Start"
                         },
                         {
-                            "chapterId": 80,
+                            "chapterId": 90,
                             "id": "2573758",
                             "name": "Listening for events through code",
                             "btnText": "Start"
                         },
                         {
-                            "chapterId": 80,
+                            "chapterId": 90,
                             "id": "2573761",
                             "name": "PropertyChange event",
                             "btnText": "Start"
                         },
                         {
-                            "chapterId": 80,
+                            "chapterId": 90,
                             "id": "2573762",
                             "name": "Custom events",
                             "btnText": "Start"
                         },
                         {
-                            "chapterId": 80,
+                            "chapterId": 90,
                             "id": "2573763",
                             "name": "Avoiding Memory leaks",
                             "btnText": "Start"
                         },
                         {
-                            "chapterId": 80,
+                            "chapterId": 90,
                             "id": "2573764",
                             "name": "Weak events",
                             "btnText": "Start"
@@ -1584,23 +1680,23 @@
                     ]
                 },
                 {
-                    "id": 90,
+                    "id": 100,
                     "name": "Hardware Access",
                     "lessons": [
                         {
-                            "chapterId": 90,
+                            "chapterId": 100,
                             "id": "2573765",
                             "name": "Overview",
                             "btnText": "Start"
                         },
                         {
-                            "chapterId": 90,
+                            "chapterId": 100,
                             "id": "2573766",
                             "name": "Using Location",
                             "btnText": "Start"
                         },
                         {
-                            "chapterId": 90,
+                            "chapterId": 100,
                             "id": "2573767",
                             "name": "Accessing the camera",
                             "btnText": "Start"
@@ -1608,41 +1704,41 @@
                     ]
                 },
                 {
-                    "id": 100,
+                    "id": 110,
                     "name": "Tracing and Debugging",
                     "lessons": [
                         {
-                            "chapterId": 100,
+                            "chapterId": 110,
                             "id": "2573769",
                             "name": "Overview",
                             "btnText": "Start"
                         },
                         {
-                            "chapterId": 100,
+                            "chapterId": 110,
                             "id": "2573770",
                             "name": "Setting up tracing",
                             "btnText": "Start"
                         },
                         {
-                            "chapterId": 100,
+                            "chapterId": 110,
                             "id": "2573771",
                             "name": "Using tracing",
                             "btnText": "Start"
                         },
                         {
-                            "chapterId": 100,
+                            "chapterId": 110,
                             "id": "2573772",
                             "name": "Debugging options",
                             "btnText": "Start"
                         },
                         {
-                            "chapterId": 100,
+                            "chapterId": 110,
                             "id": "2573774",
                             "name": "Debugging commands",
                             "btnText": "Start"
                         },
                         {
-                            "chapterId": 100,
+                            "chapterId": 110,
                             "id": "2573775",
                             "name": "Debugging with Visual Studio Code",
                             "btnText": "Start"
@@ -1650,29 +1746,29 @@
                     ]
                 },
                 {
-                    "id": 110,
+                    "id": 120,
                     "name": "Multithreaded Programming",
                     "lessons": [
                         {
-                            "chapterId": 110,
+                            "chapterId": 120,
                             "id": "2573776",
                             "name": "Overview",
                             "btnText": "Start"
                         },
                         {
-                            "chapterId": 110,
+                            "chapterId": 120,
                             "id": "2573777",
                             "name": "Workers API",
                             "btnText": "Start"
                         },
                         {
-                            "chapterId": 110,
+                            "chapterId": 120,
                             "id": "2573778",
                             "name": "General Guidelines",
                             "btnText": "Start"
                         },
                         {
-                            "chapterId": 110,
+                            "chapterId": 120,
                             "id": "2573779",
                             "name": "Limitations",
                             "btnText": "Start"
@@ -1680,35 +1776,35 @@
                     ]
                 },
                 {
-                    "id": 120,
+                    "id": 130,
                     "name": "Testing",
                     "lessons": [
                         {
-                            "chapterId": 120,
+                            "chapterId": 130,
                             "id": "2573780",
                             "name": "Overview",
                             "btnText": "Start"
                         },
                         {
-                            "chapterId": 120,
+                            "chapterId": 130,
                             "id": "2573781",
                             "name": "Configuring your project",
                             "btnText": "Start"
                         },
                         {
-                            "chapterId": 120,
+                            "chapterId": 130,
                             "id": "2573782",
                             "name": "Creating tests",
                             "btnText": "Start"
                         },
                         {
-                            "chapterId": 120,
+                            "chapterId": 130,
                             "id": "2573783",
                             "name": "Running tests",
                             "btnText": "Start"
                         },
                         {
-                            "chapterId": 120,
+                            "chapterId": 130,
                             "id": "2573784",
                             "name": "Configuring Karma",
                             "btnText": "Start"
@@ -1716,23 +1812,23 @@
                     ]
                 },
                 {
-                    "id": 130,
+                    "id": 140,
                     "name": "Transpilers",
                     "lessons": [
                         {
-                            "chapterId": 130,
+                            "chapterId": 140,
                             "id": "2573786",
                             "name": "Overview",
                             "btnText": "Start"
                         },
                         {
-                            "chapterId": 130,
+                            "chapterId": 140,
                             "id": "2573787",
                             "name": "TypeScript",
                             "btnText": "Start"
                         },
                         {
-                            "chapterId": 130,
+                            "chapterId": 140,
                             "id": "2573788",
                             "name": "Babel",
                             "btnText": "Start"
@@ -1740,77 +1836,77 @@
                     ]
                 },
                 {
-                    "id": 140,
+                    "id": 150,
                     "name": "Preparing for deployment",
                     "lessons": [
                         {
-                            "chapterId": 140,
+                            "chapterId": 150,
                             "id": "2573791",
                             "name": "Overview",
                             "btnText": "Start"
                         },
                         {
-                            "chapterId": 140,
+                            "chapterId": 150,
                             "id": "2573793",
                             "name": "AOT",
                             "btnText": "Start"
                         },
                         {
-                            "chapterId": 140,
+                            "chapterId": 150,
                             "id": "2573794",
                             "name": "Configuring WebPack",
                             "btnText": "Start"
                         },
                         {
-                            "chapterId": 140,
+                            "chapterId": 150,
                             "id": "2573795",
                             "name": "Bundling with WebPack",
                             "btnText": "Start"
                         },
                         {
-                            "chapterId": 140,
+                            "chapterId": 150,
                             "id": "2573796",
                             "name": "Bundling Extra Assets",
                             "btnText": "Start"
                         },
                         {
-                            "chapterId": 140,
+                            "chapterId": 150,
                             "id": "2573797",
                             "name": "Advanced WebPack",
                             "btnText": "Start"
                         },
                         {
-                            "chapterId": 140,
+                            "chapterId": 150,
                             "id": "2573798",
                             "name": "iOS Launch screen",
                             "btnText": "Start"
                         },
                         {
-                            "chapterId": 140,
+                            "chapterId": 150,
                             "id": "2573800",
                             "name": "iOS App Icons",
                             "btnText": "Start"
                         },
                         {
-                            "chapterId": 140,
+                            "chapterId": 150,
                             "id": "2573801",
                             "name": "iOS publishing",
                             "btnText": "Start"
                         },
                         {
-                            "chapterId": 140,
+                            "chapterId": 150,
                             "id": "2573802",
                             "name": "Android Launch screen",
                             "btnText": "Start"
                         },
                         {
-                            "chapterId": 140,
+                            "chapterId": 150,
                             "id": "2573803",
                             "name": "Android App Icons",
                             "btnText": "Start"
                         },
                         {
-                            "chapterId": 140,
+                            "chapterId": 150,
                             "id": "2573804",
                             "name": "Android publishing",
                             "btnText": "Start"
