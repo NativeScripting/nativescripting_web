@@ -229,17 +229,20 @@
                                         <div class="lessons-list">
 
                                             <ko data-ko-ignore data-ko-keep data-bind="foreach: courseSummaries">
-                                                <div class="card-lessons">
-                                                    <h2 data-ko-ignore data-ko-keep data-bind="text: authorNames"></h2>
-                                                    <p data-ko-ignore data-ko-keep data-bind="text: title"></p>
+                                                <div class="bundle-course">
+                                                    <div class="bundle-course-info">
+                                                        <span class="authors " data-ko-ignore data-ko-keep data-bind="text: authorNames"></span>
+                                                        <span class="title" data-ko-ignore data-ko-keep data-bind="text: title"></span>
+                                                        <span class="tag course-tag" data-ko-ignore data-ko-keep data-bind="text: tag, css: { 'course-tag-new': tag === 'NEW' }"></span>
+
+                                                    </div>
                                                     <img data-ko-ignore data-ko-keep data-bind="attr: { src: getLevelIcon({
                                                                 l1: '/img/level_icon1.svg',
                                                                 l2: '/img/level_icon2.svg',
                                                                 l3: '/img/level_icon3.svg'
                                                             }) }" title="Course level" />
-
-                                                    <div class="line"></div>
                                                 </div>
+                                                <div class="line"></div>
                                             </ko>
                                         </div>
                                         <div class="error" data-ko-ignore data-ko-keep data-bind="css: { 'error-active': showMessage }">

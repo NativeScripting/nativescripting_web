@@ -2033,6 +2033,59 @@ a:hover, a:focus, a:active {
           width: 96%;
           height: 1px;
           background-color: #336bc5; }
+
+
+
+
+          .special .bundle-card .top-block .bundle-course {
+            padding: 6px 4px;
+            background-color: #0949B2;
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+          }
+          .special .bundle-card .top-block .bundle-course .bundle-course-info {
+            text-align: left;
+            padding: 0 10px;
+          }
+            .special .bundle-card .top-block .bundle-course .authors {
+              font-family: "OpenSansLight";
+              font-size: 14px;
+              text-align: left;
+              line-height: 18px;
+              color: #FFFFFF;
+              margin-top: 0px;
+              margin-bottom: 0px;
+              display: block;
+              padding: 0;
+            }
+            .special .bundle-card .top-block .bundle-course .title {
+              color: #12ffcd;
+              font-family: "OpenSansRegular";
+              font-size: 14px;
+              text-align: left;
+              line-height: 18px;
+              display: inline;
+              margin: 0;
+              padding: 0;
+            }
+            .special .bundle-card .top-block .bundle-course .tag {
+              display: inline;
+              margin: 0;
+            }
+            .special .bundle-card .top-block .bundle-course img {
+              margin-right: 8px;
+            }
+            .special .bundle-card .top-block .line {
+              width: 96%;
+              height: 1px;
+              background-color: #336bc5;
+              margin-left:8px;
+            }
+
+
+
+
       .special .bundle-card .top-block .included {
         position: absolute;
         top: 0px;

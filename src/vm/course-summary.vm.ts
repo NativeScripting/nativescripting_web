@@ -8,6 +8,7 @@ export class CourseSummaryVm {
     level: number;
     title: string;
     id: string;
+    tag: string;
 
 
     constructor(c: Course) {
@@ -21,6 +22,7 @@ export class CourseSummaryVm {
             });
             return allNames.join(', ');
         });
+        this.tag = c.tag;
     }
 
 

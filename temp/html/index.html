@@ -11,7 +11,7 @@
     <link rel="shortcut icon" href="/img/favicon/favicon.ico">
     <meta name="msapplication-config" content="/img/favicon/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
-    <link type="text/css" rel="stylesheet" href="/styles/style.min.css?v=1.4.6">
+    <link type="text/css" rel="stylesheet" href="/styles/style.min.css?v=1.4.7">
 
 
     <link rel="image_src" href="https://nativescripting.com/img/course_banners/nativescript_core_ng_course_banner_bg.png">
@@ -614,17 +614,20 @@
                                         <div class="lessons-list">
 
                                             <ko data-ko-ignore="" data-ko-keep="" data-bind="foreach: courseSummaries">
-                                                <div class="card-lessons">
-                                                    <h2 data-ko-ignore="" data-ko-keep="" data-bind="text: authorNames"></h2>
-                                                    <p data-ko-ignore="" data-ko-keep="" data-bind="text: title"></p>
+                                                <div class="bundle-course">
+                                                    <div class="bundle-course-info">
+                                                        <span class="authors " data-ko-ignore="" data-ko-keep="" data-bind="text: authorNames"></span>
+                                                        <span class="title" data-ko-ignore="" data-ko-keep="" data-bind="text: title"></span>
+                                                        <span class="tag course-tag" data-ko-ignore="" data-ko-keep="" data-bind="text: tag, css: { 'course-tag-new': tag === 'NEW' }"></span>
+
+                                                    </div>
                                                     <img data-ko-ignore="" data-ko-keep="" title="Course level" data-bind="attr: { src: getLevelIcon({
                                                                 l1: '/img/level_icon1.svg',
                                                                 l2: '/img/level_icon2.svg',
                                                                 l3: '/img/level_icon3.svg'
                                                             }) }">
-
-                                                    <div class="line"></div>
                                                 </div>
+                                                <div class="line"></div>
                                             </ko>
                                         </div>
                                         <div class="error" data-ko-ignore="" data-ko-keep="" data-bind="css: { 'error-active': showMessage }">
@@ -818,7 +821,7 @@
 
     <script src="/node_modules/knockout/build/output/knockout-latest.js"></script>
     
-    <script src="/scripts/all.min.js?v=1.4.6"></script>
+    <script src="/scripts/all.min.js?v=1.4.7"></script>
 
     <script>
         bootstrapCoursesPage();

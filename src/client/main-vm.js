@@ -244,6 +244,7 @@ function CourseSummaryVm(c) {
     self.title = c.title;
     self.level = c.level;
     self.authors = c.authors;
+    self.tag = c.tag;
 
     self.authorNames = ko.pureComputed(function () {
         var allNames = self.authors.map(function (author) {
