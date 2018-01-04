@@ -5,12 +5,12 @@
         If strRequest <> "" Then 'get absolute path of the file
 
 
-        If Right(strRequest, 5) = ".docx" Then
-        '... proceed with download
+        If Right(strRequest, 5) = ".docx" Then '... proceed with download
 
 
         Dim path As String = Server.MapPath("/files/" + strRequest) 'get file object as FileInfo
         Dim file As System.IO.FileInfo = New System.IO.FileInfo(path) '-- if the file exists on the server
+
         If file.Exists Then 'set appropriate headers
         Response.Clear()
         Response.AddHeader("Content-Disposition", "attachment; filename=" & file.Name)
@@ -20,6 +20,7 @@
         Response.End 'if file does not exist
         Else
         Response.Write("This file does not exist.")
+        End If
 
         Else
         Response.Clear()
@@ -27,9 +28,6 @@
         Response.End
         End If
 
-
-
-        End If 'nothing in the URL as HTTP GET
         Else
         Response.Write("Please provide a file to download.")
         End If
