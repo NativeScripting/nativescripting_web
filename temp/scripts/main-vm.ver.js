@@ -1,7 +1,7 @@
 var ko = ko || {};
 var $ = $ || {};
 var tBaseUrl = 'http://nativescripting.teachable.com';
-var coursesDataUrl = '/coursesdata.json?v=1.4.7';
+var coursesDataUrl = '/coursesdata.json?v=1.4.8';
 var tCats = [
     new CategoryVm({ catId: 'core', name: 'NativeScript Core' }),
     new CategoryVm({ catId: 'ng', name: 'NativeScript with Angular' }),
