@@ -1,2 +1,0 @@
-webpackJsonp([60335399758886],{90:function(t,e){t.exports={data:{site:{siteMetadata:{siteName:"Using Typescript Example!"}}},layoutContext:{}}}});
-//# sourceMappingURL=path----3efff5892040fcf60578.js.map
