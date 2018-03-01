@@ -19,11 +19,12 @@ $('.course-section').each((i, section) => {
     $(section).find('.section-item a').each((j, secitem) => {
         var secBtn = $(secitem).find('.btn-primary');
         var secBtnText = $(secBtn).text().trim();
+        var isPreview = secBtnText === 'Preview';
         $(secBtn).remove();
         var secItemTitle = secitem.innerText.trim();
         var href = secitem.href;
         var id = href.substring(href.lastIndexOf('/') + 1);
-        lessons.push({ chapterId: chapCounter, id: id, name: secItemTitle, btnText: secBtnText });
+        lessons.push({ chapterId: chapCounter, id: id, name: secItemTitle, isPreview: isPreview });
     });
     chapters.push({ id: chapCounter, name: sectitle, lessons: lessons });
 });
@@ -39,13 +40,29 @@ $('.checkout-button-group').each((i, group) => {
     var licensesMax = liccount === 1 ? 1 : 10;
     products.push({ id: prodId, name: prodName, description: prodDesc, pricesale: price, pricereg: price, licensesMin: licensesMin, licensesMax: licensesMax });
 });
-var authors = [{
-    "name": "Alex Ziskind",
-    "picture": "alex_ziskind.png",
-    "bio": "Alex lives in Washington, DC. He's a speaker, trainer, and a Telerik Developer Expert. He's been invloved in NativeScript projects since 2015 and has created courses for Pluralsight and LinkedIn.",
-    "title": "Trainer and Owner"
-}];
-var courseObj = { id: courseId, title: courseTitle, subtitle: courseSubTitle, description: courseDescription, url: courseUrl, categories: ['core', 'ng'], level: 1, tag: 'PRESALE', launchdate: '05/01/2017', authors: authors, products: products, chapters: chapters };
+var authors = ['alex_ziskind'];
+var courseObj = {
+    id: courseId,
+    title: courseTitle,
+    subtitle: courseSubTitle,
+    description: courseDescription,
+    url: courseUrl,
+    flavors: ['Core', 'Angular'],
+    level: 1,
+    label: 'PRESALE',
+    launchdate: '05/01/2017',
+    authors: authors,
+    products: products,
+    publishedChapters: [
+        10,
+        20,
+        30,
+        40,
+        50,
+        60
+    ],
+    chapters: chapters
+};
 console.log(JSON.stringify(courseObj, null, 2));
 
 
