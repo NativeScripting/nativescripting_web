@@ -455,3 +455,18 @@ header.half-height .lecture-nav a.nav-btn.complete, header.half-height .lecture-
     border-radius: 0px;
     padding: 3px 18px !important;
 }
+
+::-webkit-scrollbar-thumb {
+    background-color: #12ffcd;
+    border: 2px solid #12ffcd;
+    border-radius: 1px;
+    box-shadow: 0 0 1px rgba(255,255,255,.5);
+}
+
+::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 7px;
+    height: 7px;
+    background: none;
+    border-radius: 4px;
+}
