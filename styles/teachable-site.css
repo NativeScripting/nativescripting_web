@@ -470,3 +470,9 @@ header.half-height .lecture-nav a.nav-btn.complete, header.half-height .lecture-
     background: none;
     border-radius: 4px;
 }
+
+/*report a problem wistia player */
+.w-report-a-problem__form-content select,
+.w-report-a-problem__form-content textarea {
+    color: black;
+}
